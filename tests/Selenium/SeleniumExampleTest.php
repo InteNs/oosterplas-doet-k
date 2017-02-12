@@ -14,6 +14,7 @@ class SeleniumExampleTest extends SeleniumTestCase
      */
     public function testExample()
     {
-        $this->visit('/');
+        $this->visit('http://www.google.nl')->see('aangeboden');
+
     }
 }
