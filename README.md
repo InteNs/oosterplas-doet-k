@@ -1,40 +1,50 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+# oosterplas doet
+[![Code Climate](https://codeclimate.com/repos/589dafbd73fd307939000474/badges/79352d992c3cc046ac4b/gpa.svg)](https://codeclimate.com/repos/589dafbd73fd307939000474/feed)
+[![Test Coverage](https://codeclimate.com/repos/589dafbd73fd307939000474/badges/79352d992c3cc046ac4b/coverage.svg)](https://codeclimate.com/repos/589dafbd73fd307939000474/coverage)
+[![Issue Count](https://codeclimate.com/repos/589dafbd73fd307939000474/badges/79352d992c3cc046ac4b/issue_count.svg)](https://codeclimate.com/repos/589dafbd73fd307939000474/feed)
+[![Build Status](https://travis-ci.com/InteNs/oosterplas-doet-k.svg?token=sGMSyACVozf1C3y7y3tv&branch=master)](https://travis-ci.com/InteNs/oosterplas-doet-k)
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## Wiki
 
-## About Laravel
+check the wiki here for more info on some of the frameworks we're using
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+## Code Style
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+code needs to be approved by code-climate
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+## github usage
 
-## Learning Laravel
+for the git-apprentices that want to _(should)_ use the command line:
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+ 
+ [here](https://raw.githubusercontent.com/Fabriquartz/laptop-install/master/dotfiles/gitconfig)
+are some useful aliases
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+###branches
 
-## Contributing
+- only one branch per feature
+- feature branch name should be: `feature/<feature-name>`
+- bugfix branch name should be: `bugfix/<bug-name>`
+- branch name should be lowercase and english
+- start a new branch _from master_ if you start working on something else
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+####keeping your branch up-to-date
+to keep your branch up to date with master, you need to _rebase_ it.
+rebasing is only easy if you do it often
 
-## Security Vulnerabilities
+command: `git pull --rebase origin master`
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+[fix conflicts in a rebase](https://help.github.com/articles/resolving-merge-conflicts-after-a-git-rebase/)
+###commits
 
-## License
+- only one commit per reasonable change ([good example](http://imgur.com/Wb4gOb5), [bad example](http://imgur.com/dFgX9Wu))
+- commit name should say what _changed_ in the commit
+- commit name should be lowercase and english
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+### pull-requests
+- has a reference to taiga [this way](https://tree.taiga.io/support/integrations/changing-elements-status-via-commit-message/) if applicable
+- explains what is in it
+- is only opened when they are done
+- is only opened when up-to-date with master
+- is only merged when all status checks should pass
+- is only merged by an administrator
