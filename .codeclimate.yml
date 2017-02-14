@@ -1,0 +1,28 @@
+---
+engines:
+  fixme:
+    enabled: true
+  phpcodesniffer:
+    enabled: false
+  phpmd:
+    enabled: true
+    checks:
+      CleanCode/StaticAccess:
+        enabled: false
+    config:
+      file_extensions: "php"
+      rulesets: "unusedcode,naming,design,codesize,cleancode,phpmd-ruleset.xml"
+    exclude_fingerprints:
+      - 3080ad936e14312f7373b83ab22bdd8a
+      - f75b8e6c3501f0b2a1ec9b43fa1b4918
+      - c0f91f0c5c8733ddbb9bebad5501e5c3
+      - de7429adb2930ddaf0779638e75b525e
+ratings:
+  paths:
+  - "**.php"
+
+exclude_paths:
+  - tests/*
+  - vendor/*
+  - build/*
+  - _ide_helper.php
