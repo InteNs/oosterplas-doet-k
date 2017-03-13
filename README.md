@@ -32,9 +32,19 @@ are some useful aliases
 to keep your branch up to date with master, you need to _rebase_ it.
 rebasing is only easy if you do it often
 
-command: `git pull --rebase origin master`
+you can rebase your branch by doing the following:
+```
+git pull --rebase origin master
+```
 
 [fix conflicts in a rebase](https://help.github.com/articles/resolving-merge-conflicts-after-a-git-rebase/)
+
+if rebasing is not your thing, or your branch has gotten too much out of hand,
+you can merge master into your branch by doing the following:
+```
+git merge origin master
+```
+
 ###commits
 
 - only one commit per reasonable change ([good example](http://imgur.com/Wb4gOb5), [bad example](http://imgur.com/dFgX9Wu))
