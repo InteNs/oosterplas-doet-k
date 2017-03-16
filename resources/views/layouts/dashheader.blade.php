@@ -4,12 +4,12 @@
             Dashboard
         </a>
     </div>
-    <div class="top-item right col-md-1 col-sm-6">
+    <div class="top-item right col-md-1 ">
         <a href="#">
             Uitloggen
         </a>
     </div>
-    <div class="top-item right col-md-1 col-sm-6">
+    <div class="top-item right col-md-1 ">
         <a href="#">
             <span class="glyphicon glyphicon-user right" aria-hidden="true"></span>
         </a>
