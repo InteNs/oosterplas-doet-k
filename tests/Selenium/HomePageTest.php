@@ -1,11 +1,10 @@
 <?php
-use Modelizer\Selenium\SeleniumTestCase;
+namespace Tests\Selenium;
 
-class HomePageTest extends SeleniumTestCase
+class HomePageTest extends BaseSeleniumTestCase
 {
-
-    public function testLandingPage() {
+    public function testLandingPage()
+    {
         $this->visit('/')->see('HOME');
     }
-
 }
