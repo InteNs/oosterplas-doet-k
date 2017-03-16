@@ -203,6 +203,6 @@
 </div>
 <!-- Rainbow Large -->
 <div class="rainbow no-padding">
-	<img class="home-img" src="images/rainbow-large.png">
+	<img class="home-img" src="images/rainbow.png">
 </div>
 @endsection
