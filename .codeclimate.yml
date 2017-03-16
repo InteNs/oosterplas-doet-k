@@ -4,6 +4,9 @@ engines:
     enabled: true
   phpcodesniffer:
     enabled: true
+  csslint:
+    enabled: true
+
   phpmd:
     enabled: true
     checks:
@@ -20,6 +23,7 @@ engines:
 ratings:
   paths:
   - "**.php"
+  - "**.css"
 
 exclude_paths:
   - tests/*
