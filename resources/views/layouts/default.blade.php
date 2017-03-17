@@ -24,5 +24,9 @@
 <!-- Content -->
 @yield('content')
 <!-- End Content -->
+
+<!-- Footer -->
+@include('footer')
+<!-- End Footer -->
 </body>
 </html>
