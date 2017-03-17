@@ -90,6 +90,18 @@ div.block-3, div.block-3 .continue-reading a {
 	background-color: #EC671C;
 }
 
+div.block-1 .continue-reading a:hover, div.block-1 .continue-reading a:focus {
+	background-color: #8ca213;
+}
+
+div.block-2 .continue-reading a:hover, div.block-2 .continue-reading a:focus {
+	background-color: #9a8c1c;
+}
+
+div.block-3 .continue-reading a:hover, div.block-3 .continue-reading a:focus {
+	background-color: #a25022;
+}
+
 div.block-2 a.read-more {
 	color: #C8B415;
 }
@@ -186,6 +198,14 @@ div.info-block .continue-reading a {
 	float: right;
 	padding: 10px 30px;
 	margin: 0px 20px 0px 0px;
+	-webkit-transition: background-color 1s ease-out;
+	-moz-transition: background-color 1s ease-out;
+	-o-transition: background-color 1s ease-out;
+	transition: background-color 1s ease-out;
+}
+
+div.info-block .continue-reading a:hover, div.info-block .continue-reading a:focus {
+	text-decoration: none;
 }
 
 div.block-2 a.read-more, div.block-3 a.read-more {
@@ -200,6 +220,49 @@ div.block-2 a.read-more, div.block-3 a.read-more {
 	width: 100%;
 }
 
+.show-responsive-menu {
+	display: none;
+}
+
+#responsive-menu {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 250px;
+	background-color: #333333;
+	border-right: 1px solid black;
+	z-index: 10;
+}
+
+#responsive-menu ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+#responsive-menu ul li {
+	width: 100%;
+	padding: 0px;
+	font-size: 15px;
+	border-bottom: 1px solid #999999;
+}
+
+#responsive-menu ul li a {
+	color: #fff;
+	padding: 10px;
+	display: block;
+}
+
+#responsive-menu span.close {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	color: #fff;
+	padding: 10px;
+	border-left: 1px solid #999999;
+}
+
 /**
 END Home page CSS
 **/
@@ -207,6 +270,37 @@ END Home page CSS
 /**
 Responsive
 **/
+@media (max-width: 1590px) {
+	nav.navbar {
+		font-size: 20px;
+	}
+	nav ul.social-media {
+		line-height: 40px;
+	}
+}
+
+@media (max-width: 1328px) {
+	nav.navbar {
+		font-size: 15px;
+	}
+	nav ul.social-media {
+		line-height: 25px;
+		margin-top: 10px;
+	}
+}
+
+@media (max-width: 1152px) {
+	nav ul.social-media li {
+		margin-left: 5px;
+	}
+}
+
+@media (max-width: 1067px) {
+	.nav>li>a {
+		padding: 15px 7px;
+	}
+}
+
 @media (max-width: 992px) {
 	div.info-block {
 		margin-top: 30px;
@@ -218,5 +312,16 @@ Responsive
 
 	div.block-1, div.block-2, div.block-3 {
 		padding: 0px 15px 50px 15px;
+	}
+}
+
+@media (max-width: 857px) {
+	.hide-responsive {
+		display: none;
+	}
+	.show-responsive-menu {
+		display: block;
+		float: left;
+		margin-top: 10px;
 	}
 }

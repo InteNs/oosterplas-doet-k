@@ -2,7 +2,8 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-9">
-				<ul class="nav navbar-nav">
+				<i class="fa fa-bars show-responsive-menu" aria-hidden="true" onclick="showMenu(1)"></i>
+				<ul class="nav navbar-nav hide-responsive">
 					<li class="active">
 						<a href="/">
 							Home
@@ -57,7 +58,53 @@
 		</div>
 	</div>
 </nav>
+<div id="responsive-menu">
+	<span class="close" onclick="showMenu(0)">
+		X
+	</span>
+	<ul>
+		<li>
+			<a href="#">
+				Home
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				Over ons
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				Activiteitenkalender
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				Bedrijven
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				Buurtbewoners
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				Contact
+			</a>
+		</li>
+	</ul>
+</div>
 <!-- Rainbow -->
 <div class="rainbow no-padding">
 	<img class="home-img" src="images/rainbow.png">
 </div>
+<script>
+	function showMenu(i) {
+		if (i == 1) {
+			document.getElementById("responsive-menu").style.display = 'block';
+		} else {
+			document.getElementById("responsive-menu").style.display = 'none';
+		}
+	}
+</script>
