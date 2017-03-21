@@ -183,6 +183,11 @@ return [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Qafeen\Manager\ManagerServiceProvider::class,
 
+        /**
+         * HTML & Form
+         */
+        Collective\Html\HtmlServiceProvider::class,
+
     ],
 
     /*
@@ -231,6 +236,12 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        /**
+         * HTML & Form
+         */
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
 
     ],
 

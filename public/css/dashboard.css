@@ -61,3 +61,20 @@ body{
 .nav-pills > li.active > a:hover, .nav > li > a:hover{
     color: #2e3436;
 }
+
+/* Overview filter styling */
+.overview-title {
+    display: inline-block;
+}
+
+.filters {
+    display: block;
+    float: right;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.filters a {
+    color: #000;
+    margin-left: 10px;
+}

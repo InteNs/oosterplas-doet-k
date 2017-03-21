@@ -9,6 +9,7 @@
         "barryvdh/laravel-ide-helper": "v2.2.3",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
+        "laravelcollective/html": "^5.2.0",
         "modelizer/selenium": "^1.2",
         "qafeen/manager": "^0.2.1"
     },

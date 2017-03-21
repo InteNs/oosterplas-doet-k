@@ -9,6 +9,10 @@ engines:
     checks:
       CleanCode/StaticAccess:
         enabled: false
+      CleanCode/ElseExpression:
+        enabled: false
+      Naming/ShortMethodName:
+        enabled: false
     config:
       file_extensions: "php"
       rulesets: "unusedcode,naming,design,codesize,cleancode,phpmd-ruleset.xml"
