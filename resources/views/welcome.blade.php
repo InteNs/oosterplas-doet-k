@@ -25,11 +25,11 @@
 			<img src="/images/info.jpg">
 			<h3>Huiswerkbegeleiding</h3>
 			<span class="info">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consectetur
-				urna quis nulla laoreet, at commodo mi porttitor. Suspendisse potenti.
-				Vivamus id mi sit amet elit tincidunt pulvinar ac eget enim. Integer libero
-				ante, posuere gravida orci et, elementum facilisis dolor. Nulla lacinia ligula
-				vel nisi vestibulum convallis luctus nec risus.
+				De begeleiding helpt je om je studie goed te kunnen volgen, je leert hoe je het beste kunt leren
+				en je krijgt hiervoor coaching om zelfstandig aan de slag te kunnen. Je leert plannen en je krijgt begeleiding
+				om je brugklas jaar goed aan te pakken.
+				Dit alles vindt plaats bij de Biechten en er is tussentijds ook ruimte om even lekker te ontspannen of juist even te
+				bewegen om daarna met hernieuwd concentratie weer verder te gaan.
 			</span>
 			<div class="continue-reading">
 				<a href="/">
@@ -41,11 +41,11 @@
 			<img src="/images/info.jpg">
 			<h3>Gunbanen</h3>
 			<span class="info">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consectetur
-				urna quis nulla laoreet, at commodo mi porttitor. Suspendisse potenti.
-				Vivamus id mi sit amet elit tincidunt pulvinar ac eget enim. Integer libero
-				ante, posuere gravida orci et, elementum facilisis dolor. Nulla lacinia ligula
-				vel nisi vestibulum convallis luctus nec risus.
+				Gunbanen zijn tijdelijke opstapbanen voor jongeren in een uitkeringssituatie. Iedereen tussen de 18 en 27 jaar,
+				thuiswonend of alleenstaand met of zonder kinderen, kan zich hiervoor aanmelden. We hebben diverse werkplaatsen
+				waar je ervaring op kunt doen, waar je je CV mee in beweging kunt houden en mogelijk kan leiden tot een vaste baan
+				bij hen of via hun netwerk. Ben jij, of ken je iemand die in een dergelijke situatie zit neem dan contact met ons op.
+				We helpen je graag verder.
 			</span>
 			<div class="continue-reading">
 				<a href="/">
