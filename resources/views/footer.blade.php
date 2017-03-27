@@ -2,32 +2,26 @@
 
 <footer class="container">
     <div class="row">
-        <div class="col-md-4 col-sm-12" style="text-align: center; line-height: 50px;">
+        <div class="col-md-4 col-sm-12" style="text-align: left; line-height: 40px;">
             <br>
-            <p>
-                <icon class="fa fa-building-o"></icon>
-                <strong>stichting OosterplasDOET!</strong>
-                <br>
-                <icon class="fa fa-university"></icon> NL64 TRIO 0212 1974 44
-            </p>
+            <strong>stichting OosterplasDOET!</strong>
+            <br>
 
-            <p>
-                <icon class="fa fa-address-card-o"></icon> Vincent van Goghlaan 1
-                <br>
-                5246 GA Rosmalen
-            </p>
+            <strong>Adres:</strong> Vincent van Goghlaan 1 Rosmalen
+            <br>
 
-            <p>
-                <icon class="fa fa-envelope-o"></icon> oosterplasdoet&#64;gmail.com
-            </p>
+            <strong>Postcode:</strong> 5246 GA
+            <br>
 
-            <p>
-                RSIN nummer: 855080528
-                <br>
-                KvK nummer: 63073579
-                <br>
-                SBI-code: 88993
-            </p>
+            <strong>Emailadres:</strong> oosterplasdoet&#64;gmail.com
+            <br>
+            <strong>RSIN nummer:</strong> 855080528
+            <br>
+
+            <strong>KvK nummer:</strong> 63073579
+            <br>
+
+            <strong>SBI-code:</strong> 88993
         </div>
 
         <br>
