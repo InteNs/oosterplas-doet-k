@@ -20,7 +20,7 @@ body{
 }
 
 .top-item{
-    margin-top: 15px;
+    margin-top: 10px;
     font-size: 16px;
 }
 
@@ -42,6 +42,7 @@ body{
 }
 
 .right{
+    display:none;
     float: right;
 }
 .dashboard {
@@ -60,4 +61,72 @@ body{
 }
 .nav-pills > li.active > a:hover, .nav > li > a:hover{
     color: #2e3436;
+}
+
+
+.sidebar{
+    background-color: #2e3436;
+    color: #f2f2f2;
+    height: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.sidebar-item a{
+    color: #f2f2f2;
+}
+.nav .nav-pills .nav-stacked li a{
+    color: #f2f2f2;
+}
+
+.nav-pills > li.active > a{
+    background-color: #f2f2f2;
+    color: #2e3436;
+}
+.nav > li > a{
+    color: #f2f2f2;
+}
+.nav-pills > li.active > a:focus, .nav > li > a:focus{
+    color: #2e3436;
+}
+.nav-pills > li.active > a:hover, .nav > li > a:hover{
+    color: #2e3436;
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+    .top{
+        padding-top: 6px;
+    }
+
+}
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    .right{
+        display: inline-block;
+        float: right;
+    }
+
+    .nav >  .smallDevice{
+        display: none;
+    }
+}
+.nav-pills > li.active > .hover_red > a:hover, .nav > .hover_red > a:hover{
+    color : #f2f2f2;
+    background: #DB3912;
+}
+
+.nav-pills > li.active > .hover_orange > a:hover, .nav > .hover_orange > a:hover{
+    color : #f2f2f2;
+    background: #FE9900;
+}
+
+.nav-pills > li.active > .hover_blue > a:hover, .nav > .hover_blue > a:hover{
+    color : #f2f2f2;
+    background: #4584Ed;
+}
+
+.nav-pills > li.active > .hover_green > a:hover, .nav > .hover_green > a:hover{
+    color : #f2f2f2;
+    background: #2ae212;
 }
