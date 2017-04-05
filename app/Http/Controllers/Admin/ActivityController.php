@@ -21,7 +21,7 @@ class ActivityController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index()
     {
@@ -30,7 +30,7 @@ class ActivityController extends Controller
         } else {
             $activities = Activity::orderBy('id', 'desc')->paginate(15);
         }
-        return View::make('admin.activity.index')->with('activities', $activities);
+        return view('admin.activity.index')->with('activities', $activities);
     }
 
     /**
@@ -40,121 +40,108 @@ class ActivityController extends Controller
      */
     public function create()
     {
-        return View::make('admin.activity.create');
+        return view('admin.activity.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(StoreActivity $request)
     {
-        if ($request->image == null) {
+        $activity = new Activity();
+        $activity->title = $request->title;
+        $activity->description = $request->description;
+        $activity->date = $request->date;
+        $activity->category_id = $request->category_id;
+        $activity->price = $request->price;
 
-            $activity = new Activity();
-            $activity->title = $request->title;
-            $activity->description = $request->description;
-            $activity->date = $request->date;
-            $activity->category_id = $request->category_id;
-            $activity->price = $request->price;
-            $activity->image = null;
-            $activity->save();
-        } elseif (Input::file('image')->isValid()) {
-            $destinationPath = 'images/uploads'; // upload path
-            $extension = Input::file('image')->getClientOriginalExtension(); // getting image extension
-            $fileName = 'activiteit'.date("Y-m-d").'-'.rand(11111, 99999).'.'.$extension; // renameing image
-            Input::file('image')->move($destinationPath, $fileName); // uploading file to given path
-
-            $activity = new Activity();
-            $activity->title = $request->title;
-            $activity->description = $request->description;
-            $activity->date = $request->date;
-            $activity->category_id = $request->category_id;
-            $activity->price = $request->price;
-            $activity->image = '/'.$destinationPath.'/'.$fileName;
-            $activity->save();
-        } else {
-            Session::flash('error', 'uploaded file is not valid');
-            return Redirect::to('beheer/activiteit/create');
+        if ($request->image != null) {
+            if (Input::file('image')->isValid()) {
+                $this->addImage($activity);
+            } else {
+                Session::flash('error', 'uploaded file is not valid');
+                return redirect('beheer/activiteit/create');
+            }
         }
-
-        return Redirect::to('beheer/activiteit');
+        $activity->save();
+        return redirect('beheer/activiteit');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Activity  $activity
-     * @return \Illuminate\Http\Response
+     * @param  \App\Activity $activity
+     * @return \Illuminate\Contracts\View\View
      */
     public function show($id)
     {
         $activity = Activity::find($id);
-        return View::make('admin.activity.show')->with('activity', $activity);
+        return View('admin.activity.show')->with('activity', $activity);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Activity  $activity
-     * @return \Illuminate\Http\Response
+     * @param  \App\Activity $activity
+     * @return \Illuminate\Contracts\View\View
      */
     public function edit($id)
     {
         $activity = Activity::find($id);
-        return View::make('admin.activity.edit')->with('activity', $activity);
+        return view('admin.activity.edit')->with('activity', $activity);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Activity  $activity
+     * @param  \Illuminate\Http\Request $request
+     * @param  \App\Activity $activity
      * @return \Illuminate\Http\Response
      */
     public function update(StoreActivity $request, $id)
     {
-        if ($request->image == null) {
-            $activity = Activity::find($id);
-            $activity->title = $request->title;
-            $activity->description = $request->description;
-            $activity->date = $request->date;
-            $activity->category_id = $request->category_id;
-            $activity->price = $request->price;
-            $activity->save();
-        } elseif (Input::file('image')->isValid()) {
-            $destinationPath = 'images/uploads'; // upload path
-            $extension = Input::file('image')->getClientOriginalExtension(); // getting image extension
-            $fileName = 'activiteit'.date("Y-m-d").'-'.rand(11111, 99999).'.'.$extension; // renameing image
-            Input::file('image')->move($destinationPath, $fileName); // uploading file to given path
+        $activity = Activity::find($id);
+        $activity->title = $request->title;
+        $activity->description = $request->description;
+        $activity->date = $request->date;
+        $activity->category_id = $request->category_id;
+        $activity->price = $request->price;
 
-            $activity = Activity::find($id);
-            $activity->title = $request->title;
-            $activity->description = $request->description;
-            $activity->date = $request->date;
-            $activity->category_id = $request->category_id;
-            $activity->price = $request->price;
-            $activity->image = '/'.$destinationPath.'/'.$fileName;
-            $activity->save();
-        } else {
-            Session::flash('error', 'uploaded file is not valid');
-            return Redirect::to('beheer/activiteit/create');
+        if ($request->image != null) {
+            if (Input::file('image')->isValid()) {
+                $this->addImage($activity);
+            } else {
+                Session::flash('error', 'uploaded file is not valid');
+                return redirect('beheer/activiteit/create');
+            }
         }
+        $activity->save();
+        return redirect('beheer/activiteit');
+    }
 
-        return Redirect::to('beheer/activiteit');
+    private function addImage($activity)
+    {
+        $destinationPath = 'images/uploads';
+        $extension = Input::file('image')->getClientOriginalExtension();
+        $fileName = 'activiteit' . date("Y-m-d") . '-' . rand(11111, 99999) . '.' . $extension;
+
+        # save and link image
+        Input::file('image')->move($destinationPath, $fileName);
+        $activity->image = '/' . $destinationPath . '/' . $fileName;
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Activity  $activity
+     * @param  \App\Activity $activity
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $activity = Activity::find($id);
-        $activity->delete();
+        Activity::destroy($id);
+        return redirect('/beheer/activiteit');
     }
 }
