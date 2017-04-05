@@ -7,7 +7,7 @@
 	<table class="table table-striped table-hover ">
 		<tr>
 			<td>
-				#id
+				id
 			</td>
 			<td>
 				titel
@@ -28,7 +28,7 @@
 		@foreach ($categories as $category)
 			<tr>
 				<td>
-					#{{$category->id}}
+					{{$category->id}}
 				</td>
 				<td>
 					{{$category->title}}
