@@ -1,4 +1,5 @@
 <?php
 return [
-    'avoidProxy' => true
+    'avoidProxy' => true,
+    'forcedBrowserMode' => 'firefox'
 ];
