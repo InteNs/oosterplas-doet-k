@@ -17,4 +17,5 @@ Route::get('/', function () {
 
 Route::get('/beheer', 'DashboardController@index');
 
+
 Route::auth();

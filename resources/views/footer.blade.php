@@ -8,7 +8,7 @@
         </div>
     </div>
     <!-- Rainbow Large -->
-    <div class="no-padding">
-        <img class="home-img" src="images/rainbow.png">
-    </div>
+    {{--<div class="no-padding">--}}
+        {{--<img class="home-img" src="images/rainbow.png">--}}
+    {{--</div>--}}
 </footer>

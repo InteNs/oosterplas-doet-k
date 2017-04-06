@@ -8,7 +8,7 @@
 <div class="container-fluid block-1">
 	<div class="row">
 		<div class="col-xs-12">
-			<h2 class="title">We halen samen meer uit onze wijk!</h2>
+			<h2 class="title1">We halen samen meer uit onze wijk!</h2>
 		</div>
 	</div>
 	<div class="row">
@@ -23,6 +23,7 @@
 	<div class="row">
 		<div class="col-md-6 info-block">
 			<img src="/images/info.jpg">
+			<div class="text-block1">
 			<h3>Huiswerkbegeleiding</h3>
 			<span class="info">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consectetur
@@ -31,14 +32,16 @@
 				ante, posuere gravida orci et, elementum facilisis dolor. Nulla lacinia ligula
 				vel nisi vestibulum convallis luctus nec risus.
 			</span>
-			<div class="continue-reading">
+			<div class="continue-reading1">
 				<a href="/">
 					Lees verder >
 				</a>
 			</div>
+			</div>
 		</div>
 		<div class="col-md-6 info-block">
 			<img src="/images/info.jpg">
+			<div class="text-block1">
 			<h3>Gunbanen</h3>
 			<span class="info">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consectetur
@@ -47,7 +50,7 @@
 				ante, posuere gravida orci et, elementum facilisis dolor. Nulla lacinia ligula
 				vel nisi vestibulum convallis luctus nec risus.
 			</span>
-			<div class="continue-reading">
+			<div class="continue-reading1">
 				<a href="/">
 					Lees verder >
 				</a>
@@ -55,16 +58,18 @@
 		</div>
 	</div>
 </div>
+</div>
 <!-- Block 2 -->
 <div class="container-fluid block-2">
 	<div class="row">
 		<div class="col-xs-12">
-			<h2 class="title">Highlights activiteiten</h2>
+			<h2 class="title2">Highlights activiteiten</h2>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-4 info-block">
 			<img src="/images/info.jpg">
+			<div class="text-block2">
 			<h3>Baggerloop/B-battle</h3>
 			<h4 class="date">
 				10 en 11 juni
@@ -77,14 +82,16 @@
 				jongeren op zitten die niet actief deelnemen aan een
 				sportvereniging en vaak ook een “rugzakje” hebben.
 			</span>
-			<div class="continue-reading">
+			<div class="continue-reading2">
 				<a href="/">
 					Lees verder >
 				</a>
 			</div>
+			</div>
 		</div>
 		<div class="col-md-4 info-block">
 			<img src="/images/info.jpg">
+			<div class="text-block2">
 			<h3>KEFO</h3>
 			<h4 class="date">
 				10 en 11 juni
@@ -95,14 +102,16 @@
 				voor een buurtfestival dat zich ieder jaar verder zal
 				ontwikkelen. Met de allure van lokaal talent
 			</span>
-			<div class="continue-reading">
+			<div class="continue-reading2">
 				<a href="/">
 					Lees verder >
 				</a>
 			</div>
+			</div>
 		</div>
 		<div class="col-md-4 info-block">
 			<img src="/images/info.jpg">
+			<div class="text-block2">
 			<h3>Wandelen in de natuur (65+) </h3>
 			<h4 class="date">
 				10 en 11 juni
@@ -111,10 +120,11 @@
 				In goed gezelschap met een natuurgids de leuke
 				groene routes van Den Bosch ontdekken!
 			</span>
-			<div class="continue-reading">
+			<div class="continue-reading2">
 				<a href="/">
 					Lees verder >
 				</a>
+			</div>
 			</div>
 		</div>
 	</div>
@@ -129,9 +139,9 @@
 	</div>
 </div>
 <!-- Rainbow -->
-<div class="rainbow no-padding">
-	<img class="home-img" src="images/rainbow.png">
-</div>
+{{--<div class="rainbow no-padding">--}}
+	{{--<img class="home-img" src="images/rainbow.png">--}}
+{{--</div>--}}
 <!-- Large image -->
 <div class="no-padding">
 	<img class="home-img" src="images/welcome.png">
@@ -140,12 +150,13 @@
 <div class="container-fluid block-3">
 	<div class="row">
 		<div class="col-xs-12">
-			<h2 class="title">Activiteiten reportages</h2>
+			<h2 class="title3">Activiteiten reportages</h2>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-4 info-block">
 			<img src="/images/info.jpg">
+			<div class="text-block3">
 			<h3>Baggerloop/B-battle</h3>
 			<h4 class="date">
 				10 en 11 juni
@@ -153,14 +164,16 @@
 			<span class="info">
 			   KEFO en B-battle voor alle wijkbewoners/
 			</span>
-			<div class="continue-reading">
+			<div class="continue-reading3">
 				<a href="/">
 					Lees verder >
 				</a>
 			</div>
 		</div>
+		</div>
 		<div class="col-md-4 info-block">
 			<img src="/images/info.jpg">
+			<div class="text-block3">
 			<h3>KEFO</h3>
 			<h4 class="date">
 				10 en 11 juni
@@ -168,14 +181,16 @@
 			<span class="info">
 				Het Kom Erbij Festival Oosterplas kende vorig jaar
 			</span>
-			<div class="continue-reading">
+			<div class="continue-reading3">
 				<a href="/">
 					Lees verder >
 				</a>
 			</div>
+			</div>
 		</div>
 		<div class="col-md-4 info-block">
 			<img src="/images/info.jpg">
+			<div class="text-block3">
 			<h3>Wandelen in de natuur (65+) </h3>
 			<h4 class="date">
 				10 en 11 juni
@@ -184,11 +199,12 @@
 				In goed gezelschap met een natuurgids de leuke
 				groene routes van Den Bosch ontdekken!
 			</span>
-			<div class="continue-reading">
+			<div class="continue-reading3">
 				<a href="/">
 					Lees verder >
 				</a>
 			</div>
+		</div>
 		</div>
 	</div>
 	<div class="row">
