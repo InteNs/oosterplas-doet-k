@@ -15,7 +15,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a href="/activiteitenkalender">
                             Activiteitenkalender
                         </a>
                     </li>
