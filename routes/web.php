@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Admin routes
 Route::get('/beheer', 'DashboardController@index');
+Route::group(['prefix' => 'beheer'], function () {
+    Route::resource('activiteit', 'Admin\ActivityController');
+});
 
+// Auth routes
 Route::auth();

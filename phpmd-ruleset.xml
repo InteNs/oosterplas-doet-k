@@ -11,6 +11,7 @@
     <!-- se importan los rulesets, en este caso todos. -->
     <rule ref="rulesets/cleancode.xml">
         <exclude name="StaticAccess"/>
+        <exclude name="ElseExpression"/>
     </rule>
     <rule ref="rulesets/codesize.xml/CyclomaticComplexity"/>
     <rule ref="rulesets/codesize.xml/NPathComplexity"/>
@@ -38,6 +39,7 @@
     <!-- se importa naming y se excluye ShortVariable para ser ajustada despues. -->
     <rule ref="rulesets/naming.xml">
         <exclude name="ShortVariable"/>
+        <exclude name="ShortMethodName"/>
     </rule>
     <rule ref="rulesets/naming.xml/ShortVariable"
           since="0.2"
@@ -46,7 +48,18 @@
           externalInfoUrl="http://phpmd.org/rules/naming.html#shortvariable">
         <priority>3</priority>
         <properties>
-            <property name="minimum" description="Minimum length for a variable, property or parameter name" value="3"/>
+            <property name="minimum" description="Minimum length for a variable, property or parameter name" value="2"/>
+            <property name="exceptions" value="id,q,w,i,j,v,e,f,fp" />
+        </properties>
+    </rule>
+    <rule ref="rulesets/naming.xml/ShortMethodName"
+          since="0.2"
+          message="Avoid methods with short names like {0}. Configured minimum length is {1}."
+          class="PHPMD\Rule\Naming\ShortMethodName"
+          externalInfoUrl="http://phpmd.org/rules/naming.html">
+        <priority>3</priority>
+        <properties>
+            <property name="minimum" description="Minimum length for a variable, property or parameter name" value="2"/>
             <property name="exceptions" value="id,q,w,i,j,v,e,f,fp" />
         </properties>
     </rule>
