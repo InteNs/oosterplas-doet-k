@@ -5,7 +5,8 @@ engines:
   phpcodesniffer:
     enabled: true
     exclude_fingerprints:
-      - 2dfaebcf3d8751322d80df2d0db759a1
+      - 2dfaebcf3d8751322d80df2d0db75
+      - f5785627f233bb4ef3127ddcf78b306e
   phpmd:
     enabled: true
     config:

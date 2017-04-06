@@ -24,9 +24,8 @@
         </div>
 
         <div class="form-group row">
-            {!! Form::label('category_id', 'Category ID') !!}
-            {!! Form::number('category_id', null, ['class' => 'form-control']) !!}
-            {{--TODO: categories from DB--}}
+            {!! Form::label('category', 'Category') !!}<br>
+            {!! Form::select('category', $categories, ['class' => 'form-control']) !!}
         </div>
 
         <div class="form-group row">

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Category;
 use App\Http\Requests\StoreActivity;
 use App\Activity;
 use App\Http\Controllers\Controller;
@@ -38,7 +39,9 @@ class ActivityController extends Controller
      */
     public function create()
     {
-        return view('admin.activity.create');
+        return view('admin.activity.create', [
+            'categories' => Category::pluck('title', 'id')
+        ]);
     }
 
     /**
@@ -52,7 +55,7 @@ class ActivityController extends Controller
         $activity->title = $request->title;
         $activity->description = $request->description;
         $activity->date = $request->date;
-        $activity->category_id = $request->category_id;
+        $activity->category_id = $request->category;
         $activity->price = $request->price;
 
         if ($request->image != null) {
@@ -74,8 +77,9 @@ class ActivityController extends Controller
      */
     public function show($id)
     {
-        $activity = Activity::find($id);
-        return View('admin.activity.show')->with('activity', $activity);
+        return View('admin.activity.show', [
+            'activity' => Activity::find($id)
+        ]);
     }
 
     /**
@@ -86,8 +90,10 @@ class ActivityController extends Controller
      */
     public function edit($id)
     {
-        $activity = Activity::find($id);
-        return view('admin.activity.edit')->with('activity', $activity);
+        return view('admin.activity.edit', [
+            'activity' => Activity::findOrFail($id),
+            'categories' => Category::pluck('title', 'id')
+        ]);
     }
 
     /**
@@ -101,7 +107,7 @@ class ActivityController extends Controller
         $activity->title = $request->title;
         $activity->description = $request->description;
         $activity->date = $request->date;
-        $activity->category_id = $request->category_id;
+        $activity->category_id = $request->category;
         $activity->price = $request->price;
 
         if ($request->image != null) {

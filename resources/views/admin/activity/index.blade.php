@@ -20,6 +20,7 @@
             <tr>
                 <td>#</td>
                 <td>Titel</td>
+                <td>Categorie</td>
                 <td>Prijs</td>
                 <td>Datum</td>
                 <td></td>
@@ -30,6 +31,7 @@
                 <tr>
                     <td>{{$activity->id}}</td>
                     <td>{{$activity->title}}</td>
+                    <td>{{$activity->category->title}}</td>
                     <td class="glyphicon-euro">{{$activity->price}}</td>
                     <td>{{$activity->date}}</td>
                     <td>
