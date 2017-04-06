@@ -3,10 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\StoreActivity;
-use View;
 use App\Activity;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Redirect;
 use Session;
 use Illuminate\Support\Facades\Input;
 use Request;
@@ -46,7 +44,6 @@ class ActivityController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(StoreActivity $request)
@@ -73,7 +70,6 @@ class ActivityController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Activity $activity
      * @return \Illuminate\Contracts\View\View
      */
     public function show($id)
@@ -97,8 +93,6 @@ class ActivityController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @param  \App\Activity $activity
      * @return \Illuminate\Http\Response
      */
     public function update(StoreActivity $request, $id)
@@ -136,7 +130,6 @@ class ActivityController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Activity $activity
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
