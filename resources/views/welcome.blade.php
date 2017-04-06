@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
-<div class="no-padding">
+<div class="no-padding slider">
     <div class="slideshow">
         <img class="slideshow-img" src="{{url('images/backgroundimg.jpg')}}">
         <img class="slideshow-img" src="{{url('images/backgroundimg2.jpg')}}">

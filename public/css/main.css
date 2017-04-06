@@ -110,6 +110,10 @@ Home page CSS
     overflow: hidden;
 }
 
+.slider {
+    max-height: 850px;
+}
+
 .slideshow {
     width: 20000px;
     position: relative;
