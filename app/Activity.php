@@ -5,7 +5,7 @@ namespace App;
 use DateTime;
 use Illuminate\Database\Eloquent\Model;
 
-class Activity extends Model implements \MaddHatter\LaravelFullcalendar\Event
+class Activity extends Model implements \MaddHatter\LaravelFullcalendar\IdentifiableEvent
 {
     public function category()
     {
@@ -51,5 +51,15 @@ class Activity extends Model implements \MaddHatter\LaravelFullcalendar\Event
     public function getEnd()
     {
         return DateTime::createFromFormat('Y-m-d',$this->date);
+    }
+
+    /**
+     * Get the event's ID
+     *
+     * @return int|string|null
+     */
+    public function getId()
+    {
+        return $this->id;
     }
 }

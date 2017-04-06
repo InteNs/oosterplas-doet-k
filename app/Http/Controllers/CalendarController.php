@@ -11,14 +11,15 @@ class CalendarController extends Controller
 {
     public function calendar(){
 
-        $eloquentEvent = Activity::first(); //EventModel implements MaddHatter\LaravelFullcalendar\Event
+        $eloquentEvent = Activity::all(); //EventModel implements MaddHatter\LaravelFullcalendar\Event
 
-        $calendar = Calendar::addEvent($eloquentEvent, [ //set custom color fo this event
+        $calendar = Calendar::addEvents($eloquentEvent, [ //set custom color fo this event
             'color' => '#800',
         ])->setOptions([ //set fullcalendar options
             'firstDay' => 1
         ])->setCallbacks([ //set fullcalendar callback options (will not be JSON encoded)
-            'viewRender' => 'function() {alert("Callbacks!");}'
+            'eventRender' => 'tooltip',
+            'eventClick' => 'redirect',
         ]);
 
         return view('calendar', ['calendar'=>$calendar]);
