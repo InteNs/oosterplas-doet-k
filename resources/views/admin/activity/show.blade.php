@@ -21,8 +21,7 @@
                 <h4><label for="description">Categorie:</label></h4>
             </div>
             <div class="col-md-6">
-                <h4>{{$activity->category_id}}</h4>
-                {{--TODO SHOW CATEGORIE--}}
+                <h4>{{$activity->category->title}}</h4>
             </div>
         </div>
         <div class="row">

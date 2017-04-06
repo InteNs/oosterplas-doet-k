@@ -19,7 +19,7 @@ Route::get('/', function () {
 Route::get('/beheer', 'DashboardController@index');
 Route::group(['prefix' => 'beheer'], function () {
     Route::resource('activiteit', 'Admin\ActivityController');
+    Route::resource('categorie', 'Admin\CategoryController');
 });
 
-// Auth routes
 Route::auth();

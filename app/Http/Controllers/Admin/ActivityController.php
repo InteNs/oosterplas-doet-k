@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Category;
 use App\Http\Requests\StoreActivity;
-use View;
 use App\Activity;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Redirect;
 use Session;
 use Illuminate\Support\Facades\Input;
 use Request;
@@ -40,13 +39,14 @@ class ActivityController extends Controller
      */
     public function create()
     {
-        return view('admin.activity.create');
+        return view('admin.activity.create', [
+            'categories' => Category::pluck('title', 'id')
+        ]);
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(StoreActivity $request)
@@ -55,7 +55,7 @@ class ActivityController extends Controller
         $activity->title = $request->title;
         $activity->description = $request->description;
         $activity->date = $request->date;
-        $activity->category_id = $request->category_id;
+        $activity->category_id = $request->category;
         $activity->price = $request->price;
 
         if ($request->image != null) {
@@ -73,13 +73,13 @@ class ActivityController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Activity $activity
      * @return \Illuminate\Contracts\View\View
      */
     public function show($id)
     {
-        $activity = Activity::find($id);
-        return View('admin.activity.show')->with('activity', $activity);
+        return View('admin.activity.show', [
+            'activity' => Activity::find($id)
+        ]);
     }
 
     /**
@@ -90,15 +90,15 @@ class ActivityController extends Controller
      */
     public function edit($id)
     {
-        $activity = Activity::find($id);
-        return view('admin.activity.edit')->with('activity', $activity);
+        return view('admin.activity.edit', [
+            'activity' => Activity::findOrFail($id),
+            'categories' => Category::pluck('title', 'id')
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @param  \App\Activity $activity
      * @return \Illuminate\Http\Response
      */
     public function update(StoreActivity $request, $id)
@@ -107,7 +107,7 @@ class ActivityController extends Controller
         $activity->title = $request->title;
         $activity->description = $request->description;
         $activity->date = $request->date;
-        $activity->category_id = $request->category_id;
+        $activity->category_id = $request->category;
         $activity->price = $request->price;
 
         if ($request->image != null) {
@@ -136,7 +136,6 @@ class ActivityController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Activity $activity
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
