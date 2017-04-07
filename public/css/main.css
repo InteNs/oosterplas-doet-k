@@ -82,6 +82,9 @@ nav i.fa {
 nav i.fa-twitter {
     background-color:#C7B315;
 }
+footer{
+	background-color:#acc90f;
+}
 
 nav i.fa-at {
     background-color:#DC941A;
@@ -151,6 +154,17 @@ div.block-2, div.block-3 {
     padding-bottom: 30px;
 }
 
+/*de grote blokken 1,2,3*/
+div.block-1 {
+	background-color: #ffffff;
+}
+div.block-2{
+	background-color: #C8B415;
+}
+div.block-3 {
+    background-color: #ffffff;
+}
+/*
 div.block-1, div.block-1 .continue-reading a {
     background-color: #ACC90F;
 }
@@ -173,10 +187,21 @@ div.block-2 .continue-reading a:hover, div.block-2 .continue-reading a:focus {
 
 div.block-3 .continue-reading a:hover, div.block-3 .continue-reading a:focus {
     background-color: #a25022;
-}
+}*/
+
+/*div.block-1 .continue-reading a {*/
+	/*background-color: #ACC90F;*/
+/*}*/
+/*div.block-2 .continue-reading {*/
+	/*background-color: #EC671C;*/
+/*}*/
+/*div.block-3 .continue-reading {*/
+	/*background-color: #;*/
+/*}*/
+
 
 div.block-2 a.read-more {
-    color: #C8B415;
+    color: #000;
 }
 
 div.block-3 a.read-more {
@@ -191,8 +216,49 @@ div.block-2 div.info-block h3, div.block-3 div.info-block h3 {
     line-height: 0px;
 }
 
+/*titels boven de blokken*/
 h2.title {
-    color: #fff;
+    color: #000;
+    text-transform: uppercase;
+    border-color: #000;
+    border-style: solid;
+    text-align: center;
+    width: 650px;
+    margin: 50px auto;
+    padding: 10px 0px;
+    border-left:0;
+    border-right:0;
+}
+h2.title1 {
+	color: #000;
+	text-transform: uppercase;
+	border-color: #000;
+	border-style: solid;
+	text-align: center;
+	width: 650px;
+	margin: 50px auto;
+	padding: 10px 0px;
+}
+h2.title2 {
+	color: #fff;
+	text-transform: uppercase;
+	border-color: #fff;
+	border-style: solid;
+	text-align: center;
+	margin: 50px auto;
+	padding: 10px 0px;
+}
+h2.title3 {
+    color: #000;
+    text-transform: uppercase;
+    border-color: #000;
+    border-style: solid;
+    text-align: center;
+    width: 650px;
+    margin: 50px auto;
+    padding: 10px 0px;
+}
+h2.title1, h2.title2, h2.title3 {
     font-size: 47px;
     font-family: 'bebas-neue';
     text-transform: uppercase;
@@ -200,12 +266,6 @@ h2.title {
     border-bottom: 2px;
     border-left: 0px;
     border-right: 0px;
-    border-color: #fff;
-    border-style: solid;
-    text-align: center;
-    width: 650px;
-    margin: 50px auto;
-    padding: 10px 0px;
 }
 
 span.home-text {
@@ -219,7 +279,8 @@ span.home-text {
     margin: 0 auto;
     padding-bottom: 50px;
 }
-
+  
+/*alle images in de kleine blokken*/
 div.info-block .img {
     background-color: #fff;
     width: 100%;
@@ -228,6 +289,7 @@ div.info-block .img {
     background-position: center;
     overflow: hidden;
 }
+
 
 div.info-block h3 {
     color: #000000;
@@ -241,6 +303,31 @@ div.info-block h3 {
     padding: 30px 20px;
     margin: 0px;
 }
+/*text-block is alle tekst onder het plaatje in de kleine blokken*/
+div.text-block1 h3{
+	color: #000000;
+	background-color: #ACC90F;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	padding: 30px 20px;
+	margin: 0px;
+}
+
+div.text-block3 h3{
+	color: #000000;
+	background-color: #EC671C;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	padding: 30px 20px;
+	margin: 0px;
+}
+
 
 div.info-block h4.date {
     color: #000000;
@@ -254,6 +341,29 @@ div.info-block h4.date {
     padding: 0px 20px 15px;
     margin: 0px;
 }
+div.text-block1 h4.date {
+	color: #000000;
+	background-color: #ACC90F;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	padding: 0px 20px 15px;
+	margin: 0px;
+}
+
+div.text-block3 h4.date {
+	color: #000000;
+	background-color: #EC671C;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	padding: 0px 20px 15px;
+	margin: 0px;
+}
 
 div.info-block span.info {
     color: #000000;
@@ -266,44 +376,92 @@ div.info-block span.info {
     display: block;
     overflow: hidden;
 }
-
-div.info-block .continue-reading {
-    font-family: 'bebas-neue';
-    font-size: 20px;
-    background-color: #fff;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    overflow: hidden;
+div.text-block1 span.info {
+	color: #000000;
+	background-color: #ACC90F;
+	display: inline-block;
+	width: 100%;
+	padding: 0px 20px 20px 20px;
+	height: 160px;
+	display: block;
+	overflow: hidden;
+}
+div.text-block3 span.info {
+	color: #000000;
+	background-color: #EC671C;
+	display: inline-block;
+	width: 100%;
+	padding: 0px 20px 20px 20px;
+	height: 160px;
+	display: block;
+	overflow: hidden;
 }
 
-div.info-block .continue-reading a {
-    color: #fff;
-    text-transform: uppercase;
-    text-align: center;
-    display: inline-block;
-    float: right;
-    padding: 10px 30px;
-    margin: 0px 20px 0px 0px;
-    -webkit-transition: background-color 1s ease-out;
-    -moz-transition: background-color 1s ease-out;
-    -o-transition: background-color 1s ease-out;
-    transition: background-color 1s ease-out;
+div.info-block .continue-reading1 {
+  font-family: 'bebas-neue';
+  font-size: 20px;
+	background-color: #ACC90F;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	overflow: hidden;
+}
+div.info-block .continue-reading2 {
+  font-family: 'bebas-neue';
+  font-size: 20px;
+	background-color: #ffffff;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	overflow: hidden;
+}
+div.info-block .continue-reading3 {
+  font-family: 'bebas-neue';
+  font-size: 20px;
+	background-color: #EC671C;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	overflow: hidden;
 }
 
-div.info-block .continue-reading a:hover, div.info-block .continue-reading a:focus {
-    text-decoration: none;
+div.info-block .continue-reading1 a {
+	color: #000;
+	background-color: #ffffff ;
+	text-transform: uppercase;
+	text-align: center;
+	display: inline-block;
+	float: right;
+	padding: 10px 30px;
+	margin: 0px 20px 0px 0px;
 }
-
+div.info-block .continue-reading2 a {
+	color: #000;
+	background-color: #C8B415;
+	text-transform: uppercase;
+	text-align: center;
+	display: inline-block;
+	float: right;
+	padding: 10px 30px;
+	margin: 0px 20px 0px 0px;
+}
+div.info-block .continue-reading3 a {
+	color: #000;
+	background-color: #ffffff ;
+	text-transform: uppercase;
+	text-align: center;
+	display: inline-block;
+	float: right;
+	padding: 10px 30px;
+ 	margin: 0px 20px 0px 0px;
+}
 div.block-2 a.read-more, div.block-3 a.read-more {
-    background-color: #fff;
     text-transform: uppercase;
     font-family: 'bebas-neue';
     font-size: 30px;
-    text-align: center;
+    text-align: right;
     padding: 12.5px;
     margin-top: 30px;
     display: inline-block;
     width: 100%;
+
 }
 
 .show-responsive-menu {

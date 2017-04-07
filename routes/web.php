@@ -24,4 +24,5 @@ Route::group(['prefix' => 'beheer'], function () {
     Route::resource('categorie', 'Admin\CategoryController');
 });
 
+
 Route::auth();
