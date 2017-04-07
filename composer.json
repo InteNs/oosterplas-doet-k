@@ -10,6 +10,7 @@
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.2.0",
+        "maddhatter/laravel-fullcalendar": "^1.2",
         "modelizer/selenium": "^1.2",
         "qafeen/manager": "^0.2.1"
     },
