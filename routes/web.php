@@ -14,8 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/activiteitenkalender', 'CalendarController@calendar');
 
-Route::get('/beheer', 'DashboardController@index');
+// Admin routes
+
+Route::group(['prefix' => 'beheer'], function () {
+    Route::get('/', 'DashboardController@index');
+    Route::resource('activiteit', 'Admin\ActivityController');
+    Route::resource('categorie', 'Admin\CategoryController');
+});
 
 
 Route::auth();

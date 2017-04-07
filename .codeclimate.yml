@@ -4,14 +4,14 @@ engines:
     enabled: true
   phpcodesniffer:
     enabled: true
+    exclude_fingerprints:
+      - 2dfaebcf3d8751322d80df2d0db75
+      - f5785627f233bb4ef3127ddcf78b306e
   phpmd:
     enabled: true
-    checks:
-      CleanCode/StaticAccess:
-        enabled: false
     config:
       file_extensions: "php"
-      rulesets: "unusedcode,naming,design,codesize,cleancode,phpmd-ruleset.xml"
+      rulesets: "phpmd-ruleset.xml"
     exclude_fingerprints:
       - 3080ad936e14312f7373b83ab22bdd8a
       - f75b8e6c3501f0b2a1ec9b43fa1b4918
@@ -19,7 +19,7 @@ engines:
       - de7429adb2930ddaf0779638e75b525e
 ratings:
   paths:
-  - "**.php"
+    - "**.php"
 
 exclude_paths:
   - tests/*
