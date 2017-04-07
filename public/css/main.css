@@ -83,8 +83,7 @@ nav i.fa-twitter {
     background-color:#C7B315;
 }
 footer{
-	background-color:#DC941A;
-
+	background-color:#acc90f;
 }
 
 nav i.fa-at {
@@ -163,8 +162,8 @@ div.block-2{
 	background-color: #C8B415;
 }
 div.block-3 {
-	background-color: #ffffff;
-
+    background-color: #ffffff;
+}
 /*
 div.block-1, div.block-1 .continue-reading a {
     background-color: #ACC90F;
@@ -202,7 +201,7 @@ div.block-3 .continue-reading a:hover, div.block-3 .continue-reading a:focus {
 
 
 div.block-2 a.read-more {
-    color: #C8B415;
+    color: #000;
 }
 
 div.block-3 a.read-more {
@@ -218,7 +217,18 @@ div.block-2 div.info-block h3, div.block-3 div.info-block h3 {
 }
 
 /*titels boven de blokken*/
-
+h2.title {
+    color: #000;
+    text-transform: uppercase;
+    border-color: #000;
+    border-style: solid;
+    text-align: center;
+    width: 650px;
+    margin: 50px auto;
+    padding: 10px 0px;
+    border-left:0;
+    border-right:0;
+}
 h2.title1 {
 	color: #000;
 	text-transform: uppercase;
@@ -239,15 +249,15 @@ h2.title2 {
 	padding: 10px 0px;
 }
 h2.title3 {
-	color: #000;
-	text-transform: uppercase;
-	border-color: #000;
-	border-style: solid;
-	text-align: center;
-	width: 650px;
-	margin: 50px auto;
-	padding: 10px 0px;
-  
+    color: #000;
+    text-transform: uppercase;
+    border-color: #000;
+    border-style: solid;
+    text-align: center;
+    width: 650px;
+    margin: 50px auto;
+    padding: 10px 0px;
+}
 h2.title1, h2.title2, h2.title3 {
     font-size: 47px;
     font-family: 'bebas-neue';
@@ -443,15 +453,15 @@ div.info-block .continue-reading3 a {
  	margin: 0px 20px 0px 0px;
 }
 div.block-2 a.read-more, div.block-3 a.read-more {
-    background-color: #fff;
     text-transform: uppercase;
     font-family: 'bebas-neue';
     font-size: 30px;
-    text-align: center;
+    text-align: right;
     padding: 12.5px;
     margin-top: 30px;
     display: inline-block;
     width: 100%;
+
 }
 
 .show-responsive-menu {

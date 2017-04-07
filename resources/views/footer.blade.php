@@ -4,7 +4,7 @@
     }
 </style>
 
-<footer class="container">
+<footer class="container-fluid">
     <div class="row">
         <div class="col-md-4 col-sm-12" style="text-align: left; line-height: 40px;">
             <br>
@@ -36,10 +36,11 @@
                data-chrome="nofooter">Tweets by OosterplasDoet</a>
             <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
-
-        <iframe class="col-md-4" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Foosterplasdoet&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId"
-                height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true">
+        <div class="col-md-4">
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Foosterplasdoet&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId"
+                height="500"  style="border:none;overflow:hidden;width:100%" scrolling="no" frameborder="0" allowTransparency="true">
         </iframe>
+        </div>
         <br>
     </div>
 </footer>
