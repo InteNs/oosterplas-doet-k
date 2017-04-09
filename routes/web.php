@@ -11,18 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 Route::get('/activiteitenkalender', 'CalendarController@calendar');
+Route::get('/', 'MainController@index');
 
-// Admin routes
-
-Route::group(['prefix' => 'beheer'], function () {
-    Route::get('/', 'DashboardController@index');
+Route::group(['prefix' => 'beheer', 'middleware' => ['auth']], function () {
+    Route::get('/', 'Admin\AdminController@index');
     Route::resource('activiteit', 'Admin\ActivityController');
     Route::resource('categorie', 'Admin\CategoryController');
 });
-
 
 Route::auth();
