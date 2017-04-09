@@ -4,8 +4,9 @@ namespace App;
 
 use DateTime;
 use Illuminate\Database\Eloquent\Model;
+use MaddHatter\LaravelFullcalendar\IdentifiableEvent;
 
-class Activity extends Model implements \MaddHatter\LaravelFullcalendar\IdentifiableEvent
+class Activity extends Model implements IdentifiableEvent
 {
     public function category()
     {

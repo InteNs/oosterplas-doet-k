@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('layouts.main')
 
 @section('content')
 <div class="no-padding slider">

@@ -27,10 +27,10 @@
 
 </head>
 <body>
-@include('dashheader')
+@include('partials.admin.dashheader')
 
 @if(!Auth::guest())
-    @include('dashmenu')
+    @include('partials.admin.dashmenu')
 @endif
 
 <div class="col-md-offset-2">

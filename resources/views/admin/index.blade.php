@@ -1,4 +1,4 @@
-@extends('layouts.dashdefault')
+@extends('layouts.admin')
 
 @section('content')
     <div class="dashboard col-sm-12 col-md-10">
