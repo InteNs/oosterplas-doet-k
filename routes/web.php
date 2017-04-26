@@ -22,7 +22,7 @@ Route::group(['prefix' => 'beheer'], function () {
     Route::get('/', 'DashboardController@index');
     Route::resource('activiteit', 'Admin\ActivityController');
     Route::resource('categorie', 'Admin\CategoryController');
+    Route::resource('gebruiker', 'Admin\UserController');
 });
-
 
 Route::auth();

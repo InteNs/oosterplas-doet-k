@@ -5,9 +5,15 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Requests\StoreCategory;
 use App\Category;
 use App\Http\Controllers\Controller;
+use Request;
 
 class CategoryController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +21,11 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::paginate(15);
+        if (Request::get('order') != null && Request::get('direction') != null) {
+            $categories = Category::orderBy(Request::get('order'), Request::get('direction'))->paginate(15);
+        } else {
+            $categories = Category::orderBy('id', 'asc')->paginate(15);
+        }
         return view('admin.category.index')->with('categories', $categories);
     }
 
@@ -88,7 +98,7 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        Category::detroy($id);
+        Category::destroy($id);
         return redirect('/categorie');
     }
 }
