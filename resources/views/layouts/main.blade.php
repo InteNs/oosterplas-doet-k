@@ -28,7 +28,7 @@
 </head>
 <body>
 <!-- Header -->
-@include('header')
+@include('partials.header')
 <!-- End Header -->
 
 <!-- Content -->
@@ -36,7 +36,7 @@
 <!-- End Content -->
 
 <!-- Footer -->
-@include('footer')
+@include('partials.footer')
 <!-- End Footer -->
 </body>
 </html>
