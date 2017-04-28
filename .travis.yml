@@ -1,7 +1,9 @@
 language: php
+dist: trusty
+sudo: required
 
 php:
-  - 7.1
+  - 7.0
 
 before_install:
   - cp .env.travis .env.testing
@@ -23,8 +25,22 @@ before_script:
 script:
   - vendor/bin/phpunit
 
+after_failure:
+  - tail -n 1000 storage/logs/laravel.log | pastebinit
+
 services:
   - mysql
+
+env:
+  - DEFAULT_BROWSER=chrome
+
+addons:
+  apt:
+    sources:
+    - google-chrome
+    packages:
+    - google-chrome-stable
+    - pastebinit
 
 cache:
   directories:
