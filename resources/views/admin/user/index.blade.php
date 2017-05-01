@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
+    @include('admin.user.modal')
     <div class="container">
         <h3 class="overview-title">
             Gebruikers
@@ -27,39 +28,20 @@
                                title="Edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                         </td>
                         <td>
-                            <a href="javascript:checkDelete({{$user->id}});"
-                               title="Delete"><i class="fa fa-times" aria-hidden="true"></i></a>
+                            {{ Form::open(['id' => 'formDelete'.$user->id,'method' => 'DELETE', 'route' => ['gebruiker.destroy', $user->id]]) }}
+                            <a title="Delete" href="javascript:void(0)" onclick="$('#conf').modal().on('click', '#delete-btn', function(){
+                                    document.getElementById('formDelete{{$user->id}}').submit()
+                                    });">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </a>
+                            {{ Form::close() }}
                         </td>
                     @endif
                 </tr>
             @endforeach
         </table>
+
     </div>
     {{ $users->appends(request()->input())->links() }}
-    <script>
-        function checkDelete(id) {
-            //Declaration
-            var token = $('#token').val();
-            var id = id;
-
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-
-            //Delete request
-            $.ajax({
-                type: 'DELETE',
-                url: '/beheer/gebruiker/' + id,
-                data: {_token: token},
-                success: function (data) {
-
-                }
-            });
-
-            window.location.href = "/beheer/gebruiker";
-        }
-    </script>
 
 @endsection
