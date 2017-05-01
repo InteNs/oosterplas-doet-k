@@ -1,4 +1,4 @@
-@extends('layouts.dashdefault')
+@extends('layouts.admin')
 
 @section('content')
     <div class="container">
@@ -21,13 +21,14 @@
                         <a href="/beheer/gebruiker/{{$user->id}}"
                            title="View"><i class="fa fa-eye" aria-hidden="true"></i></a>
                     </td>
-                    @if(Auth::user()->role == 'admin')
+                    @if(Auth::user()->isAdmin)
                         <td>
                             <a href="/beheer/gebruiker/{{$user->id}}/edit"
                                title="Edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                         </td>
-
                         <td>
+                            <a href="javascript:checkDelete({{$user->id}});"
+                               title="Delete"><i class="fa fa-times" aria-hidden="true"></i></a>
                         </td>
                     @endif
                 </tr>
