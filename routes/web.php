@@ -18,6 +18,7 @@ Route::group(['prefix' => 'beheer', 'middleware' => ['auth']], function () {
     Route::get('/', 'Admin\AdminController@index');
     Route::resource('activiteit', 'Admin\ActivityController');
     Route::resource('categorie', 'Admin\CategoryController');
+    Route::resource('gebruiker', 'Admin\UserController');
 });
 
 Route::auth();

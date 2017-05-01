@@ -16,6 +16,7 @@ class UsersTableSeeder extends Seeder
             'name' => 'admin',
             'email' => 'admin@oosterplasdoet.com',
             'password' => bcrypt('admin1'),
+            'isAdmin' => true,
         ]);
 
         User::updateOrCreate([
