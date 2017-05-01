@@ -6,7 +6,7 @@
             <h1>Verander een activiteit</h1>
         </div>
 
-        {!! Form::model($activity, array('url' => array('/beheer/activiteit', $activity->id), 'method' => 'PUT', 'files'=>true)) !!}
+        {!! Form::model($activity, array('url' => array('/beheer/activiteit', $activity->id), 'method' => 'PUT', 'files'=>true, 'class' => 'editForm')) !!}
         <div class="form-group row">
             {!! Form::label('title', 'Titel') !!}
             {!! Form::text('title', $activity->title, ['class' => 'form-control', 'required']) !!}
