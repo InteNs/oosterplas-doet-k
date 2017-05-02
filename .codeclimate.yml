@@ -7,6 +7,9 @@ engines:
     exclude_fingerprints:
       - 2dfaebcf3d8751322d80df2d0db75
       - f5785627f233bb4ef3127ddcf78b306e
+    exclude_paths:
+      - database/migrations/*
+      - database/seeds/*
   phpmd:
     enabled: true
     config:
