@@ -6,6 +6,13 @@
             Categorieen
         </h3>
 
+        <div class="filters">
+            <a href="/beheer/categorie?order=title&direction=asc" title="Order op titel ASC"><i
+                        class="fa fa-sort-alpha-asc" aria-hidden="true"></i></a>
+            <a href="/beheer/categorie?order=title&direction=desc" title="Order op titel DESC"><i
+                        class="fa fa-sort-alpha-desc" aria-hidden="true"></i></a>
+        </div>
+
         <table class="table table-striped table-hover ">
             <tr>
                 <td>#</td>
