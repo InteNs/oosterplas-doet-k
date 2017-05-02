@@ -81,7 +81,7 @@ class ActivityTest extends BaseSeleniumTestCase
             ->hold(1)
             ->see('Activiteiten')
             ->see($activity->title)
-            ->submitFOrm('#formDelete'.$activity->id, [])
+            ->submitForm('#formDelete'.$activity->id, [])
             ->hold(1)
             ->notSee($activity->title);
     }
