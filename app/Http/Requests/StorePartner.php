@@ -28,7 +28,7 @@ class StorePartner extends FormRequest
             'name' => 'required',
             'description' => 'required',
             'rank' => 'required',
-            'image' => 'required',
+            'image' => 'required'
         ];
     }
 }

@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\StoreCategory;
-use App\Category;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StorePartner;
 use App\Partner;
-use Request;
+use Session;
+use Illuminate\Support\Facades\Input;
 
 class PartnerController extends Controller
 {
@@ -36,7 +36,7 @@ class PartnerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreCategory $request)
+    public function store(StorePartner $request)
     {
         $partner = new Partner();
         $partner->name = $request->name;
@@ -52,7 +52,7 @@ class PartnerController extends Controller
             }
         }
         $partner->save();
-        return redirect('beheer/partner');
+        return redirect('/beheer/partner');
     }
 
     /**
@@ -82,7 +82,7 @@ class PartnerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function update(StoreCategory $request, $id)
+    public function update(StorePartner $request, $id)
     {
         $partner = Partner::find($id);
         $partner->name = $request->name;
@@ -98,7 +98,7 @@ class PartnerController extends Controller
             }
         }
         $partner->save();
-        return redirect('beheer/partner');
+        return redirect('/beheer/partner');
     }
 
     private function addImage($partner)
@@ -119,7 +119,7 @@ class PartnerController extends Controller
      */
     public function destroy($id)
     {
-        Category::destroy($id);
+        Partner::destroy($id);
         return redirect('/beheer/partner');
     }
 }
