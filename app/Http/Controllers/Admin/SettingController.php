@@ -8,13 +8,9 @@ use App\Setting;
 
 class SettingController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
-        if ($request->isMethod('put')) {
-            $this->store($request);
-        }
-
-        $setting = Setting::find(1);
+    	$setting = Setting::find(1);
         return view('admin.setting.index')->with('setting', $setting);
     }
 
@@ -28,5 +24,6 @@ class SettingController extends Controller
         $setting->{'KvK-number'} = $request->{'KvK-number'};
         $setting->{'SBI-code'} = $request->{'SBI-code'};
         $setting->save();
+	    return redirect('beheer/setting');
     }
 }

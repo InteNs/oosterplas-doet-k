@@ -8,7 +8,7 @@ class BaseSeleniumTestCase extends SeleniumTestCase
     public function setUp()
     {
         parent::setUp();
-        $this->artisan('db:seed');
+        $this->artisan('db:seed', ['--class' => 'SettingsTableSeeder']);
     }
 
     public function tearDown()
