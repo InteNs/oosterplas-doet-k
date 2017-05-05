@@ -10,7 +10,7 @@ class SettingController extends Controller
 {
     public function index()
     {
-    	$setting = Setting::find(1);
+        $setting = Setting::find(1);
         return view('admin.setting.index')->with('setting', $setting);
     }
 
