@@ -43,38 +43,15 @@
                            title="Edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                     </td>
                     <td>
-                        <a href="javascript:checkDelete({{$activity->id}});"
-                           title="Delete"><i class="fa fa-times" aria-hidden="true"></i></a>
+                        {{ Form::open(['id' => 'formDelete'.$activity->id,'method' => 'DELETE', 'route' => ['activiteit.destroy', $activity->id]]) }}
+                            <a title="Delete" href="javascript:void(0)" onclick="document.getElementById('formDelete{{$activity->id}}').submit()">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </a>
+                        {{ Form::close() }}
                     </td>
                 </tr>
             @endforeach
         </table>
     </div>
     {{ $activities->appends(request()->input())->links() }}
-    <script>
-        function checkDelete(id) {
-            //Declaration
-            var token = $('#token').val();
-            var id = id;
-
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-
-            //Delete request
-            $.ajax({
-                type: 'DELETE',
-                url: '/beheer/activiteit/' + id,
-                data: {_token: token},
-                success: function (data) {
-
-                }
-            });
-
-            window.location.href = "/beheer/activiteit";
-        }
-    </script>
-
 @endsection

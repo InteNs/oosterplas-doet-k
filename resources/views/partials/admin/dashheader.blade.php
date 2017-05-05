@@ -1,6 +1,6 @@
 <div class="top col-md-12">
     <div class="top-item-escape col-md-2 col-sm-12">
-        <a href="#">
+        <a href="/beheer">
             Dashboard
         </a>
     </div>

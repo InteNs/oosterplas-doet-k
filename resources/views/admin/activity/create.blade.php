@@ -6,7 +6,7 @@
             <h1>Creëer een activiteit</h1>
         </div>
 
-        {!! Form::open(array('url' => 'beheer/activiteit', 'method' => 'POST', 'files'=>true)) !!}
+        {!! Form::open(array('url' => 'beheer/activiteit', 'method' => 'POST', 'files'=>true, 'class' => 'createForm')) !!}
 
         <div class="form-group row">
             {!! Form::label('title', 'Titel') !!}
@@ -40,7 +40,7 @@
         </div>
 
         <div class="row">
-            {!! Form::submit('Creëer de activiteit!', array('class' => 'btn btn-primary')) !!}
+            {!! Form::submit('Creëer de activiteit!', array('class' => 'btn btn-primary', 'id' => 'createSubmit')) !!}
         </div>
 
         {!! Form::close() !!}
