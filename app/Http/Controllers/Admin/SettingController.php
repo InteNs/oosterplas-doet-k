@@ -24,6 +24,6 @@ class SettingController extends Controller
         $setting->{'KvK-number'} = $request->{'KvK-number'};
         $setting->{'SBI-code'} = $request->{'SBI-code'};
         $setting->save();
-	    return redirect('beheer/setting');
+        return redirect('beheer/setting');
     }
 }
