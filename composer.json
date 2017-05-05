@@ -11,7 +11,7 @@
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.2.0",
         "maddhatter/laravel-fullcalendar": "^1.2",
-        "modelizer/selenium": "^1.2",
+        "modelizer/selenium": "~1.0",
         "qafeen/manager": "^0.2.1"
     },
     "require-dev": {
