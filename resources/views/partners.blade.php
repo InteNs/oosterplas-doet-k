@@ -39,7 +39,6 @@
                         </div>
                     </div>
                 </div>
-                <br /><br />
                 <div class="row partial_rang_one">
                     <div class="row">
                         <div class="col-md-12">

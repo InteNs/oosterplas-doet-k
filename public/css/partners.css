@@ -41,3 +41,17 @@ div.partners-block-3 {
 .rang_three  .col-md-10 {
  padding: 0px 0px 0px 0px;
 }
+
+.rang_one_img{
+    height: 200px;
+}
+
+.rang_two_img{
+    width:200px;
+    height: 200px;
+}
+
+.rang_three_img{
+    width:200px;
+    height: 200px;
+}
