@@ -47,6 +47,15 @@ body {
 /**
 Header CSS
 **/
+adress{
+    float: left;
+    margin: 150px;
+}
+twitter col-md-4{
+    clear: both;
+    color: black;
+}
+
 nav.navbar {
     background-color: #fff;
     border-color: #fff;
