@@ -9,7 +9,7 @@
             - "hover_red"
         -->
         <li role="presentation" class="hover_red">
-            <a href="#">
+            <a href="/beheer/setting">
                 <span class="glyphicon glyphicon-wrench left" aria-hidden="true"></span> Instellingen
             </a>
         </li>

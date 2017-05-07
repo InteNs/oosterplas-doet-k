@@ -5,24 +5,19 @@
     <div class="row">
         <div class="col-md-4 col-sm-12" style="text-align: left; line-height: 40px;">
             <br>
-            <strong>stichting OosterplasDOET!</strong>
-            <br>
+            <strong>stichting OosterplasDOET!</strong><br>
 
-            <strong>Adres:</strong> Vincent van Goghlaan 1 Rosmalen
-            <br>
+            <strong>Adres:</strong> {{ $settings->address }}<br>
 
-            <strong>Postcode:</strong> 5246 GA
-            <br>
+            <strong>Postcode:</strong> {{ $settings->zipcode }}<br>
 
-            <strong>Emailadres:</strong> oosterplasdoet&#64;gmail.com
-            <br>
-            <strong>RSIN nummer:</strong> 855080528
-            <br>
+            <strong>Emailadres:</strong> {{ $settings->email }}<br>
 
-            <strong>KvK nummer:</strong> 63073579
-            <br>
+            <strong>RSIN nummer:</strong> {{ $settings->{'RSIN-number'} }}<br>
 
-            <strong>SBI-code:</strong> 88993
+            <strong>KvK nummer:</strong> {{ $settings->{'KvK-number'} }}<br>
+
+            <strong>SBI-code:</strong> {{ $settings->{'SBI-code'} }}<br>
         </div>
 
         <br>

@@ -16,6 +16,8 @@ Route::get('/', 'MainController@index');
 
 Route::group(['prefix' => 'beheer', 'middleware' => ['auth']], function () {
     Route::get('/', 'Admin\AdminController@index');
+    Route::get('setting', 'Admin\SettingController@index');
+    Route::put('setting', 'Admin\SettingController@update');
     Route::resource('activiteit', 'Admin\ActivityController');
     Route::resource('categorie', 'Admin\CategoryController');
     Route::resource('gebruiker', 'Admin\UserController');
