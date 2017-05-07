@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\StoreSetting;
 use App\Http\Controllers\Controller;
 use App\Setting;
 
@@ -14,16 +14,17 @@ class SettingController extends Controller
         return view('admin.setting.index')->with('setting', $setting);
     }
 
-    public function store(Request $request)
+    public function update(StoreSetting $request)
     {
         $setting = Setting::find(1);
-        $setting->address = $request->address;
-        $setting->zipcode = $request->zipcode;
-        $setting->email = $request->email;
-        $setting->{'RSIN-number'} = $request->{'RSIN-number'};
-        $setting->{'KvK-number'} = $request->{'KvK-number'};
-        $setting->{'SBI-code'} = $request->{'SBI-code'};
-        $setting->save();
+        $setting->update([
+            'address' => $request->address,
+            'zipcode' => $request->zipcode,
+            'email' => $request->email,
+            'RSIN-number' => $request->{'RSIN-number'},
+            'KvK-number' => $request->{'KvK-number'},
+            'SBI-code' => $request->{'SBI-code'}
+        ]);
         return redirect('beheer/setting');
     }
 }
