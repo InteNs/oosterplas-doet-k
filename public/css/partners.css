@@ -14,7 +14,7 @@ div.partners-block-2{
     background-color: #C8B415;
 }
 div.partners-block-3 {
-    padding: 20px 100px 20px 100px;
+    padding: 25px 100px 25px 100px;
     background-color: #ffffff;
 }
 
@@ -35,9 +35,15 @@ div.partners-block-3 {
     height: 200px;"
 }
 .partial_rang_three {
-
+    padding: 0px;
+    width: calc(33.3333333% - 15px);
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+    margin-bottom: 25px;
     background-color: #ACC90F;
 }
+
+
 .rang_three  .col-md-10 {
  padding: 0px 0px 0px 0px;
 }

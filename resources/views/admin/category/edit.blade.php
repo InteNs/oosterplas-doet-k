@@ -2,11 +2,7 @@
 
 @section('content')
     <div class="container">
-
-        <div class="row">
-            <h1>Verander een categorie</h1>
-        </div>
-        {!! Form::model($category, array('url' => array('/beheer/categorie', $category->id), 'method' => 'PUT', 'files'=>true)) !!}
+    {!! Form::model($category, array('url' => array('/beheer/categorie', $category->id), 'method' => 'PUT', 'files'=>true, 'class' => 'editForm')) !!}
 
         <div class="form-group row">
             {!! Form::label('title', 'Titel') !!}

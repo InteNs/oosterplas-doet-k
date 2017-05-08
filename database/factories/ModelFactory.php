@@ -36,6 +36,16 @@ $factory->define(App\Activity::class, function (Faker\Generator $faker) {
     ];
 });
 
+$factory->define(App\Partner::class, function (Faker\Generator $faker) {
+
+    return [
+        'name' => $faker->word,
+        'description' => $faker->text(100),
+        'link' => $faker->word,
+        'rank' => $faker->numberBetween(1, 0),
+    ];
+});
+
 $factory->define(App\Category::class, function (Faker\Generator $faker) {
     return [
         'title' => $faker->word,
