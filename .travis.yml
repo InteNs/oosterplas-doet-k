@@ -18,15 +18,16 @@ before_script:
 
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
-  - php artisan selenium:start &
-  - php artisan serve --env=testing &
+  - php artisan selenium:start >>storage/selenium.log 2>&1 &
+  - php artisan serve --env=testing >/dev/null 2>&1 &
   - sleep 3
 
 script:
   - vendor/bin/phpunit
 
 after_failure:
-  - tail -n 1000 storage/logs/laravel.log | pastebinit
+  - tail -n 10000 storage/logs/laravel.log | pastebinit
+  - tail -n 10000 storage/logs/selenium.log | pastebinit
 
 services:
   - mysql
