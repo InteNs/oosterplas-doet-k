@@ -13,7 +13,7 @@
 
 Route::get('/activiteitenkalender', 'CalendarController@calendar');
 Route::get('/', 'MainController@index');
-Route::get('/partners', 'PartnerFrontController@index');
+Route::get('/partners', 'PartnerController@index');
 
 Route::group(['prefix' => 'beheer', 'middleware' => ['auth']], function () {
     Route::get('/', 'Admin\AdminController@index');
