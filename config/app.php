@@ -162,6 +162,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Modelizer\Selenium\SeleniumServiceProvider::class,
 
 
         /*
@@ -247,5 +248,6 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
 
     ],
+
 
 ];

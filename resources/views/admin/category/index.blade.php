@@ -36,38 +36,15 @@
                            title="Edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                     </td>
                     <td>
-                        <a href="javascript:checkDelete({{$category->id}});"
-                           title="Delete"><i class="fa fa-times" aria-hidden="true"></i></a>
+                        {{ Form::open(['id' => 'formDelete'.$category->id,'method' => 'DELETE', 'route' => ['categorie.destroy', $category->id]]) }}
+                            <a title="Delete" href="javascript:void(0)" onclick="document.getElementById('formDelete{{$category->id}}').submit()">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </a>
+                        {{ Form::close() }}
                     </td>
                 </tr>
             @endforeach
         </table>
     </div>
     {{ $categories->appends(request()->input())->links() }}
-    <script>
-        function checkDelete(id) {
-            //Declaration
-            var token = $('#token').val();
-            var id = id;
-
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-
-            //Delete request
-            $.ajax({
-                type: 'DELETE',
-                url: '/beheer/categorie/' + id,
-                data: {_token: token},
-                success: function (data) {
-
-                }
-            });
-
-            window.location.href = "/beheer/categorie";
-        }
-    </script>
-
 @endsection

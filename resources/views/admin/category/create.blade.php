@@ -6,7 +6,7 @@
             <h1>Creëer een categorie</h1>
         </div>
 
-        {!! Form::open(array('url' => 'beheer/categorie', 'method' => 'POST', 'files'=>true)) !!}
+        {!! Form::open(array('url' => 'beheer/categorie', 'method' => 'POST', 'files'=>true, 'class' => 'createForm')) !!}
 
         <div class="form-group row">
             {!! Form::label('title', 'Titel') !!}
