@@ -139,6 +139,16 @@ body {
     margin-left: 10px;
 }
 
+/* Setting slider styling */
+.sliders img {
+    width: 250px;
+    max-height: 250px;
+}
+
+.sliders .lightgray {
+    background-color: #D3D3D3;
+}
+
 /* Extra Small Devices, Phones */
 @media only screen and (min-width: 480px) {
 
