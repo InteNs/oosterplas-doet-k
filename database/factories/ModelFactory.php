@@ -46,6 +46,13 @@ $factory->define(App\Partner::class, function (Faker\Generator $faker) {
     ];
 });
 
+$factory->define(App\Category::class, function (Faker\Generator $faker) {
+    return [
+        'title' => $faker->word,
+        'description' => $faker->text(100),
+    ];
+});
+
 $factory->define(App\Slider::class, function (Faker\Generator $faker) {
     return [
         'logo' => "/images/logo.png",
