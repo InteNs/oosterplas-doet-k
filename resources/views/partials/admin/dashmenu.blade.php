@@ -12,6 +12,13 @@
             <a href="/beheer/setting">
                 <span class="glyphicon glyphicon-wrench left" aria-hidden="true"></span> Instellingen
             </a>
+            <ul>
+                <li class="hover_blue">
+                    <a href="/beheer/setting/slider">
+                        <span class="glyphicon glyphicon-film left" aria-hidden="true"></span> Slider
+                    </a>
+                </li>
+            </ul>
         </li>
         <li role="presentation" class="hover_green">
             <a href="/beheer/activiteit">

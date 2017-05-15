@@ -134,6 +134,10 @@ Home page CSS
 
 .slideshow-img {
     width: 100px;
+    height: 850px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     float: left;
 }
 

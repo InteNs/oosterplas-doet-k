@@ -52,3 +52,12 @@ $factory->define(App\Category::class, function (Faker\Generator $faker) {
         'description' => $faker->text(100),
     ];
 });
+
+$factory->define(App\Slider::class, function (Faker\Generator $faker) {
+    return [
+        'logo' => "/images/logo.png",
+        'image1' => "/images/backgroundimg.jpg",
+        'image2' => "/images/backgroundimg2.jpg",
+        'image3' => "/images/backgroundimg3.jpg",
+    ];
+});
