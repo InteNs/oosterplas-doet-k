@@ -15,6 +15,8 @@ Route::get('/activiteit/{id}', 'ActivitiesController@index');
 Route::get('/activiteitenkalender', 'CalendarController@calendar');
 Route::get('/', 'MainController@index');
 Route::get('/partners', 'PartnerController@index');
+Route::get('/contact', 'ContactController@index');
+Route::post('/contact', 'ContactController@store');
 
 Route::group(['prefix' => 'beheer', 'middleware' => ['auth']], function () {
     Route::get('/', 'Admin\AdminController@index');
@@ -28,6 +30,7 @@ Route::group(['prefix' => 'beheer', 'middleware' => ['auth']], function () {
     Route::resource('activiteit', 'Admin\ActivityController');
     Route::resource('gebruiker', 'Admin\UserController');
     Route::resource('partner', 'Admin\PartnerController');
+    Route::resource('bericht', 'Admin\MessageController');
 });
 
 Route::auth();

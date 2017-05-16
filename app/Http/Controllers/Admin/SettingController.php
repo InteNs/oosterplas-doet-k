@@ -22,12 +22,14 @@ class SettingController extends Controller
     {
         $setting = Setting::find(1);
         $setting->update([
+            'name' => $request->name,
             'address' => $request->address,
             'zipcode' => $request->zipcode,
             'email' => $request->email,
             'RSIN-number' => $request->{'RSIN-number'},
             'KvK-number' => $request->{'KvK-number'},
-            'SBI-code' => $request->{'SBI-code'}
+            'SBI-code' => $request->{'SBI-code'},
+            'account-number' => $request->{'account-number'}
         ]);
         return redirect('beheer/setting');
     }
