@@ -47,9 +47,20 @@ body {
 /**
 Header CSS
 **/
-adress{
-    float: left;
-    margin: 150px;
+div. {
+    margin-top: 20px;
+}
+div. facebook.col-md-4{
+    margin-bottom: 150px;
+}
+
+
+span.address{
+
+    margin-left: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 20px;
 }
 twitter col-md-4{
     clear: both;
