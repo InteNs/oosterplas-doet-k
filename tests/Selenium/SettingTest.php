@@ -7,6 +7,7 @@ class SettingTest extends BaseSeleniumTestCase
 {
     public function testShowSetting()
     {
+        factory(App\Slider::class)->create();
         $setting = App\Setting::find(1);
 
         $this
@@ -21,6 +22,7 @@ class SettingTest extends BaseSeleniumTestCase
 
     public function testEditSetting()
     {
+        factory(App\Slider::class)->create();
         $user = factory(App\User::class)->create(['password' => bcrypt('test')]);
         $setting = App\Setting::find(1);
 

@@ -17,8 +17,13 @@ Route::get('/partners', 'PartnerController@index');
 
 Route::group(['prefix' => 'beheer', 'middleware' => ['auth']], function () {
     Route::get('/', 'Admin\AdminController@index');
-    Route::get('setting', 'Admin\SettingController@index');
-    Route::put('setting', 'Admin\SettingController@update');
+    Route::group(['prefix' => 'setting'], function () {
+        Route::get('/', 'Admin\SettingController@index');
+        Route::put('/', 'Admin\SettingController@update');
+        Route::get('slider', 'Admin\SettingController@slider');
+        Route::put('slider', 'Admin\SettingController@editSlider');
+        Route::delete('slider/{id}', 'Admin\SettingController@deleteSlider')->name('beheer.setting.slider');
+    });
     Route::resource('activiteit', 'Admin\ActivityController');
     Route::resource('categorie', 'Admin\CategoryController');
     Route::resource('gebruiker', 'Admin\UserController');
