@@ -38,11 +38,9 @@
                         Oude slider image nr. {{$i}}:
                         @if ($slider->{'image'.$i} !== null)
                             <img src="{{ $slider->{'image'.$i} }}" class="img-responsive">
-                            {{ Form::open(['id' => 'formDelete'.$i,'method' => 'DELETE', 'route' => ['beheer.setting.slider', $i]]) }}
                             <a title="Delete" href="javascript:void(0)" onclick="document.getElementById('formDelete{{$i}}').submit()">
                                 Verwijder deze afbeelding
                             </a>
-                            {{ Form::close() }}
                         @else
                             geen afbeelding
                         @endif
@@ -57,6 +55,12 @@
             </div>
         </div>
         {!! Form::close() !!}
+        @for ($i = 1; $i < 10; $i++)
+            @if ($slider->{'image'.$i} !== null)
+                {{ Form::open(['id' => 'formDelete'.$i,'method' => 'DELETE', 'route' => ['beheer.setting.slider', $i]]) }}
+                {{ Form::close() }}
+            @endif
+        @endfor
         <br>
     </div>
 @endsection
