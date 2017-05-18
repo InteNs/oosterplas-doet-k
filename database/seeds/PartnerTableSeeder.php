@@ -173,12 +173,14 @@ class PartnerTableSeeder extends Seeder
             'name' => 'Park Eemwijk',
             'description' => 'Deze ouderen zorgorganisatie (van Neynsel) is regelmatig betrokken bij Oosterplas Doet',
             'rank' => '3',
+            'link' => ''
         ]);
 
         Partner::updateOrCreate([
             'name' => 'De dialoog ',
             'description' => 'De dialoog is betrokken bij Oosterplas Doet door ……………………….',
             'rank' => '3',
+            'link' => '',
         ]);
         Partner::updateOrCreate([
             'name' => 'Toon Lef!',
