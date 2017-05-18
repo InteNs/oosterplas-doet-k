@@ -21,8 +21,7 @@ class ActivityTest extends BaseSeleniumTestCase
     public function testEditActivity()
     {
         $user = factory(App\User::class)->create(['password' => bcrypt('test')]);
-        $category = factory(App\Category::class)->create();
-        $activity = factory(App\Activity::class)->create(['category_id' => $category->id]);
+        $activity = factory(App\Activity::class)->create();
 
         $this
             ->visit('/beheer/activiteit/'.$activity->id.'/edit')
@@ -31,13 +30,14 @@ class ActivityTest extends BaseSeleniumTestCase
             ->press('Inloggen')
             ->hold(1)
             ->see('Verander een activiteit')
-            ->submitForm('.editForm', [
+            ->typeInformation( [
                 'title' => 'Een aangepaste titel',
                 'description' => 'Een aangepaste beschrijving',
-                'date' => '02-01-2019',
-                'category' => $category->id,
+//                'datetimestart' => '2019-01-02 08:30:00',
+//                'datetimeend' => '2019-01-02 12:45:00',
                 'price' => '55',
-            ])
+            ], true)
+            ->click('editSubmit')
             ->hold(1)
             ->see('Activiteiten')
             ->see('Een aangepaste titel');
@@ -46,8 +46,6 @@ class ActivityTest extends BaseSeleniumTestCase
     public function testCreateActivity()
     {
         $user = factory(App\User::class)->create(['password' => bcrypt('test')]);
-        $category = factory(App\Category::class)->create();
-
         $this
             ->visit('/beheer/activiteit/create')
             ->see('Login')
@@ -55,13 +53,14 @@ class ActivityTest extends BaseSeleniumTestCase
             ->press('Inloggen')
             ->hold(1)
             ->see('Creëer een activiteit')
-            ->submitForm('.createForm', [
+            ->typeInformation([
                 'title' => 'B-Battle',
                 'description' => 'KEFO en B-battle voor alle wijkbewoners/ Bosschenaren, Baggerloop voor 7 basisscholen in Den Bosch Oost en Hintham en 5 middelbare scholen. Dit zijn juist 5 middelbare scholen waar veel kinderen/ jongeren op zitten die niet actief deelnemen aan een sportvereniging en vaak ook een “rugzakje” hebben.',
-                'date' => '02-01-2017',
-                'category' => $category->id,
+//                'datetimestart' => '2019-01-02 08:30:00',
+//                'datetimeend' => '2019-01-02 12:45:00',
                 'price' => '10',
-            ])
+            ],true )
+            ->click('createSubmit')
             ->hold(1)
             ->see('Activiteiten')
             ->see('B-Battle');
@@ -70,8 +69,7 @@ class ActivityTest extends BaseSeleniumTestCase
     public function testDeleteActivity()
     {
         $user = factory(App\User::class)->create(['password' => bcrypt('test')]);
-        $category = factory(App\Category::class)->create();
-        $activity = factory(App\Activity::class)->create(['category_id' => $category->id]);
+        $activity = factory(App\Activity::class)->create();
 
         $this
             ->visit('/beheer/activiteit')

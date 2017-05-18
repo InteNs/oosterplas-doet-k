@@ -33,18 +33,6 @@
             </ul>
         </li>
         <li role="presentation" class="hover_green">
-            <a href="/beheer/categorie">
-                <span class="glyphicon glyphicon-tags left" aria-hidden="true"></span> Categorieën
-            </a>
-            <ul>
-                <li class="hover_blue">
-                    <a href="/beheer/categorie/create">
-                        <span class="glyphicon glyphicon-plus left" aria-hidden="true"></span> Toevoegen
-                    </a>
-                </li>
-            </ul>
-        </li>
-        <li role="presentation" class="hover_green">
             <a href="/beheer/gebruiker">
                 <span class="glyphicon glyphicon-tags left" aria-hidden="true"></span> Gebruikers
             </a>

@@ -13,7 +13,7 @@ class CalendarController extends Controller
 
         $eloquentEvent = Activity::all(); //EventModel implements MaddHatter\LaravelFullcalendar\Event
 
-        $calendar = Calendar::addEvents($eloquentEvent, [ //set custom color fo this event
+        $calendar = Calendar::addEvents($eloquentEvent, [ //set custom color for this event
             'color' => '#800',
         ])->setOptions([ //set fullcalendar options
             'firstDay' => 1

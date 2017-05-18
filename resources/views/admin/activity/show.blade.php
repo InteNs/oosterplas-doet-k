@@ -18,10 +18,18 @@
         </div>
         <div class="row">
             <div class="col-md-2">
-                <h4><label for="description">Categorie:</label></h4>
+                <h4><label for="image">Begint op:</label></h4>
             </div>
             <div class="col-md-6">
-                <h4>{{$activity->category->title}}</h4>
+                <h4>{{$activity->datetimestart}}</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <h4><label for="image">Eindigt op:</label></h4>
+            </div>
+            <div class="col-md-6">
+                <h4>{{$activity->datetimeend}}</h4>
             </div>
         </div>
         <div class="row">
@@ -38,22 +46,6 @@
             </div>
             <div class="col-md-6">
                 <img src="{{$activity->image}}" class="img-responsive">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-2">
-                <h4><label for="image">Aangemaakt op:</label></h4>
-            </div>
-            <div class="col-md-6">
-                <h4>{{$activity->created_at}}</h4>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-2">
-                <h4><label for="image">Gewijzigd op:</label></h4>
-            </div>
-            <div class="col-md-6">
-                <h4>{{$activity->updated_at}}</h4>
             </div>
         </div>
     </div>

@@ -19,7 +19,7 @@
 
         <div class="form-group row">
             <div class="col-md-12">
-                Huidige logo:
+                Oude logo:
                 <img src="{{$slider->logo}}" class="img-responsive lightgray">
             </div>
         </div>
@@ -35,12 +35,14 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-md-12">
-                        Huidige slider image nr. {{$i}}:
+                        Oude slider image nr. {{$i}}:
                         @if ($slider->{'image'.$i} !== null)
                             <img src="{{ $slider->{'image'.$i} }}" class="img-responsive">
+                            {{ Form::open(['id' => 'formDelete'.$i,'method' => 'DELETE', 'route' => ['beheer.setting.slider', $i]]) }}
                             <a title="Delete" href="javascript:void(0)" onclick="document.getElementById('formDelete{{$i}}').submit()">
                                 Verwijder deze afbeelding
                             </a>
+                            {{ Form::close() }}
                         @else
                             geen afbeelding
                         @endif
@@ -51,16 +53,10 @@
 
         <div class="row">
             <div class="col-md-12">
-            {!! Form::submit('Wijzigingen toepassen!', array('class' => 'btn btn-primary')) !!}
+            {!! Form::submit('Verander de slider afbeeldingen!', array('class' => 'btn btn-primary')) !!}
             </div>
         </div>
         {!! Form::close() !!}
-        @for ($i = 1; $i < 10; $i++)
-            @if ($slider->{'image'.$i} !== null)
-                {{ Form::open(['id' => 'formDelete'.$i,'method' => 'DELETE', 'route' => ['beheer.setting.slider', $i]]) }}
-                {{ Form::close() }}
-            @endif
-        @endfor
         <br>
     </div>
 @endsection
