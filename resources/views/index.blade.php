@@ -3,11 +3,13 @@
 @section('content')
 <div class="no-padding slider">
     <div class="slideshow">
-        <img class="slideshow-img" src="{{url('images/backgroundimg.jpg')}}">
-        <img class="slideshow-img" src="{{url('images/backgroundimg2.jpg')}}">
-        <img class="slideshow-img" src="{{url('images/backgroundimg3.jpg')}}">
+        @for ($t = 1; $t < 10; $t++)
+            @if ($slider->{'image'.$t} !== null)
+                <div class="slideshow-img" style="background-image: url('{{url($slider->{'image'.$t})}}');"></div>
+            @endif
+        @endfor
     </div>
-    <img class="logo" src="{{url('images/logo.png')}}">
+    <img class="logo" src="{{url($slider->logo)}}">
 </div>
 <!-- Block 1 -->
 <div class="container-fluid block-1">
