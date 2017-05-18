@@ -21,4 +21,11 @@
             <span class="glyphicon glyphicon-user right" aria-hidden="true"></span>
         </a>
     </div>
+    <div class="row">
+        <!-- will be used to show any messages -->
+        @if (Session::has('message'))
+            <div class="alert alert-danger">{{ Session::get('message') }}</div>
+        @endif
+
+    </div>
 </div>

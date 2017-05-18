@@ -17,8 +17,8 @@ class CreateActivitiesTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->text('description');
-            $table->date('date');
-            $table->integer('category_id')->nullable()->default(null);
+            $table->datetime('datetimestart');
+            $table->datetime('datetimeend');
             $table->double('price')->default(0);
             $table->string('image')->nullable()->default(null);
             $table->timestamps();

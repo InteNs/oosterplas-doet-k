@@ -16,7 +16,6 @@ engines:
       file_extensions: "php"
       rulesets: "phpmd-ruleset.xml"
     exclude_fingerprints:
-      - 4ce013c1b0a4c686387650e9540d9ad0
       - 3080ad936e14312f7373b83ab22bdd8a
       - f75b8e6c3501f0b2a1ec9b43fa1b4918
       - c0f91f0c5c8733ddbb9bebad5501e5c3
