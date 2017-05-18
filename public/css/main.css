@@ -47,6 +47,26 @@ body {
 /**
 Header CSS
 **/
+
+div.address{
+    float: left;
+    margin-left: 150px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    margin-right: 45px;
+}
+div.twitter{
+    margin-top: 30px;
+    margin-left: 50px;
+}
+div.facebook{
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+div.facebook{
+    margin-top: 30px;
+    margin-left: 30px;
+}
 nav.navbar {
     background-color: #fff;
     border-color: #fff;
