@@ -19,7 +19,7 @@
 
         <div class="form-group row">
             <div class="col-md-12">
-                Oude logo:
+                Huidige logo:
                 <img src="{{$slider->logo}}" class="img-responsive lightgray">
             </div>
         </div>
@@ -35,7 +35,7 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-md-12">
-                        Oude slider image nr. {{$i}}:
+                        Huidige slider image nr. {{$i}}:
                         @if ($slider->{'image'.$i} !== null)
                             <img src="{{ $slider->{'image'.$i} }}" class="img-responsive">
                             <a title="Delete" href="javascript:void(0)" onclick="document.getElementById('formDelete{{$i}}').submit()">
@@ -51,7 +51,7 @@
 
         <div class="row">
             <div class="col-md-12">
-            {!! Form::submit('Verander de slider afbeeldingen!', array('class' => 'btn btn-primary')) !!}
+            {!! Form::submit('Wijzigingen toepassen!', array('class' => 'btn btn-primary')) !!}
             </div>
         </div>
         {!! Form::close() !!}
