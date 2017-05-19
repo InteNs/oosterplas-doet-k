@@ -21,7 +21,7 @@ class ActivitiesTableSeeder extends Seeder
             'datetimestart' => '2017-05-15 15:00:00',
             'datetimeend' => '2017-05-15 18:00:00',
             'price' => '0',
-            'image' => '/images/uploads/natuurwandeling',
+            'image' => '/images/natuurwandeling.png',
         ]);
 
         Activity::updateOrCreate([
@@ -33,7 +33,7 @@ class ActivitiesTableSeeder extends Seeder
         'datetimestart' => '2017-06-10 09:00:00',
         'datetimeend' => '2017-06-11 23:00:00',
         'price' => '20',
-        'image' => '/images/uploads/KEFO',
+        'image' => '/images/KEFO.png',
     ]);
 
         Activity::updateOrCreate([
@@ -46,7 +46,7 @@ class ActivitiesTableSeeder extends Seeder
         'datetimestart' => '2017-05-23 10:00:00',
         'datetimeend' => '2017-05-24 20:00:00',
         'price' => '0',
-        'image' => '/images/uploads/baggerloop',
+        'image' => '/images/baggerloop.jpg',
     ]);
 
         Activity::updateOrCreate([
@@ -58,7 +58,7 @@ class ActivitiesTableSeeder extends Seeder
             'datetimestart' => '2017-05-31 17:00:00',
             'datetimeend' => '2017-05-31 22:00:00',
             'price' => '15',
-            'image' => '/images/uploads/dance',
+            'image' => '/images/dance.jpg',
         ]);
     }
 }
