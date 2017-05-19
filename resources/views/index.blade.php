@@ -75,73 +75,15 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-4 info-block">
-            <div class="img" style="background-image: url('{{url('/images/baggerloop.jpg')}}');"></div>
-            <div class="text-block2">
-            <h3>Baggerloop/B-battle</h3>
-            <h4 class="date">
-                10 en 11 juni
-            </h4>
-            <span class="info">
-                KEFO en B-battle voor alle wijkbewoners/
-                Bosschenaren, Baggerloop voor 7 basisscholen in
-                Den Bosch Oost en Hintham en 5 middelbare scholen.
-                Dit zijn juist 5 middelbare scholen waar veel kinderen/
-                jongeren op zitten die niet actief deelnemen aan een
-                sportvereniging en vaak ook een “rugzakje” hebben.
-            </span>
-            <div class="continue-reading2">
-                <a href="/">
-                    Lees verder >
-                </a>
-            </div>
-            </div>
-        </div>
-        <div class="col-md-4 info-block">
-            <div class="img" style="background-image: url('{{url('/images/KEFO.png')}}');"></div>
-            <div class="text-block2">
-            <h3>KEFO</h3>
-            <h4 class="date">
-                10 en 11 juni
-            </h4>
-            <span class="info">
-                Het Kom Erbij Festival Oosterplas kende vorig jaar
-                een mooie eerste editie. Daarmee is de toon gezet
-                voor een buurtfestival dat zich ieder jaar verder zal
-                ontwikkelen. Met de allure van lokaal talent
-            </span>
-            <div class="continue-reading2">
-                <a href="/">
-                    Lees verder >
-                </a>
-            </div>
-            </div>
-        </div>
-        <div class="col-md-4 info-block">
-            <div class="img" style="background-image: url('{{url('/images/natuurwandeling.png')}}');"></div>
-            <div class="text-block2">
-            <h3>Wandelen in de natuur (65+) </h3>
-            <h4 class="date">
-                10 en 11 juni
-            </h4>
-            <span class="info">
-                In goed gezelschap met een natuurgids de leuke
-                groene routes van Den Bosch ontdekken!
-            </span>
-            <div class="continue-reading2">
-                <a href="/">
-                    Lees verder >
-                </a>
-            </div>
-            </div>
-        </div>
-    </div>
+        @foreach($activities as $activity)
+            @include("partials.activity.activity", ['activity' => $activity])
+        @endforeach
     <div class="row">
         <div class="col-md-4"></div>
         <div class="col-md-4"></div>
         <div class="col-md-4">
             <a href="/" class="read-more">
-                Bekijk de volledige evenements kalender >
+                Bekijk de volledige evenementen kalender >
             </a>
         </div>
     </div>

@@ -11,6 +11,7 @@
 |
 */
 
+Route::get('/activiteit/{id}', 'ActivitiesController@index');
 Route::get('/activiteitenkalender', 'CalendarController@calendar');
 Route::get('/', 'MainController@index');
 Route::get('/partners', 'PartnerController@index');
