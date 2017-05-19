@@ -16,13 +16,13 @@ class MainController extends Controller
 
     private function getLastThreeActivities($activities){
 
-        foreach ($activities as $activity){
+        foreach ($activities as $activity) {
 
-            if (count($activities) <= 3){
+            if (count($activities) <= 3) {
                 return $activities;
             }
                 $start = $activity->datetimestart;
-            if ($start <= Carbon::now()){
+            if ($start <= Carbon::now()) {
                 $activities->shift();
                 continue;
             }
