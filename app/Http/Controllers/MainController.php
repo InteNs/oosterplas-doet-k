@@ -14,10 +14,9 @@ class MainController extends Controller
         return view('index')->with('slider', Slider::find(1))->with('activities', $last_activities);
     }
 
-    private function getLastThreeActivities($activities){
-
+    private function getLastThreeActivities($activities)
+    {
         foreach ($activities as $activity) {
-
             if (count($activities) <= 3) {
                 return $activities;
             }
