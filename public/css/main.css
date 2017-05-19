@@ -116,6 +116,11 @@ Home page CSS
 .slider {
     max-height: 850px;
 }
+div.calendar{
+    margin-top: 20px;
+}
+
+
 
 .slideshow {
     width: 20000px;

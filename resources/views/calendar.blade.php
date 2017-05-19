@@ -1,5 +1,6 @@
 @extends('layouts.main')
 @section('content')
+    <div class="calendar">
     <div class="container">
         {!! $calendar->calendar() !!}
         {!! $calendar->script() !!}
@@ -15,6 +16,7 @@
            }
        </script>
 
+    </div>
     </div>
     <div class="container">
 
