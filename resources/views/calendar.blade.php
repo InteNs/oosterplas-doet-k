@@ -6,7 +6,7 @@
         {!! $calendar->script() !!}
        <script>
            function redirect (calEvent, jsEvent, view) {
-               window.location.href = "/beheer/activiteit/" +calEvent.id;
+               window.location.href = "/activiteit/" +calEvent.id;
            }
 
            function tooltip(calEvent, element) {
