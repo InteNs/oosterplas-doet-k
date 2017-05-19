@@ -18,13 +18,13 @@
         </div>
 
         <div class="form-group row">
-            {!! Form::label('datetimestart', 'Begintijd') !!}
-            {!! Form::datetime('datetimestart', $activity->datetimestart, ['class' => 'form-control', 'required']) !!}
+            {!! Form::label('date', 'Datum') !!}
+            {!! Form::date('date', $activity->date, ['class' => 'form-control', 'required']) !!}
         </div>
 
         <div class="form-group row">
-            {!! Form::label('datetimeend', 'Eindtijd') !!}
-            {!! Form::datetime('datetimeend',$activity->datetimeend, ['class' => 'form-control', 'required']) !!}
+            {!! Form::label('category', 'Category') !!}<br>
+            {!! Form::select('category', $categories, $activity->category_id, ['class' => 'form-control']) !!}
         </div>
 
         <div class="form-group row">
@@ -44,7 +44,7 @@
         </div>
 
         <div class="row">
-            {!! Form::submit('Verander de activiteit!', array('class' => 'btn btn-primary', 'id' => 'editSubmit')   ) !!}
+            {!! Form::submit('Verander de activiteit!', array('class' => 'btn btn-primary')) !!}
         </div>
 
         {!! Form::close() !!}

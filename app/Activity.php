@@ -8,6 +8,11 @@ use MaddHatter\LaravelFullcalendar\IdentifiableEvent;
 
 class Activity extends Model implements IdentifiableEvent
 {
+    public function category()
+    {
+        return $this->belongsTo('App\Category');
+    }
+
     /**
      * Get the event's title
      *
@@ -25,7 +30,7 @@ class Activity extends Model implements IdentifiableEvent
      */
     public function isAllDay()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -35,7 +40,8 @@ class Activity extends Model implements IdentifiableEvent
      */
     public function getStart()
     {
-        return new DateTime($this->datetimestart);
+//        return $this->date;
+        return DateTime::createFromFormat('Y-m-d',$this->date);
     }
 
     /**
@@ -45,7 +51,7 @@ class Activity extends Model implements IdentifiableEvent
      */
     public function getEnd()
     {
-        return new DateTime($this->datetimeend);
+        return DateTime::createFromFormat('Y-m-d',$this->date);
     }
 
     /**

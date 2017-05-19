@@ -25,6 +25,7 @@ Route::group(['prefix' => 'beheer', 'middleware' => ['auth']], function () {
         Route::delete('slider/{id}', 'Admin\SettingController@deleteSlider')->name('beheer.setting.slider');
     });
     Route::resource('activiteit', 'Admin\ActivityController');
+    Route::resource('categorie', 'Admin\CategoryController');
     Route::resource('gebruiker', 'Admin\UserController');
     Route::resource('partner', 'Admin\PartnerController');
 });

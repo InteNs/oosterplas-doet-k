@@ -6,7 +6,6 @@ use App\Category;
 use App\Http\Requests\StoreActivity;
 use App\Activity;
 use App\Http\Controllers\Controller;
-use DateTime;
 use Session;
 use Illuminate\Support\Facades\Input;
 use Request;
@@ -35,7 +34,9 @@ class ActivityController extends Controller
      */
     public function create()
     {
-        return view('admin.activity.create');
+        return view('admin.activity.create', [
+            'categories' => Category::pluck('title', 'id')
+        ]);
     }
 
     /**
@@ -45,27 +46,18 @@ class ActivityController extends Controller
      */
     public function store(StoreActivity $request)
     {
-        $date1 = new DateTime("$request->datetimestart");
-        $date2 = new DateTime("$request->datetimeend");
-
         $activity = new Activity();
         $activity->title = $request->title;
         $activity->description = $request->description;
-
-        if ($date2 <= $date1) {
-            Session::flash('message', 'Eindtijd kan niet voor begintijd liggen');
-            return redirect('beheer/activiteit/create');
-        }
-
-        $activity->datetimestart = $date1;
-        $activity->datetimeend = $date2;
+        $activity->date = $request->date;
+        $activity->category_id = $request->category;
         $activity->price = $request->price;
 
         if ($request->image != null) {
             if (Input::file('image')->isValid()) {
                 $this->addImage($activity);
             } else {
-                Session::flash('message', 'Upload een foto');
+                Session::flash('error', 'uploaded file is not valid');
                 return redirect('beheer/activiteit/create');
             }
         }
@@ -94,7 +86,9 @@ class ActivityController extends Controller
     public function edit($id)
     {
         return view('admin.activity.edit', [
-            'activity' => Activity::findOrFail($id)]);
+            'activity' => Activity::findOrFail($id),
+            'categories' => Category::pluck('title', 'id')
+        ]);
     }
 
     /**
@@ -105,27 +99,17 @@ class ActivityController extends Controller
     public function update(StoreActivity $request, $id)
     {
         $activity = Activity::find($id);
-
-        $date1 = new DateTime("$request->datetimestart");
-        $date2 = new DateTime("$request->datetimeend");
-
         $activity->title = $request->title;
         $activity->description = $request->description;
-
-        if ($date2 <= $date1) {
-            Session::flash('message', 'Eindtijd kan niet voor begintijd liggen');
-            return redirect('beheer/activiteit/create');
-        }
-
-        $activity->datetimestart = $date1;
-        $activity->datetimeend = $date2;
+        $activity->date = $request->date;
+        $activity->category_id = $request->category;
         $activity->price = $request->price;
 
         if ($request->image != null) {
             if (Input::file('image')->isValid()) {
                 $this->addImage($activity);
             } else {
-                Session::flash('message', 'Upload een foto');
+                Session::flash('error', 'uploaded file is not valid');
                 return redirect('beheer/activiteit/create');
             }
         }
