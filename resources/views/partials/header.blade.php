@@ -97,7 +97,7 @@
 </div>
 <!-- Rainbow -->
 <div class="rainbow no-padding">
-    <img class="home-img" src="images/rainbow.png">
+    <img class="home-img" src="/images/rainbow.png">
 </div>
 <script>
     function showMenu(i) {
