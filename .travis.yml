@@ -20,10 +20,10 @@ before_script:
   - sh -e /etc/init.d/xvfb start
   - php artisan selenium:start >>storage/selenium.log 2>&1 &
   - php artisan serve --env=testing >/dev/null 2>&1 &
-  - sleep 3
+  - sleep 10
 
 script:
-  - vendor/bin/phpunit
+  - vendor/bin/phpunit --verbose
 
 after_failure:
   - tail -n 10000 storage/logs/laravel.log | pastebinit
