@@ -11,16 +11,16 @@
                 <dt><br>Adres:</dt>
                 <dd class="address">
                     <p translate="no" itemscope itemtype="http://schema.org/PostalAddress">
-                        <span itemprop="streetAddress"> Vincent van Goghlaan 1 </span><br>
-                        <span itemprop="postalCode"> 5246 GA </span>
-                        <span itemprop="addressLocation"> Rosmalen</span><br>
+                        <span itemprop="streetAddress"> {{ $settings->address }} </span><br>
+                        <span itemprop="postalCode"> {{ $settings->zipcode }} </span>
+
                     </p>
                 </dd>
             </div>
-            <strong>RSIN nummer:</strong> 855080528<br>
-            <strong>KvK nummer:</strong> 63073579<br>
-            <strong>SBI-code:</strong> 88993Ω<br>
-            <strong><br>Emailadres:</strong> <br> oosterplasdoet&#64;gmail.com
+            <strong>RSIN nummer:</strong> {{ $settings->{'RSIN-number'} }}<br>
+            <strong>KvK nummer:</strong> {{ $settings->{'KvK-number'} }}<br>
+            <strong>SBI-code:</strong> {{ $settings->{'SBI-code'} }}<br>
+            <strong><br>Emailadres:</strong><br>{{ $settings->email }}<br>
         </adress>
     </div>
 
