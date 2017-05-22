@@ -8,7 +8,12 @@
         {!! Form::model($setting, array('url' => array('/beheer/setting'), 'method' => 'PUT', 'files'=>false, 'class' => 'editForm')) !!}
 
         <div class="form-group row">
-            {!! Form::label('address', 'Adress') !!}
+            {!! Form::label('name', 'Naam') !!}
+            {!! Form::text('name', $setting->{'name'}, ['class' => 'form-control', 'required']) !!}
+        </div>
+
+        <div class="form-group row">
+            {!! Form::label('address', 'Adres') !!}
             {!! Form::text('address', $setting->address, ['class' => 'form-control', 'required']) !!}
         </div>
 
@@ -35,6 +40,11 @@
         <div class="form-group row">
             {!! Form::label('SBI-code', 'SBI-code') !!}
             {!! Form::text('SBI-code', $setting->{'SBI-code'}, ['class' => 'form-control', 'required']) !!}
+        </div>
+
+        <div class="form-group row">
+            {!! Form::label('account-number', 'Rekeningnummer') !!}
+            {!! Form::text('account-number', $setting->{'account-number'}, ['class' => 'form-control', 'required']) !!}
         </div>
 
         <div class="row">
