@@ -1,7 +1,7 @@
 <?php
 
-use App\Setting;
 use Illuminate\Database\Seeder;
+use App\Setting;
 
 class SettingsTableSeeder extends Seeder
 {
@@ -13,12 +13,14 @@ class SettingsTableSeeder extends Seeder
     public function run()
     {
         Setting::updateOrCreate([
+            'name' => 'stichting OosterplasDOET!',
             'address' => 'Vincent van Goghlaan 1 Rosmalen',
             'zipcode' => '5246 GA',
             'email' => 'oosterplasdoet@gmail.com',
             'RSIN-number' => '855080528',
             'KvK-number' => '63073579',
             'SBI-code' => '88993',
+            'account-number' => 'NL64 TRIO 0212 1974 44',
         ]);
     }
 }
