@@ -10,14 +10,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/activiteit/{id}', 'ActivitiesController@index');
-Route::get('/activiteitenkalender', 'CalendarController@calendar');
-Route::get('/', 'MainController@index');
-Route::get('/partners', 'PartnerController@index');
-Route::get('/contact', 'ContactController@index');
-Route::post('/contact', 'ContactController@store');
-
+// Routes with page counter
+Route::group(['middleware' => ['log']], function () {
+    Route::get('/activiteit/{id}', 'ActivitiesController@index');
+    Route::get('/activiteitenkalender', 'CalendarController@calendar');
+    Route::get('/', 'MainController@index');
+    Route::get('/partners', 'PartnerController@index');
+    Route::get('/contact', 'ContactController@index');
+    Route::post('/contact', 'ContactController@store');
+});
 Route::group(['prefix' => 'beheer', 'middleware' => ['auth']], function () {
     Route::get('/', 'Admin\AdminController@index');
     Route::group(['prefix' => 'setting'], function () {
