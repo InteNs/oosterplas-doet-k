@@ -59,7 +59,7 @@ class PartnerController extends Controller
         $partner = new Partner();
         $partner->name = $request->name;
         $partner->description = $request->description;
-        $partner->rank = $request->rank;
+        $partner->link = $request->link;
 
         if ($request->image != null) {
             if (Input::file('image')->isValid()) {
@@ -105,7 +105,7 @@ class PartnerController extends Controller
         $partner = Partner::find($id);
         $partner->name = $request->name;
         $partner->description = $request->description;
-        $partner->rank = $request->rank;
+        $partner->link = $request->link;
 
         if ($request->image != null) {
             if (Input::file('image')->isValid()) {
