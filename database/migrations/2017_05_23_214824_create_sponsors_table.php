@@ -18,6 +18,7 @@ class CreateSponsorsTable extends Migration
             $table->string('name');
             $table->text('description');
             $table->integer('rank');
+            $table->string('link')->nullable()->default(null);
             $table->string('image')->nullable()->default(null);
             $table->timestamps();
         });
