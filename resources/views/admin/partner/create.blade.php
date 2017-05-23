@@ -24,11 +24,6 @@
         </div>
 
         <div class="form-group row">
-            {!! Form::label('rank', 'Rank') !!}
-            {!! Form::number('rank', 3, ['class' => 'form-control', 'step' => 'any', 'min' => 1]) !!}
-        </div>
-
-        <div class="form-group row">
             <label for="image">Upload
                 afbeelding:</label> {!! Form::file('image', ['class' => 'form-control', 'accept' => 'image/*']) !!}
             <p class="errors">{!! $errors->first('image') !!}</p>
