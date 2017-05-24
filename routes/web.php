@@ -15,6 +15,8 @@ Route::group(['middleware' => ['log']], function () {
     Route::get('/activiteit/{id}', 'ActivitiesController@index');
     Route::get('/activiteitenkalender', 'CalendarController@calendar');
     Route::get('/', 'MainController@index');
+    Route::get('/huiswerkbegeleiding', 'HomeworkController@index');
+    Route::post('/huiswerkbegeleiding', 'HomeworkController@store');
     Route::get('/partners', 'PartnerController@index');
     Route::get('/contact', 'ContactController@index');
     Route::post('/contact', 'ContactController@store');
@@ -32,6 +34,7 @@ Route::group(['prefix' => 'beheer', 'middleware' => ['auth']], function () {
     Route::resource('gebruiker', 'Admin\UserController');
     Route::resource('partner', 'Admin\PartnerController');
     Route::resource('bericht', 'Admin\MessageController');
+    Route::resource('huiswerk', 'Admin\HomeworkController');
 });
 
 Route::auth();
