@@ -26,6 +26,4 @@ class CompanyController extends Controller
         return view('bedrijven', ['sponsorRank1' => $sponsorRank1,
             'sponsorRank2' => $sponsorRank2, 'sponsorRank3' => $sponsorRank3, 'partners' => $partners]);
     }
-
-
 }
