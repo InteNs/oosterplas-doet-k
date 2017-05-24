@@ -39,7 +39,7 @@
         </div>
 
         <div class="row">
-            {!! Form::submit('Verander de sponsor!', array('class' => 'btn btn-primary')) !!}
+            {!! Form::submit('Verander een sponsor!', array('class' => 'btn btn-primary')) !!}
         </div>
 
         {!! Form::close() !!}
