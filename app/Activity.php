@@ -6,7 +6,7 @@ use DateTime;
 use Illuminate\Database\Eloquent\Model;
 use MaddHatter\LaravelFullcalendar\IdentifiableEvent;
 
-class Activity extends Model implements IdentifiableEvent
+class Activity extends Model
 {
     /**
      * Get the event's title

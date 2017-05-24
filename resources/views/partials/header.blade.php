@@ -20,7 +20,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/partners">
+                        <a href='/partners'>
                             Bedrijven
                         </a>
                     </li>

@@ -18,7 +18,7 @@
                                    {{$activity->description}}
                                 </span>
                                 <div class="continue-reading3">
-                                    <a href="/">
+                                    <a href="/evenementen/{{$activity->id}}">
                                         Reportage bekijken? >
                                     </a>
                                 </div>
