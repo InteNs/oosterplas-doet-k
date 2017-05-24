@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Http\FormRequest;
 
-class StorePartner extends FormRequest
+class StoreSponsor extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -16,7 +16,6 @@ class StorePartner extends FormRequest
     {
         return Auth::check();
     }
-
     /**
      * Get the validation rules that apply to the request.
      *
@@ -27,6 +26,7 @@ class StorePartner extends FormRequest
         return [
             'name' => 'required',
             'description' => 'required',
+            'rank' => 'required',
             'link' => 'required'
         ];
     }

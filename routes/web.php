@@ -15,7 +15,7 @@ Route::group(['middleware' => ['log']], function () {
     Route::get('/evenementen/{id}', 'ActivitiesController@show');
     Route::get('/evenementen', 'ActivitiesController@index');
     Route::get('/', 'MainController@index');
-    Route::get('/partners', 'PartnerController@index');
+    Route::get('/bedrijven', 'CompanyController@index');
     Route::get('/contact', 'ContactController@index');
     Route::post('/contact', 'ContactController@store');
 });
@@ -31,6 +31,7 @@ Route::group(['prefix' => 'beheer', 'middleware' => ['auth']], function () {
     Route::resource('activiteit', 'Admin\ActivityController');
     Route::resource('gebruiker', 'Admin\UserController');
     Route::resource('partner', 'Admin\PartnerController');
+    Route::resource('sponsor', 'Admin\SponsorController');
     Route::resource('bericht', 'Admin\MessageController');
 });
 

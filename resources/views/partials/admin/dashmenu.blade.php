@@ -59,6 +59,18 @@
                 </li>
             </ul>
         </li>
+        <li role="presentation" class="hover_green">
+            <a href="/beheer/sponsor">
+                <span class="glyphicon glyphicon-tags left" aria-hidden="true"></span> Sponsors
+            </a>
+            <ul>
+                <li class="hover_blue">
+                    <a href="/beheer/sponsor/create">
+                        <span class="glyphicon glyphicon-plus left" aria-hidden="true"></span> Toevoegen
+                    </a>
+                </li>
+            </ul>
+        </li>
         <li class="smallDevice" role="presentation">
             <a href="#">
                 <span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;Profiel

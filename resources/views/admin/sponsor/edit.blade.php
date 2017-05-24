@@ -3,23 +3,28 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <h1>Verander een partner</h1>
+            <h1>Verander een sponsor</h1>
         </div>
 
-        {!! Form::model($partner, array('url' => array('/beheer/partner', $partner->id), 'method' => 'PUT', 'files'=>true, 'class' => 'editForm')) !!}
+        {!! Form::model($sponsor, array('url' => array('/beheer/sponsor', $sponsor->id), 'method' => 'PUT', 'files'=>true, 'class' => 'editForm')) !!}
         <div class="form-group row">
             {!! Form::label('name', 'Naam') !!}
-            {!! Form::text('name', $partner->name, ['class' => 'form-control', 'required']) !!}
+            {!! Form::text('name', $sponsor->name, ['class' => 'form-control', 'required']) !!}
         </div>
 
         <div class="form-group row">
             {!! Form::label('description', 'Beschrijving') !!}
-            {!! Form::text('description', $partner->description, ['class' => 'form-control', 'required']) !!}
+            {!! Form::text('description', $sponsor->description, ['class' => 'form-control', 'required']) !!}
+        </div>
+
+        <div class="form-group row">
+            {!! Form::label('rank', 'Rank') !!}
+            {!! Form::number('rank', $sponsor->rank, ['class' => 'form-control', 'required']) !!}
         </div>
 
         <div class="form-group row">
             {!! Form::label('link', 'Link naar de huidige website') !!}
-            {!! Form::text('link', $partner->link, ['class' => 'form-control', 'required']) !!}
+            {!! Form::text('link', $sponsor->link, ['class' => 'form-control', 'required']) !!}
         </div>
 
         <div class="form-group row">
@@ -30,11 +35,11 @@
 
         <div class="form-group row">
             Oude afbeelding:
-            <img src="{{$partner->image}}" class="img-responsive">
+            <img src="{{$sponsor->image}}" class="img-responsive">
         </div>
 
         <div class="row">
-            {!! Form::submit('Verander de partner!', array('class' => 'btn btn-primary')) !!}
+            {!! Form::submit('Verander een sponsor!', array('class' => 'btn btn-primary')) !!}
         </div>
 
         {!! Form::close() !!}
