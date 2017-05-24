@@ -75,7 +75,7 @@
         </li>
         <li>
             <a href="#">
-                Activiteitenkalender
+                Evenementen
             </a>
         </li>
         <li>
@@ -86,6 +86,11 @@
         <li>
             <a href="#">
                 Buurtbewoners
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                Notulen
             </a>
         </li>
         <li>

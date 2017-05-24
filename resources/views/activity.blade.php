@@ -1,33 +1,41 @@
 @extends('layouts.main')
 @section('content')
-    <div class="container">
-        <div class="row">
-        </div>
-        <div class="row rang_one">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row partial_rang_one">
+
+    @for ($i = ((count($activities))/3); $i > 0; $i++)
+        <div class="container-fluid block-3">
+            @if ($i === ((count($activities))/3))
                 <div class="row">
-                    <div class="col-md-12">
-                        <img class="rang_one_img" src="{{$activity->image}}" />
+                    <div class="col-xs-12">
+                        <h2 class="title">Evenementen</h2>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3>
-                            {{$activity->title}}
-                        </h3>
-                        <p>
-                            {{$activity->description}}
-                        </p>
-                    </div>
-                </div>
+            @endif
+            @foreach($activities as $activity)
                     <div class="row">
-                        <button class="btn, btn-md">
-                            Schrijf je nu in!
-                        </button>
+                        <div class="col-md-4 info-block">
+                            <div class="img" style="background-image: url({{$activity->image}});"></div>
+                            <div class="text-block3">
+                                <h3>  {{$activity->title}}</h3>
+                                <h4 class="date">
+                                    {{$activity->datetimestart}}
+                                </h4>
+                                <span class="info">
+                                   {{$activity->description}}
+                                </span>
+                                <div class="continue-reading3">
+                                    <a href="/">
+                                        Reportage bekijken? >
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-             </div>
-            </div>
+                @endforeach
+
         </div>
-    </div>
+    @endfor
+
+
+
 @endsection
+
