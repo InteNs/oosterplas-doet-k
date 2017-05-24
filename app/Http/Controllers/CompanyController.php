@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Partner;
 use App\Sponsor;
 
-class BedrijvenController extends Controller
+class CompanyController extends Controller
 {
     public function index()
     {
