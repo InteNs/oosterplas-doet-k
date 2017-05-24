@@ -15,18 +15,23 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/activiteitenkalender">
-                            Activiteitenkalender
+                        <a href="/evenementen">
+                            Evenementen
                         </a>
                     </li>
                     <li>
                         <a href="/partners">
-                            Partners
+                            Bedrijven
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a href="#">
                             Buurtbewoners
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Notulen
                         </a>
                     </li>
                     <li>
