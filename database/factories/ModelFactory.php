@@ -42,6 +42,15 @@ $factory->define(App\Partner::class, function (Faker\Generator $faker) {
         'name' => $faker->word,
         'description' => $faker->text(100),
         'link' => $faker->word,
+    ];
+});
+
+$factory->define(App\Sponsor::class, function (Faker\Generator $faker) {
+
+    return [
+        'name' => $faker->word,
+        'description' => $faker->text(100),
+        'link' => $faker->word,
         'rank' => $faker->numberBetween(1, 0),
     ];
 });
