@@ -42,11 +42,12 @@ class SponsorTest extends BaseSeleniumTestCase
         $user = factory(App\User::class)->create(['password' => bcrypt('test')]);
         $sponsor = factory(App\Sponsor::class)->create();
         $this
-        ->visit('/beheer/partner/'.$sponsor->id.'/edit')
+        ->visit('/beheer/sponsor/'.$sponsor->id.'/edit')
         ->see('Login')
         ->typeInformation(['email' => $user->email, 'password' => 'test'])
         ->press('Inloggen')
         ->hold(1)
+        ->see('Verander een sponsor')
         ->submitForm('.editForm', [
         'name' => 'Een aangepaste titel',
         'description' => 'Een aangepaste beschrijving',
