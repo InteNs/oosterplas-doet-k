@@ -15,18 +15,23 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/activiteitenkalender">
-                            Activiteitenkalender
+                        <a href="/evenementen">
+                            Evenementen
                         </a>
                     </li>
                     <li>
-                        <a href="/partners">
-                            Partners
+                        <a href='/partners'>
+                            Bedrijven
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a href="#">
                             Buurtbewoners
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Notulen
                         </a>
                     </li>
                     <li>
@@ -75,7 +80,7 @@
         </li>
         <li>
             <a href="#">
-                Activiteitenkalender
+                Evenementen
             </a>
         </li>
         <li>
@@ -86,6 +91,11 @@
         <li>
             <a href="#">
                 Buurtbewoners
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                Notulen
             </a>
         </li>
         <li>
