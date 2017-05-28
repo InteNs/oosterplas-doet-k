@@ -17,7 +17,6 @@ class CreatePartnersTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->text('description');
-            $table->integer('rank');
             $table->string('link');
             $table->string('image')->nullable()->default(null);
             $table->timestamps();

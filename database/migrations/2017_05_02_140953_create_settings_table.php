@@ -15,12 +15,14 @@ class CreateSettingsTable extends Migration
     {
         Schema::create('settings', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
             $table->string('address');
             $table->string('zipcode');
             $table->string('email');
             $table->string('RSIN-number');
             $table->string('KvK-number');
             $table->string('SBI-code');
+            $table->string('account-number');
             $table->timestamps();
         });
     }

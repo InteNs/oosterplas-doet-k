@@ -33,7 +33,6 @@ class PartnerTest extends BaseSeleniumTestCase
                 'name' => 'samplepartner',
                 'description' => 'Deze partner is een samplepartner, en heeft dus ook een sampledescription.',
                 'link' => 'samplepartner.com',
-                'rank' => 1,
             ])
             ->hold(1)
             ->see('Partners')
@@ -55,7 +54,6 @@ class PartnerTest extends BaseSeleniumTestCase
             ->submitForm('.editForm', [
                 'name' => 'Een aangepaste titel',
                 'description' => 'Een aangepaste beschrijving',
-                'rank' => '1',
                 'link' => 'www.examplesite.com',
             ])
             ->hold(1)

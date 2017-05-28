@@ -24,19 +24,28 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 });
 
 $factory->define(App\Activity::class, function (Faker\Generator $faker) {
-    static $category_id;
-
+    $startingDate = $faker->dateTimeBetween('this week', '+6 days');
+    $endingDate   = $faker->dateTimeBetween($startingDate, strtotime('+6 days'));
     return [
         'title' => $faker->word,
         'description' => $faker->text(100),
-        'date' => $faker->date(),
-        'category_id' => $category_id ?: $category_id = 1,
+        'datetimestart' => $startingDate,
+        'datetimeend' => $endingDate,
         'price' => $faker->numberBetween(0, 999),
         'image' => "/images/gunbaan.jpg",
     ];
 });
 
 $factory->define(App\Partner::class, function (Faker\Generator $faker) {
+
+    return [
+        'name' => $faker->word,
+        'description' => $faker->text(100),
+        'link' => $faker->word,
+    ];
+});
+
+$factory->define(App\Sponsor::class, function (Faker\Generator $faker) {
 
     return [
         'name' => $faker->word,

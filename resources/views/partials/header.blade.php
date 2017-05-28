@@ -15,22 +15,27 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/activiteitenkalender">
-                            Activiteitenkalender
+                        <a href="/evenementen">
+                            Evenementen
                         </a>
                     </li>
                     <li>
-                        <a href="/partners">
-                            Partners
+                        <a href="/bedrijven">
+                            Bedrijven
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a href="#">
                             Buurtbewoners
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a href="#">
+                            Notulen
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/contact">
                             Contact
                         </a>
                     </li>
@@ -75,7 +80,7 @@
         </li>
         <li>
             <a href="#">
-                Activiteitenkalender
+                Evenementen
             </a>
         </li>
         <li>
@@ -90,6 +95,11 @@
         </li>
         <li>
             <a href="#">
+                Notulen
+            </a>
+        </li>
+        <li>
+            <a href="#">
                 Contact
             </a>
         </li>
@@ -97,7 +107,7 @@
 </div>
 <!-- Rainbow -->
 <div class="rainbow no-padding">
-    <img class="home-img" src="images/rainbow.png">
+    <img class="home-img" src="/images/rainbow.png">
 </div>
 <script>
     function showMenu(i) {

@@ -4,12 +4,13 @@ body {
 
 .col-md-offset-2 .container {
     overflow: hidden;
+    margin-left: 20px;
 }
 
 .top {
     background-color: #2e3436;
     border-bottom: 1px solid #f2f2f2;
-    height: 50px;
+    height: 60px;
     color: #f2f2f2;
 }
 
@@ -170,23 +171,33 @@ body {
     }
 }
 
-.nav-pills > li.active > .hover_red > a:hover, .nav > .hover_red > a:hover, .nav li ul li.hover_red a:hover, .nav li ul li.hover_red a.active {
-    color: #f2f2f2;
-    background: #DB3912;
-}
+.nav-pills > li.active > .hover_red > a:hover, .nav > .hover_red > a:hover, .nav li ul li.toevoegen a:hover,
+.nav li ul li.toevoegen a.active, .nav-pills > li.active > .hover_orange > a:hover, .nav > .hover_orange > a:hover,
+.nav li ul li.toevoegen a:hover, .nav li ul li.htoevoegen a.active, .nav-pills > li.active > .hover_blue > a:hover,
+.nav > .hover_blue > a:hover, .nav li ul li.toevoegen a:hover,
+.nav li ul li.toevoegen a.active .nav-pills > li.active > .hover_green > a:hover, .nav > .hover_green > a:hover,
+.nav li ul li.toevoegen a:hover, .nav li ul li.toevoegen a.active {
 
-.nav-pills > li.active > .hover_orange > a:hover, .nav > .hover_orange > a:hover, .nav li ul li.hover_orange a:hover, .nav li ul li.hover_orange a.active {
-    color: #f2f2f2;
-    background: #FE9900;
+     color: #000000;
+     background: #d7d7d7;
+ }
+.nav li ul li.toevoegen .tekst{
+     border-bottom: solid;
+     border-color: limegreen;
+ }
+.nav li ul li.toevoegen .glyphicon glyphicon-plus left{
+     color: green;
+ }
+.nav li:hover ul {
+    display: block;
 }
+.nav li ul{
+    display: none;
+}
+.nav {
+     padding: 0px;
+    margin: 0px;
+    list-style: none;
+ }
 
-.nav-pills > li.active > .hover_blue > a:hover, .nav > .hover_blue > a:hover, .nav li ul li.hover_blue a:hover, .nav li ul li.hover_blue a.active {
-    color: #f2f2f2;
-    background: #4584Ed;
-}
-
-.nav-pills > li.active > .hover_green > a:hover, .nav > .hover_green > a:hover, .nav li ul li.hover_green a:hover, .nav li ul li.hover_green a.active {
-    color: #f2f2f2;
-    background: #2ae212;
-}
 

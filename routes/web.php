@@ -10,10 +10,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/activiteitenkalender', 'CalendarController@calendar');
-Route::get('/', 'MainController@index');
-Route::get('/partners', 'PartnerController@index');
+// Routes with page counter
+Route::group(['middleware' => ['log']], function () {
+    Route::get('/evenementen/{id}', 'ActivitiesController@show');
+    Route::get('/evenementen', 'ActivitiesController@index');
+    Route::get('/', 'MainController@index');
+    Route::get('/bedrijven', 'CompanyController@index');
+    Route::get('/contact', 'ContactController@index');
+    Route::post('/contact', 'ContactController@store');
+});
 
 Route::group(['prefix' => 'beheer', 'middleware' => ['auth']], function () {
     Route::get('/', 'Admin\AdminController@index');
@@ -24,11 +29,14 @@ Route::group(['prefix' => 'beheer', 'middleware' => ['auth']], function () {
         Route::put('slider', 'Admin\SettingController@editSlider');
         Route::delete('slider/{id}', 'Admin\SettingController@deleteSlider')->name('beheer.setting.slider');
     });
+
     Route::resource('activiteit', 'Admin\ActivityController');
-    Route::resource('categorie', 'Admin\CategoryController');
     Route::resource('gebruiker', 'Admin\UserController');
     Route::resource('partner', 'Admin\PartnerController');
-    Route::resource('employee', 'Admin\EmployeeController');
+    Route::resource('sponsor', 'Admin\SponsorController');
+    Route::resource('bericht', 'Admin\MessageController');
 });
+
+
 
 Route::auth();

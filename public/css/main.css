@@ -47,6 +47,22 @@ body {
 /**
 Header CSS
 **/
+
+div.address{
+    float: left;
+    margin-left: 150px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    margin-right: 45px;
+}
+div.twitter{
+    margin-top: 30px;
+}
+div.facebook{
+    margin-top: 30px;
+    margin-left: 10px;
+  }
+
 nav.navbar {
     background-color: #fff;
     border-color: #fff;
@@ -116,6 +132,11 @@ Home page CSS
 .slider {
     max-height: 850px;
 }
+div.calendar{
+    margin-top: 20px;
+}
+
+
 
 .slideshow {
     width: 20000px;
