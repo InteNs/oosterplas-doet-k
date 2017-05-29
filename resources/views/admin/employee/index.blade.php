@@ -26,15 +26,15 @@
                     <td>{{$employee->id}}</td>
                     <td>{{$employee->name}}</td>
                     <td>
-                        <a href="/beheer/about/{{$employee->id}}"
+                        <a href="/beheer/employee/{{$employee->id}}"
                            title="View"><i class="fa fa-eye" aria-hidden="true"></i></a>
                     </td>
                     <td>
-                        <a href="/beheer/about/{{$employee->id}}/edit"
+                        <a href="/beheer/employee/{{$employee->id}}/edit"
                            title="Edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                     </td>
                     <td>
-                        {{ Form::open(['id' => 'formDelete'.$employee->id,'method' => 'DELETE', 'route' => ['employee', $employee->id]]) }}
+                        {{ Form::open(['id' => 'formDelete'.$employee->id,'method' => 'DELETE', 'route' => ['employee.destroy', $employee->id]]) }}
                         <a title="Delete" href="javascript:void(0)" onclick="document.getElementById('formDelete{{$employee->id}}').submit()">
                             <i class="fa fa-times" aria-hidden="true"></i>
                         </a>

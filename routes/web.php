@@ -18,6 +18,7 @@ Route::group(['middleware' => ['log']], function () {
     Route::get('/bedrijven', 'CompanyController@index');
     Route::get('/contact', 'ContactController@index');
     Route::post('/contact', 'ContactController@store');
+    route::get('/over-ons', 'EmployeeController@index');
 });
 
 Route::group(['prefix' => 'beheer', 'middleware' => ['auth']], function () {
@@ -35,6 +36,7 @@ Route::group(['prefix' => 'beheer', 'middleware' => ['auth']], function () {
     Route::resource('partner', 'Admin\PartnerController');
     Route::resource('sponsor', 'Admin\SponsorController');
     Route::resource('bericht', 'Admin\MessageController');
+    Route::resource('employee', 'Admin\EmployeeController');
 });
 
 

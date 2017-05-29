@@ -6,7 +6,7 @@
             <h1>Wijzig een medewerker</h1>
         </div>
 
-        {!! Form::model($employee, array('url' => array('employee', $employee->id), 'method' => 'PUT', 'files'=>true, 'class' => 'editForm')) !!}
+        {!! Form::model($employee, array('url' => array('beheer/employee', $employee->id), 'method' => 'PUT', 'files'=>true, 'class' => 'editForm')) !!}
         <div class="form-group row">
             {!! Form::label('name', 'Naam') !!}
             {!! Form::text('name', $employee->name, ['class' => 'form-control', 'required']) !!}

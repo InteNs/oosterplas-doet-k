@@ -11,16 +11,12 @@ class CompanyController extends Controller
     public function index()
     {
         $sponsorRank1 = Sponsor::where('rank', 1);
-       // $sponsorRank1->all();
 
         $sponsorRank2 = Sponsor::where('rank', 2);
-        //$sponsorRank2->all();
 
         $sponsorRank3 = Sponsor::where('rank', 3);
-        //$sponsorRank3->all();
 
         $partners = Partner::all();
-
 
         return view('bedrijven', ['sponsorRank1' => $sponsorRank1,
             'sponsorRank2' => $sponsorRank2, 'sponsorRank3' => $sponsorRank3, 'partners' => $partners]);

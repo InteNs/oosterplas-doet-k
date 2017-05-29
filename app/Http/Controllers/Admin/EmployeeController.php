@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Employee;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreEmployee;
 use Session;
 use Illuminate\Support\Facades\Input;
 
