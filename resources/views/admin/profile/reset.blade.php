@@ -14,24 +14,10 @@
                         </div>
                     @endif
 
-                        {!! Form::open(['role' => 'form', 'method' => 'POST', 'action' => 'Admin\AccountController@reset', 'class' => 'form-horizontal']) !!}
-
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-mailadres</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ $email or old('email') }}" required autofocus>
-
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+                    {!! Form::open(['role' => 'form', 'method' => 'POST', 'action' => 'Admin\ProfileController@reset', 'class' => 'form-horizontal']) !!}
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Wachtwoord</label>
+                            <label for="password" class="col-md-4 control-label">Nieuw Wachtwoord</label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control" name="password" required>

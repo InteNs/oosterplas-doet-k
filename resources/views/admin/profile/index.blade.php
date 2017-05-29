@@ -5,9 +5,9 @@
 
     <div class="form-group">
         <div class="col-md-6 col-md-offset-4">
-            <button onclick="location.href='profiel/email';" class="btn btn-primary">
+            <a href="profiel/reset" class="btn btn-primary button-reset">
                 Reset wachtwoord
-            </button>
+            </a>
         </div>
     </div>
 @stop
