@@ -10,8 +10,6 @@ class EmployeeController extends Controller
     {
         $employees = Employee::all();
 
-
         return view('employee', ['employees' => $employees]);
-
     }
 }
