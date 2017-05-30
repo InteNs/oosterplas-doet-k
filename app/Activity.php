@@ -16,6 +16,11 @@ class Activity extends Model
         return $this->hasMany('App\Entry');
     }
 
+    public function getNumberOfEntries()
+    {
+        return $this->entries()->count();
+    }
+
     /**
      * Get the event's title
      *
