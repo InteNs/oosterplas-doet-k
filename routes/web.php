@@ -17,7 +17,7 @@ Route::group(['middleware' => ['log']], function () {
     Route::get('/', 'MainController@index');
     Route::get('/bedrijven', 'CompanyController@index');
     Route::get('/contact', 'ContactController@index');
-    Route::post('/contact', 'ContactController@store');
+    Route::post('/contact', 'ContactController@post');
 });
 Route::group(['prefix' => 'beheer', 'middleware' => ['auth']], function () {
     Route::get('/', 'Admin\AdminController@index');
@@ -33,6 +33,8 @@ Route::group(['prefix' => 'beheer', 'middleware' => ['auth']], function () {
     Route::resource('partner', 'Admin\PartnerController');
     Route::resource('sponsor', 'Admin\SponsorController');
     Route::resource('bericht', 'Admin\MessageController');
+    Route::resource('abonnee', 'Admin\SubscriberController');
+    Route::post('abonnee', 'Admin\SubscriberController@export');
 });
 
 Route::auth();

@@ -1,8 +1,10 @@
 <?php
+
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Subscriber;
+use Response;
 
 class SubscriberController extends Controller
 {
@@ -26,5 +28,24 @@ class SubscriberController extends Controller
     {
         Subscriber::destroy($id);
         return redirect('beheer/abonnee');
+    }
+
+    public function export()
+    {
+        $subscribers = Subscriber::all();
+        $fileText = '';
+
+        foreach ($subscribers as $subscriber) {
+            $fileText .= $subscriber->email . ' ';
+        }
+
+        $file = "mails.txt";
+        $headers = [
+            'Content-type' => 'text/plain',
+            'Content-Disposition' => sprintf('attachment; filename="%s"', $file)
+        ];
+
+        return Response::make($fileText, 200, $headers);
+
     }
 }

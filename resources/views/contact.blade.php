@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="col-sm-12 col-md-10">
+    <div class="col-sm-12 col-md-12">
         <div class="row">
             <br>
 
@@ -50,116 +50,118 @@
         </div>
         <br>
         <div class="row">
-            <div class="col-sm-12 col-md-8">
+            <div class="col-md-8">
                 <fieldset>
                     <!-- Form Name -->
                     <legend>Neem vandaag nog contact op!</legend>
+                    <div class="col-md-7">
+                        {!! Form::open(array('id' => 'contact_form', 'method' => 'POST', 'action' => 'ContactController@post', 'class' => 'well form-horizontal')) !!}
 
-                    {!! Form::open(array('id' => 'contact_form', 'method' => 'POST', 'action' => 'ContactController@post', 'class' => 'well form-horizontal')) !!}
+                        <div>
+                            <!-- Text input-->
 
-                    <div>
-                        <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Naam</label>
+                                <div class="col-md-7 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input name="name" placeholder="Naam" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
 
-                        <div class="form-group">
-                            <label class="col-md-4 control-label">Naam</label>
-                            <div class="col-md-4 inputGroupContainer">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                    <input name="name" placeholder="Naam" class="form-control" type="text">
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">E-Mail</label>
+                                <div class="col-md-7 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i
+                                                    class="glyphicon glyphicon-envelope"></i></span>
+                                        <input name="email" placeholder="E-mailadres" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Text input-->
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Telefoonnummer</label>
+                                <div class="col-md-7 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i
+                                                    class="glyphicon glyphicon-earphone"></i></span>
+                                        <input name="phone" placeholder="0612345678" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Text area -->
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Tekst</label>
+                                <div class="col-md-7 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i
+                                                    class="glyphicon glyphicon-pencil"></i></span>
+                                        <textarea class="form-control" name="text" placeholder="Tekst"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                        @if (session('status'))
+                            <!-- Success message -->
+                                <div class="alert alert-success" role="alert" id="success_message">Success <i
+                                            class="glyphicon glyphicon-thumbs-up"></i> {{ session('status') }}
+                                </div>
+                        @endif
+
+                        <!-- Button -->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label"></label>
+                                <div class="col-md-4">
+                                    {!! Form::submit('Verzend reactie', array('class' => 'btn btn-primary', 'name' => 'createSubmit')) !!}
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Text input-->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label">E-Mail</label>
-                            <div class="col-md-4 inputGroupContainer">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                    <input name="email" placeholder="E-mailadres" class="form-control" type="text">
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Text input-->
-
-                        <div class="form-group">
-                            <label class="col-md-4 control-label">Telefoonnummer</label>
-                            <div class="col-md-4 inputGroupContainer">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                                    <input name="phone" placeholder="0612345678" class="form-control" type="text">
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Text area -->
-
-                        <div class="form-group">
-                            <label class="col-md-4 control-label">Tekst</label>
-                            <div class="col-md-4 inputGroupContainer">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                    <textarea class="form-control" name="text" placeholder="Tekst"></textarea>
-                                </div>
-                            </div>
-                        </div>
-
-                    @if (session('status'))
-                        <!-- Success message -->
-                            <div class="alert alert-success" role="alert" id="success_message">Success <i
-                                        class="glyphicon glyphicon-thumbs-up"></i> {{ session('status') }}
-                            </div>
-                    @endif
-
-                    <!-- Button -->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label"></label>
-                            <div class="col-md-4">
-                                {!! Form::submit('Stuur', array('class' => 'btn btn-primary', 'name' => 'createSubmit')) !!}
-                            </div>
-                        </div>
+                        {!! Form::close() !!}
                     </div>
-                    {!! Form::close() !!}
-
                     <div>
-                        <div class="form-group">
-                            <label class="col-md-4 control-label">Wilt u altijd als eerste de nieuwtjes weten over onze
-                                website?</label>
-                            <label class="col-md-4 control-label">Meld je hier dan aan voor onze nieuwsbrief!</label>
-                            <div class="col-md-4">
-                                {!! Form::open(array('id' => 'newsletter_form', 'method' => 'POST', 'action' => 'ContactController@post', 'class' => 'well form-horizontal')) !!}
+                        <label class="col-md-2 control-label">Wilt u altijd als eerste de nieuwtjes weten over onze
+                            website?</label>
+                        <label class="col-md-2 control-label">Meld je hier dan aan voor onze nieuwsbrief!</label>
+                        <div class="col-md-5">
+                            {!! Form::open(array('id' => 'newsletter_form', 'method' => 'POST', 'action' => 'ContactController@post', 'class' => 'well form-horizontal')) !!}
 
-                                <div class="form-group row">
-                                    {!! Form::label('email', 'Email') !!}
-                                    {!! Form::text('email', null, ['class' => 'form-control', 'required']) !!}
-                                </div>
-
-                                <input type="hidden" name="event" value="empty" id="event">
-
-                                <div class="row">
-                                    {!! Form::submit('Meld je nu aan voor onze nieuwsbrief!', array('class' => 'btn btn-primary', 'id' => 'subscribe')) !!}
-                                    <br/><br/>
-                                    {!! Form::submit('Klik hier om je af te melden van onze nieuwsbrief', array('class' => 'btn btn-primary', 'id' => 'unsubscribe')) !!}
-                                </div>
-
-                                @if (session('message'))
-                                <!-- Success message -->
-                                    <div class="alert alert-success" role="alert" id="success_message">Success <i
-                                                class="glyphicon glyphicon-thumbs-up"></i> {{ session('message') }}
-                                    </div>
-                                @endif
-
-                                @if (session('error'))
-                                <!-- Error message -->
-                                    <div class="alert alert-danger" role="alert" id="success_message">
-                                        {{ session('error') }}
-                                    </div>
-                                @endif
-
-                                {!! Form::close() !!}
+                            <div class="form-group row">
+                                {!! Form::label('email', 'Email') !!}
+                                {!! Form::text('email', null, ['class' => 'form-control', 'required']) !!}
                             </div>
+
+                            <input type="hidden" name="event" value="empty" id="event">
+
+                            <div class="row">
+                                {!! Form::submit('Meld je nu aan voor onze nieuwsbrief!', array('class' => 'btn btn-primary button-submit', 'id' => 'subscribe')) !!}
+                                <br/><br/>
+                                {!! Form::submit('Klik hier om je af te melden van onze nieuwsbrief', array('class' => 'btn btn-primary button-submit', 'id' => 'unsubscribe')) !!}
+                            </div>
+
+                            @if (session('message'))
+                            <!-- Success message -->
+                                <div class="alert alert-success" role="alert" id="success_message">Success <i
+                                            class="glyphicon glyphicon-thumbs-up"></i> {{ session('message') }}
+                                </div>
+                            @endif
+
+                            @if (session('error'))
+                            <!-- Error message -->
+                                <div class="alert alert-danger" role="alert" id="success_message">
+                                    {{ session('error') }}
+                                </div>
+                            @endif
+
+                            {!! Form::close() !!}
                         </div>
+
                     </div>
                 </fieldset>
             </div>
