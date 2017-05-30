@@ -17,5 +17,6 @@ class DatabaseSeeder extends Seeder
         $this->call(SlidersTableSeeder::class);
         $this->call(PartnerTableSeeder::class);
         $this->call(SponsorTableSeeder::class);
+        $this->call(EmployeeTableSeeder::class);
     }
 }

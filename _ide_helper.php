@@ -1,4 +1,5 @@
 <?php
+<?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
  * Generated for Laravel 5.4.9 on 2017-02-06.
@@ -8273,9 +8274,9 @@ namespace {
          * Suppose this request is instantiated from /mysite on localhost:
          * 
          *  * http://localhost/mysite              returns an empty string
-         *  * http://localhost/mysite/about        returns '/about'
+         *  * http://localhost/mysite/employee        returns '/employee'
          *  * http://localhost/mysite/enco%20ded   returns '/enco%20ded'
-         *  * http://localhost/mysite/about?var=1  returns '/about'
+         *  * http://localhost/mysite/employee?var=1  returns '/employee'
          *
          * @return string The raw path (i.e. not urldecoded)
          * @static 

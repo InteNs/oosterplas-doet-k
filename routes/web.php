@@ -12,13 +12,18 @@
 */
 // Routes with page counter
 Route::group(['middleware' => ['log']], function () {
-    Route::get('/evenementen/{id}', 'ActivitiesController@show');
     Route::get('/evenementen', 'ActivitiesController@index');
+    Route::get('/evenementen/{id}', 'ActivitiesController@show');
+    Route::post('/evenementen/{id}', 'ActivitiesController@store')->name('activity.submit.entry');
+    Route::get('/activiteitenkalender', 'CalendarController@calendar');
     Route::get('/', 'MainController@index');
+    Route::get('/partners', 'PartnerController@index');
     Route::get('/bedrijven', 'CompanyController@index');
     Route::get('/contact', 'ContactController@index');
     Route::post('/contact', 'ContactController@post');
+    Route::get('/over-ons', 'EmployeeController@index');
 });
+
 Route::group(['prefix' => 'beheer', 'middleware' => ['auth']], function () {
     Route::get('/', 'Admin\AdminController@index');
     Route::group(['prefix' => 'setting'], function () {
@@ -28,13 +33,18 @@ Route::group(['prefix' => 'beheer', 'middleware' => ['auth']], function () {
         Route::put('slider', 'Admin\SettingController@editSlider');
         Route::delete('slider/{id}', 'Admin\SettingController@deleteSlider')->name('beheer.setting.slider');
     });
+
     Route::resource('activiteit', 'Admin\ActivityController');
     Route::resource('gebruiker', 'Admin\UserController');
     Route::resource('partner', 'Admin\PartnerController');
     Route::resource('sponsor', 'Admin\SponsorController');
     Route::resource('bericht', 'Admin\MessageController');
+    Route::resource('huiswerk', 'Admin\HomeworkController');
+    Route::resource('employee', 'Admin\EmployeeController');
     Route::resource('abonnee', 'Admin\SubscriberController');
     Route::post('abonnee', 'Admin\SubscriberController@export');
 });
+
+
 
 Route::auth();

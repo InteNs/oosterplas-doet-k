@@ -13,6 +13,24 @@ class ActivitiesTableSeeder extends Seeder
     public function run()
     {
         Activity::updateOrCreate([
+            'title' => 'Huiswerkbegeleiding',
+            'description' =>
+                'De begeleiding helpt je om je studie goed te kunnen volgen, je leert hoe je het beste kunt leren en je krijgt hiervoor coaching om zelfstandig aan de slag te kunnen.
+Je leert plannen en je krijgt begeleiding om je brugklas jaar goed aan te pakken.
+Dit alles vindt plaats bij de Biechten en er is tussentijds ook ruimte om even lekker te ontspannen of juist even te bewegen om daarna met hernieuwd concentratie weer verder te gaan.
+Tijden: elke dinsdag en donderdag professionele begeleiding van Studiejunk van 15.00-18.00
+
+Tarieven worden vastgesteld bij aanmelding. Dit wordt gebaseerd op het gezamenlijk bruto jaarinkomen:
+Bij een inkomen lager dan 18.500,- betaal je € 20,- per maand
+Bij een inkomen tussen de 18.500,- en 37.000,- betaal je € 80,-  per maand
+Bij een inkomen hoger dan 37.000,- betaal je € 160,- per maand',
+            'datetimestart' => '2017-01-01 00:00:00',
+            'datetimeend' => '2017-01-01 00:00:00',
+            'price' => '0',
+            'image' => '/images/huiswerkbegeleiding.jpg',
+        ]);
+
+        Activity::updateOrCreate([
             'title' => 'Natuurwandeling',
             'description' =>
                 'De flora en fauna langs onze Oosterplas is deze tijd van het jaar in volle glorie te bewonderen.
