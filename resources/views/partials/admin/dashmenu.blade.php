@@ -34,6 +34,11 @@
             </ul>
         </li>
         <li role="presentation" class="hover_green">
+            <a href="/beheer/huiswerk">
+                <span class="glyphicon glyphicon-list-alt left" aria-hidden="true"></span> Huiswerkbegeleiding
+            </a>
+        </li>
+        <li role="presentation" class="hover_green">
             <a href="/beheer/gebruiker">
                 <span class="glyphicon glyphicon-tags left" aria-hidden="true"></span> Gebruikers
             </a>

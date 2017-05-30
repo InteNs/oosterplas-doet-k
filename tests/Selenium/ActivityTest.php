@@ -69,6 +69,8 @@ class ActivityTest extends BaseSeleniumTestCase
     public function testDeleteActivity()
     {
         $user = factory(App\User::class)->create(['password' => bcrypt('test')]);
+        // First activity is homework so it has to be ignored
+        factory(App\Activity::class)->create();
         $activity = factory(App\Activity::class)->create();
 
         $this
