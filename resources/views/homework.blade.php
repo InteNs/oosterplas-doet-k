@@ -2,22 +2,23 @@
 
 @section('content')
     <div class="col-md-12">
-        <img src="{{url($activity->image)}}" style="max-width:100px;"><br>
+        <br>
         {!! nl2br($activity->description) !!}
         <br><br>
     </div>
-    <div class="col-sm-12 col-md-10">
+    <div class="col-sm-12 col-md-12">
         <div class="row">
 
-            <div class="col-sm-12 col-md-8">
-                {!! Form::open(array('id' => 'contact_form', 'method' => 'POST', 'action' => 'HomeworkController@store', 'class' => 'well form-horizontal', 'style' => 'height: 500px;')) !!}
+            <div class="col-sm-12 col-md-8 col-md-offset-2">
+                <br>
+                {!! Form::open(array('id' => 'contact_form', 'method' => 'POST', 'action' => 'HomeworkController@store', 'class' => 'well form-horizontal')) !!}
                 <fieldset>
                     <!-- Form Name -->
                     <legend>Schrijf je in voor huiswerkbegeleiding!</legend>
 
                     <div class="form-group">
                         <label class="col-md-4 control-label">Voornaam</label>
-                        <div class="col-md-4 inputGroupContainer">
+                        <div class="col-md-6 inputGroupContainer">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                                 <input name="firstname" placeholder="Voornaam" class="form-control" type="text">
@@ -27,7 +28,7 @@
 
                     <div class="form-group">
                         <label class="col-md-4 control-label">Achternaam</label>
-                        <div class="col-md-4 inputGroupContainer">
+                        <div class="col-md-6 inputGroupContainer">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                                 <input name="lastname" placeholder="Achternaam" class="form-control" type="text">
@@ -37,7 +38,7 @@
 
                     <div class="form-group">
                         <label class="col-md-4 control-label">E-Mail</label>
-                        <div class="col-md-4 inputGroupContainer">
+                        <div class="col-md-6 inputGroupContainer">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
                                 <input name="email" placeholder="E-mailadres" class="form-control" type="text">
@@ -47,7 +48,7 @@
 
                     <div class="form-group">
                         <label class="col-md-4 control-label">Telefoonnummer</label>
-                        <div class="col-md-4 inputGroupContainer">
+                        <div class="col-md-6 inputGroupContainer">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
                                 <input name="phone" placeholder="0612345678" class="form-control" type="text">
