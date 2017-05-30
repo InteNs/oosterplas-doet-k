@@ -38,7 +38,6 @@
 <!-- End Content -->
 
 <!-- Footer -->
-@include('partials.footer')
 <!-- End Footer -->
 </body>
 </html>
