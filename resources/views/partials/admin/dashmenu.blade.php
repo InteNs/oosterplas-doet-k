@@ -77,6 +77,16 @@
             </ul>
         </li>
         <li role="presentation" class="hover_green">
+            <a href="/beheer/bericht">
+                <span class="glyphicon glyphicon-tags left" aria-hidden="true"></span> Berichten
+            </a>
+        </li>
+        <li role="presentation" class="hover_green">
+            <a href="/beheer/abonnee">
+                <span class="glyphicon glyphicon-tags left" aria-hidden="true"></span> Abonnees
+            </a>
+        </li>
+        <li role="presentation" class="hover_green">
             <a href="/beheer/employee">
                 <span class="glyphicon glyphicon-tags left" aria-hidden="true"></span> Medewerkers
             </a>
