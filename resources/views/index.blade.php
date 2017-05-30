@@ -40,7 +40,7 @@
                 bewegen om daarna met hernieuwd concentratie weer verder te gaan.
             </span>
             <div class="continue-reading1">
-                <a href="/">
+                <a href="{{url('/evenementen/1')}}">
                     Lees verder >
                 </a>
             </div>

@@ -34,6 +34,11 @@
             </ul>
         </li>
         <li role="presentation" class="hover_green">
+            <a href="/beheer/huiswerk">
+                <span class="glyphicon glyphicon-list-alt left" aria-hidden="true"></span> Huiswerkbegeleiding
+            </a>
+        </li>
+        <li role="presentation" class="hover_green">
             <a href="/beheer/gebruiker">
                 <span class="glyphicon glyphicon-tags left" aria-hidden="true"></span> Gebruikers
             </a>
@@ -66,6 +71,18 @@
             <ul>
                 <li class="hover_blue">
                     <a href="/beheer/sponsor/create">
+                        <span class="glyphicon glyphicon-plus left" aria-hidden="true"></span> Toevoegen
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li role="presentation" class="hover_green">
+            <a href="/beheer/employee">
+                <span class="glyphicon glyphicon-tags left" aria-hidden="true"></span> Medewerkers
+            </a>
+            <ul>
+                <li class="hover_blue">
+                    <a href="/beheer/employee/create">
                         <span class="glyphicon glyphicon-plus left" aria-hidden="true"></span> Toevoegen
                     </a>
                 </li>

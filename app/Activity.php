@@ -9,6 +9,14 @@ use MaddHatter\LaravelFullcalendar\IdentifiableEvent;
 class Activity extends Model
 {
     /**
+     * Get the entries for the activity.
+     */
+    public function entries()
+    {
+        return $this->hasMany('App\Entry');
+    }
+
+    /**
      * Get the event's title
      *
      * @return string

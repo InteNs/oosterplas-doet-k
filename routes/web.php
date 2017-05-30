@@ -13,9 +13,12 @@
 
 // Routes with page counter
 Route::group(['middleware' => ['log']], function () {
-    Route::get('/evenementen/{id}', 'ActivitiesController@show');
     Route::get('/evenementen', 'ActivitiesController@index');
+    Route::get('/evenementen/{id}', 'ActivitiesController@show');
+    Route::post('/evenementen/{id}', 'ActivitiesController@store')->name('activity.submit.entry');
+    Route::get('/activiteitenkalender', 'CalendarController@calendar');
     Route::get('/', 'MainController@index');
+    Route::get('/partners', 'PartnerController@index');
     Route::get('/bedrijven', 'CompanyController@index');
     Route::get('contact', 'ContactController@index');
     Route::post('contact', 'ContactController@post');
@@ -38,7 +41,7 @@ Route::group(['prefix' => 'beheer', 'middleware' => ['auth']], function () {
         Route::put('slider', 'Admin\SettingController@editSlider');
         Route::delete('slider/{id}', 'Admin\SettingController@deleteSlider')->name('beheer.setting.slider');
     });
-    
+
     Route::resource('activiteit', 'Admin\ActivityController');
     Route::resource('gebruiker', 'Admin\UserController');
     Route::resource('partner', 'Admin\PartnerController');
