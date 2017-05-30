@@ -23,6 +23,7 @@
                 <td>Prijs</td>
                 <td>Begintijd</td>
                 <td>Eindtijd</td>
+                <td>Inschrijvingen</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -34,6 +35,7 @@
                     <td class="glyphicon-euro">{{$activity->price}}</td>
                     <td>{{$activity->datetimestart}}</td>
                     <td>{{$activity->datetimeend}}</td>
+                    <td>{{$activity->getNumberOfEntries()}}</td>
                     <td>
                         <a href="/beheer/activiteit/{{$activity->id}}"
                            title="View"><i class="fa fa-eye" aria-hidden="true"></i></a>
