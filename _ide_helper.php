@@ -1,4 +1,5 @@
 <?php
+<?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
  * Generated for Laravel 5.4.9 on 2017-02-06.
@@ -8190,7 +8191,7 @@ namespace {
         /**
          * Whether the request contains a Session object.
          * 
-         * This method does not give any information employee the state of the session object,
+         * This method does not give any information about the state of the session object,
          * like whether the session is started or not. It is just a way to check if this Request
          * is associated with a Session instance.
          *
@@ -8374,7 +8375,7 @@ namespace {
         /**
          * Gets the user info.
          *
-         * @return string A user name and, optionally, scheme-specific information employee how to gain authorization to access the server
+         * @return string A user name and, optionally, scheme-specific information about how to gain authorization to access the server
          * @static 
          */
         public static function getUserInfo(){
