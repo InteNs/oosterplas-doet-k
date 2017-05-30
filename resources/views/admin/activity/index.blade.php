@@ -43,11 +43,13 @@
                            title="Edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                     </td>
                     <td>
-                        {{ Form::open(['id' => 'formDelete'.$activity->id,'method' => 'DELETE', 'route' => ['activiteit.destroy', $activity->id]]) }}
-                            <a title="Delete" href="javascript:void(0)" onclick="document.getElementById('formDelete{{$activity->id}}').submit()">
-                                <i class="fa fa-times" aria-hidden="true"></i>
-                            </a>
-                        {{ Form::close() }}
+                        @if ($activity->id !== 1)
+                            {{ Form::open(['id' => 'formDelete'.$activity->id,'method' => 'DELETE', 'route' => ['activiteit.destroy', $activity->id]]) }}
+                                <a title="Delete" href="javascript:void(0)" onclick="document.getElementById('formDelete{{$activity->id}}').submit()">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </a>
+                            {{ Form::close() }}
+                        @endif
                     </td>
                 </tr>
             @endforeach
