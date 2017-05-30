@@ -10,7 +10,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a href="/over-ons">
                             Over ons
                         </a>
                     </li>

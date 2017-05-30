@@ -45,6 +45,14 @@ $factory->define(App\Partner::class, function (Faker\Generator $faker) {
     ];
 });
 
+$factory->define(App\Employee::class, function (Faker\Generator $faker) {
+
+    return [
+        'name' => $faker->word,
+        'description' => $faker->text(100),
+    ];
+});
+
 $factory->define(App\Sponsor::class, function (Faker\Generator $faker) {
 
     return [
