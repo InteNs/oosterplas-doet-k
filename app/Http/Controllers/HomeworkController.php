@@ -2,22 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Homework;
+use App\Entry;
+use App\Activity;
 use Illuminate\Http\Request;
 
 class HomeworkController extends Controller
 {
     public function index()
     {
-        return view('homework');
+        return view('homework')->with('activity', Activity::find(1));
     }
 
     public function store(Request $request)
     {
-        Homework::create([
+        Entry::firstOrCreate([
+            'activity_id' => 1,
+            'email' => $request->input('email'),
             'firstname' => $request->input('firstname'),
             'lastname' => $request->input('lastname'),
-            'email' => $request->input('email'),
             'phone' => $request->input('phone')
         ]);
 

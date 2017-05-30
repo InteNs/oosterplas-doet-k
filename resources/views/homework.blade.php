@@ -1,6 +1,11 @@
 @extends('layouts.main')
 
 @section('content')
+    <div class="col-md-12">
+        <img src="{{url($activity->image)}}" style="max-width:100px;"><br>
+        {!! nl2br($activity->description) !!}
+        <br><br>
+    </div>
     <div class="col-sm-12 col-md-10">
         <div class="row">
 

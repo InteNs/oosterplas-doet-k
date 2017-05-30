@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Homework;
+use App\Entry;
 
 class HomeworkController extends Controller
 {
@@ -15,7 +14,7 @@ class HomeworkController extends Controller
      */
     public function index()
     {
-        $homeworks = Homework::paginate(15);
+        $homeworks = Entry::where('activity_id', 1)->paginate(15);
         return view('admin.homework.index')->with('homeworks', $homeworks);
     }
 
@@ -27,7 +26,7 @@ class HomeworkController extends Controller
      */
     public function show($id)
     {
-        $homework = Homework::find($id);
+        $homework = Entry::find($id);
         return view('admin.homework.show')->with('homework', $homework);
     }
 
@@ -39,7 +38,7 @@ class HomeworkController extends Controller
      */
     public function destroy($id)
     {
-        Homework::destroy($id);
+        Entry::destroy($id);
         return redirect('/beheer/huiswerk');
     }
 }
