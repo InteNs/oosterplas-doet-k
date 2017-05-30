@@ -17,7 +17,7 @@
         @endif
     </div>
     <div class="top-item right col-md-1 ">
-        <a href="#">
+        <a href="/beheer/profiel">
             <span class="glyphicon glyphicon-user right" aria-hidden="true"></span>
         </a>
     </div>

@@ -133,8 +133,8 @@
                             {!! Form::open(array('id' => 'newsletter_form', 'method' => 'POST', 'action' => 'ContactController@post', 'class' => 'well form-horizontal')) !!}
 
                             <div class="form-group row">
-                                {!! Form::label('email', 'Email') !!}
-                                {!! Form::text('email', null, ['class' => 'form-control', 'required']) !!}
+                                {!! Form::label('news_email', 'Email') !!}
+                                {!! Form::text('news_email', null, ['class' => 'form-control', 'required']) !!}
                             </div>
 
                             <input type="hidden" name="event" value="empty" id="event">
@@ -235,7 +235,7 @@
                     validating: 'glyphicon glyphicon-refresh'
                 },
                 fields: {
-                    email: {
+                    news_email: {
                         validators: {
                             notEmpty: {
                                 message: 'Vul alstublieft uw emailadres in'

@@ -21,7 +21,7 @@ class ContactController extends Controller
         $message = null;
 
         if ($request->event == 'subscribe') {
-            $subscriber = Subscriber::where('email', $request->email)->first();
+            $subscriber = Subscriber::where('email', $request->news_email)->first();
             if ($subscriber != null) {
                 $status = 'error';
                 $message = 'Je hebt je al aangemeld voor onze nieuwsbrief';
@@ -56,13 +56,13 @@ class ContactController extends Controller
     public function subscribe(Request $request)
     {
         Subscriber::create([
-            'email' => $request->input('email'),
+            'email' => $request->input('news_email'),
         ]);
     }
 
     public function unsubscribe(Request $request)
     {
-        $subscriber = Subscriber::where('email', $request->email)->first();
+        $subscriber = Subscriber::where('email', $request->news_email)->first();
         Subscriber::destroy($subscriber->id);
     }
 }
