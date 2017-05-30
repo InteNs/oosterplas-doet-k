@@ -44,8 +44,6 @@ class SubscriberController extends Controller
             'Content-type' => 'text/plain',
             'Content-Disposition' => sprintf('attachment; filename="%s"', $file)
         ];
-
         return Response::make($fileText, 200, $headers);
-
     }
 }
