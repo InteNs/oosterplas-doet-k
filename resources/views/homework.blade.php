@@ -122,6 +122,9 @@
                     },
                     phone: {
                         validators: {
+                            notEmpty: {
+                                message: 'Vul alstublieft uw telefoonnummer in'
+                            },
                             phone: {
                                 country: 'NL',
                                 message: 'Vul alstublieft een geldig telefoonnummer in'
