@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Partner extends Model
 {
-    protected $fillable = ['name', 'description', 'rank', 'link', 'image'];
+    protected $fillable = ['name', 'description', 'link', 'image'];
 }

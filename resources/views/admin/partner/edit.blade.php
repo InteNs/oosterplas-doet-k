@@ -18,11 +18,6 @@
         </div>
 
         <div class="form-group row">
-            {!! Form::label('rank', 'Rank') !!}
-            {!! Form::number('rank', $partner->rank, ['class' => 'form-control', 'required']) !!}
-        </div>
-
-        <div class="form-group row">
             {!! Form::label('link', 'Link naar de huidige website') !!}
             {!! Form::text('link', $partner->link, ['class' => 'form-control', 'required']) !!}
         </div>

@@ -15,7 +15,13 @@ class ActivitiesController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function index($id)
+    public function index()
+    {
+        $activities = Activity::all();
+        return view('events', ['activities' => $activities]);
+    }
+
+    public function show($id)
     {
         return view('activity', ['activity' => Activity::findOrFail($id)]);
     }
@@ -30,6 +36,6 @@ class ActivitiesController extends Controller
             'phone' => $request->input('phone')
         ]);
 
-        return redirect('/activiteit/'.$id)->with('status', true);
+        return redirect('/evenementen/'.$id)->with('status', true);
     }
 }

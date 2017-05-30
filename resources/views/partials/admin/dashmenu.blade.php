@@ -25,9 +25,10 @@
                 <span class="glyphicon glyphicon-list-alt left" aria-hidden="true"></span> Activiteiten
             </a>
             <ul>
-                <li class="hover_blue">
+                <li class="toevoegen">
                     <a href="/beheer/activiteit/create">
-                        <span class="glyphicon glyphicon-plus left" aria-hidden="true"></span> Toevoegen
+                        <span class="glyphicon glyphicon-plus left" aria-hidden="true"></span>
+                        <span class="tekst">Toevoegen</span>
                     </a>
                 </li>
             </ul>
@@ -42,9 +43,10 @@
                 <span class="glyphicon glyphicon-tags left" aria-hidden="true"></span> Gebruikers
             </a>
             <ul>
-                <li class="hover_blue">
+                <li class="toevoegen">
                     <a href="/beheer/gebruiker/create">
-                        <span class="glyphicon glyphicon-plus left" aria-hidden="true"></span> Toevoegen
+                        <span class="glyphicon glyphicon-plus left" aria-hidden="true"></span>
+                        <span class="tekst">Toevoegen</span>
                     </a>
                 </li>
             </ul>
@@ -54,8 +56,21 @@
                 <span class="glyphicon glyphicon-tags left" aria-hidden="true"></span> Partners
             </a>
             <ul>
-                <li class="hover_blue">
+                <li class="toevoegen">
                     <a href="/beheer/partner/create">
+                        <span class="glyphicon glyphicon-plus left" aria-hidden="true"></span>
+                        <span class="tekst">Toevoegen</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li role="presentation" class="hover_green">
+            <a href="/beheer/sponsor">
+                <span class="glyphicon glyphicon-tags left" aria-hidden="true"></span> Sponsors
+            </a>
+            <ul>
+                <li class="hover_blue">
+                    <a href="/beheer/sponsor/create">
                         <span class="glyphicon glyphicon-plus left" aria-hidden="true"></span> Toevoegen
                     </a>
                 </li>

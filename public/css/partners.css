@@ -21,7 +21,7 @@ div.partners-block-3 {
 /* block-2 custom css*/
 .partial_rang_two{
     background: #ffffff;
-    padding: 5px 5px 5px 5px;
+    padding: 25px;
     margin-bottom: 20px;
 }
 
@@ -60,4 +60,8 @@ div.partners-block-3 {
 .rang_three_img{
     width:200px;
     height: 200px;
+}
+
+.partner-background{
+    background-color: #EC671C !important;
 }
