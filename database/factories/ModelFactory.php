@@ -39,7 +39,7 @@ $factory->define(App\Activity::class, function (Faker\Generator $faker) {
 $factory->define(App\Partner::class, function (Faker\Generator $faker) {
 
     return [
-        'name' => $faker->word,
+        'name' => $faker->name,
         'description' => $faker->text(100),
         'link' => $faker->word,
     ];
@@ -48,7 +48,7 @@ $factory->define(App\Partner::class, function (Faker\Generator $faker) {
 $factory->define(App\Employee::class, function (Faker\Generator $faker) {
 
     return [
-        'name' => $faker->word,
+        'name' => $faker->name,
         'description' => $faker->text(100),
     ];
 });
@@ -56,17 +56,10 @@ $factory->define(App\Employee::class, function (Faker\Generator $faker) {
 $factory->define(App\Sponsor::class, function (Faker\Generator $faker) {
 
     return [
-        'name' => $faker->word,
+        'name' => $faker->name,
         'description' => $faker->text(100),
         'link' => $faker->word,
         'rank' => $faker->numberBetween(1, 0),
-    ];
-});
-
-$factory->define(App\Category::class, function (Faker\Generator $faker) {
-    return [
-        'title' => $faker->word,
-        'description' => $faker->text(100),
     ];
 });
 
