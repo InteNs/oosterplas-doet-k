@@ -13,8 +13,14 @@ class ActivitiesController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function index($id)
+    public function index()
     {
-        return view('activity', ['activity' => Activity::findOrFail($id)]);
+        $activities = Activity::all();
+        return view('activity', ['activities' => $activities]);
+    }
+
+    public function show($id)
+    {
+        return view('show', ['activity' => Activity::findOrFail($id)]);
     }
 }

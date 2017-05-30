@@ -26,14 +26,6 @@
         </div>
         <div class="row">
             <div class="col-md-2">
-                <h4><label for="rank">Rank:</label></h4>
-            </div>
-            <div class="col-md-6">
-                <h4>{{$partner->rank}}</h4>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-2">
                 <h4><label for="image">Afbeelding:</label></h4>
             </div>
             <div class="col-md-6">

@@ -59,7 +59,6 @@ class PartnerController extends Controller
         $partner = new Partner();
         $partner->name = $request->name;
         $partner->description = $request->description;
-        $partner->rank = $request->rank;
         $partner->link = $request->link;
 
         if ($request->image != null) {
@@ -106,7 +105,6 @@ class PartnerController extends Controller
         $partner = Partner::find($id);
         $partner->name = $request->name;
         $partner->description = $request->description;
-        $partner->rank = $request->rank;
         $partner->link = $request->link;
 
         if ($request->image != null) {

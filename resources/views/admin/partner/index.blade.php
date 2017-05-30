@@ -30,7 +30,6 @@
                     <td>{{$partner->id}}</td>
                     <td>{{$partner->name}}</td>
                     <td>{{$partner->link}}</td>
-                    <td>{{$partner->rank}}</td>
                     <td>
                         <a href="/beheer/partner/{{$partner->id}}"
                            title="View"><i class="fa fa-eye" aria-hidden="true"></i></a>
