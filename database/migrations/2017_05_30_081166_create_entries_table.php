@@ -17,7 +17,8 @@ class CreateEntriesTable extends Migration
             $table->increments('id');
             $table->integer('activity_id')->unsigned();
             $table->foreign('activity_id')->references('id')->on('activities');
-            $table->string('email')->unique();
+            $table->string('email');
+            $table->index(['email']);
             $table->string('firstname');
             $table->string('lastname');
             $table->string('phone');

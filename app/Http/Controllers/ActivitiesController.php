@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Activity;
+use App\Entry;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class ActivitiesController extends Controller
@@ -16,5 +18,18 @@ class ActivitiesController extends Controller
     public function index($id)
     {
         return view('activity', ['activity' => Activity::findOrFail($id)]);
+    }
+
+    public function store(Request $request, $id)
+    {
+        Entry::firstOrCreate([
+            'activity_id' => $id,
+            'email' => $request->input('email'),
+            'firstname' => $request->input('firstname'),
+            'lastname' => $request->input('lastname'),
+            'phone' => $request->input('phone')
+        ]);
+
+        return redirect('/activiteit/'.$id)->with('status', true);
     }
 }

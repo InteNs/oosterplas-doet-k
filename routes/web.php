@@ -13,10 +13,9 @@
 // Routes with page counter
 Route::group(['middleware' => ['log']], function () {
     Route::get('/activiteit/{id}', 'ActivitiesController@index');
+    Route::post('/activiteit/{id}', 'ActivitiesController@store')->name('activity.submit.entry');
     Route::get('/activiteitenkalender', 'CalendarController@calendar');
     Route::get('/', 'MainController@index');
-    Route::get('/huiswerkbegeleiding', 'HomeworkController@index');
-    Route::post('/huiswerkbegeleiding', 'HomeworkController@store');
     Route::get('/partners', 'PartnerController@index');
     Route::get('/contact', 'ContactController@index');
     Route::post('/contact', 'ContactController@store');
