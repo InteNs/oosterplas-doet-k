@@ -1,0 +1,17 @@
+div.links, div.address{
+
+    margin-bottom: 60px;
+}
+div.address{
+
+    border-right: solid;
+    border-color: black;
+}
+div.links a{
+    color: dimgrey;
+}
+div.all{
+    margin-left: 10%;
+    margin-top: 80px;
+    margin-right: 5%;
+}
