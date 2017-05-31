@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Category;
+use App\Entry;
 use App\Http\Requests\StoreActivity;
 use App\Activity;
 use App\Http\Controllers\Controller;
 use DateTime;
+use PhpParser\Node\Expr\Array_;
 use Session;
 use Illuminate\Support\Facades\Input;
 use Request;
@@ -80,8 +82,15 @@ class ActivityController extends Controller
      */
     public function show($id)
     {
+        $entries = Entry::all();
+        foreach ($entries as $entry) {
+            if ($entry->activity_id != $id) {
+                $entries = $entry.array_pop($entries);
+            }
+        }
+
         return View('admin.activity.show', [
-            'activity' => Activity::find($id)
+            'activity' => Activity::find($id), 'entries' => $entries
         ]);
     }
 
