@@ -49,6 +49,29 @@ Header CSS
 **/
 
 
+/**
+css contactpagina
+ */
+div.col-sm-12.col-md-12{
+    background-color: #DC941A;
+}
+div.googlemaps{
+    margin-top: 10%;
+    margin-left: 5%;
+}
+.btn-primary {
+    background-color: #DC941A;
+    color: white;
+    border-color: #DC941A;
+}
+div.contact-address{
+    margin-left: 20%;
+    margin-top: 30%;
+}
+div.links a{
+    color: dimgrey;
+}
+
 div.twitter{
     margin-top: 30px;
 }
