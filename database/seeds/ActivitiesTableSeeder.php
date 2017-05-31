@@ -24,7 +24,7 @@ Tarieven worden vastgesteld bij aanmelding. Dit wordt gebaseerd op het gezamenli
 Bij een inkomen lager dan 18.500,- betaal je € 20,- per maand
 Bij een inkomen tussen de 18.500,- en 37.000,- betaal je € 80,-  per maand
 Bij een inkomen hoger dan 37.000,- betaal je € 160,- per maand',
-            'sorting_date' => '2017-01-01 00:00:00',
+            'sorting_date' => '2017-12-31 00:00:00',
             'display_date' => 'Iedere dinsdag en donderdag!',
             'price' => '0',
             'image' => '/images/huiswerkbegeleiding.jpg',
