@@ -48,5 +48,33 @@
                 <img src="{{$activity->image}}" class="img-responsive">
             </div>
         </div>
+
+        <table class="table table-striped table-hover ">
+            <tr>
+                <td>#</td>
+                <td>Voornaam</td>
+                <td>Achternaam</td>
+                <td>Telefoonnummer</td>
+                <td>E-mailadres</td>
+                <td></td>
+            </tr>
+            @foreach ($entries as $entry)
+                <tr>
+                    <td>{{$entry->id}}</td>
+                    <td>{{$entry->firstname}}</td>
+                    <td>{{$entry->lastname}}</td>
+                    <td>{{$entry->phone}}</td>
+                    <td>{{$entry->email}}</td>
+                    <td>
+                        {{ Form::open(['id' => 'formDelete'.$entry->id,'method' => 'DELETE', 'route' => ['entry.destroy', $entry->id]]) }}
+                            <a title="Delete" href="javascript:void(0)" onclick="document.getElementById('formDelete{{$entry->id}}').submit()">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </a>
+                        {{ Form::close() }}
+                    </td>
+                </tr>
+            @endforeach
+        </table>
+
     </div>
 @endsection

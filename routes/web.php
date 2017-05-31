@@ -43,6 +43,7 @@ Route::group(['prefix' => 'beheer', 'middleware' => ['auth']], function () {
     });
 
     Route::resource('activiteit', 'Admin\ActivityController');
+    Route::resource('entry', 'Admin\EntryController');
     Route::resource('gebruiker', 'Admin\UserController');
     Route::resource('partner', 'Admin\PartnerController');
     Route::resource('sponsor', 'Admin\SponsorController');
