@@ -51,9 +51,9 @@ class Activity extends Model
      *
      * @return DateTime
      */
-    public function getStart()
+    public function getSortingDate()
     {
-        return new DateTime($this->datetimestart);
+        return new DateTime($this->sorting_date);
     }
 
     /**
@@ -61,9 +61,9 @@ class Activity extends Model
      *
      * @return DateTime
      */
-    public function getEnd()
+    public function getDisplayDate()
     {
-        return new DateTime($this->datetimeend);
+        return new DateTime($this->display_date);
     }
 
     /**

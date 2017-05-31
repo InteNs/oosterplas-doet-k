@@ -3,7 +3,7 @@
     <div class="text-block2">
         <h3>{{$activity->title}}</h3>
         <h4 class="date">
-           {{$activity->datetimestart}}
+           {{$activity->display_date}}
         </h4>
         <span class="info">
                {{$activity->description}}

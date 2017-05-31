@@ -19,13 +19,13 @@
         </div>
 
         <div class="form-group row">
-            {!! Form::label('datetimestart', 'Begintijd') !!}
-            {!! Form::datetime('datetimestart', \Carbon\Carbon::now(), ['class' => 'form-control', 'required']) !!}
+            {!! Form::label('sorting_date', 'Sorteerdatum') !!}
+            {!! Form::datetime('sorting_date', \Carbon\Carbon::now(), ['class' => 'form-control', 'required']) !!}
         </div>
 
         <div class="form-group row">
-            {!! Form::label('datetimeend', 'Eindtijd') !!}
-            {!! Form::datetime('datetimeend', \Carbon\Carbon::tomorrow(), ['class' => 'form-control', 'required']) !!}
+            {!! Form::label('display_date', 'Weergavedatum') !!}
+            {!! Form::datetime('display_date', null, ['class' => 'form-control', 'required']) !!}
         </div>
 
         <div class="form-group row">

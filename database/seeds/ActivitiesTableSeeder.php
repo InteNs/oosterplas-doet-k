@@ -24,8 +24,8 @@ Tarieven worden vastgesteld bij aanmelding. Dit wordt gebaseerd op het gezamenli
 Bij een inkomen lager dan 18.500,- betaal je € 20,- per maand
 Bij een inkomen tussen de 18.500,- en 37.000,- betaal je € 80,-  per maand
 Bij een inkomen hoger dan 37.000,- betaal je € 160,- per maand',
-            'datetimestart' => '2017-01-01 00:00:00',
-            'datetimeend' => '2017-01-01 00:00:00',
+            'sorting_date' => '2017-01-01 00:00:00',
+            'display_date' => 'Iedere dinsdag en donderdag!',
             'price' => '0',
             'image' => '/images/huiswerkbegeleiding.jpg',
         ]);
@@ -35,8 +35,8 @@ Bij een inkomen hoger dan 37.000,- betaal je € 160,- per maand',
             'description' =>
                 'De flora en fauna langs onze Oosterplas is deze tijd van het jaar in volle glorie te bewonderen.
                 Meld je nu aan voor deze bijzondere wandeling met onze eigen gids!',
-            'datetimestart' => '2017-05-15 15:00:00',
-            'datetimeend' => '2017-05-15 18:00:00',
+            'sorting_date' => '2017-08-06 00:00:00',
+            'display_date' => '6 augustus!',
             'price' => '0',
             'image' => '/images/natuurwandeling.png',
         ]);
@@ -47,8 +47,8 @@ Bij een inkomen hoger dan 37.000,- betaal je € 160,- per maand',
                 'Het Kom Erbij Festival Oosterplas kende vorig jaar een mooie eerste editie. 
             Daarmee is de toon gezet voor een buurtfestival dat zich ieder jaar verder zal ontwikkelen. 
             Met de allure van lokaal talent',
-            'datetimestart' => '2017-06-10 09:00:00',
-            'datetimeend' => '2017-06-11 23:00:00',
+            'sorting_date' => '2017-07-08 00:00:00',
+            'display_date' => '8 juli',
             'price' => '20',
             'image' => '/images/KEFO.png',
         ]);
@@ -60,8 +60,8 @@ Bij een inkomen hoger dan 37.000,- betaal je € 160,- per maand',
             Baggerloop voor 7 basisscholen in Den Bosch Oost en Hintham en 5 middelbare scholen. 
             Dit zijn juist 5 middelbare scholen waar veel kinderen/ jongeren op zitten die niet actief deelnemen aan een sportvereniging 
             en vaak ook een “rugzakje” hebben.',
-            'datetimestart' => '2017-05-23 10:00:00',
-            'datetimeend' => '2017-05-24 20:00:00',
+            'sorting_date' => '2017-12-12 00:00:00',
+            'display_date' => '12 december',
             'price' => '0',
             'image' => '/images/baggerloop.jpg',
         ]);
@@ -72,8 +72,8 @@ Bij een inkomen hoger dan 37.000,- betaal je € 160,- per maand',
                 'Jaarlijks vindt er in de lente onze alom bekende danswedstrijd plaats.
                 Er kan meegedaan in groepen, tweetallen maar natuurlijk ook solo,
                 De dansstijl is vrij, dus schrijf je vooral in!',
-            'datetimestart' => '2017-05-31 17:00:00',
-            'datetimeend' => '2017-05-31 22:00:00',
+            'sorting_date' => '2017-06-10 00:00:00',
+            'display_date' => '10 juni',
             'price' => '15',
             'image' => '/images/dance.jpg',
         ]);

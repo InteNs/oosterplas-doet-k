@@ -21,8 +21,8 @@
                 <td>#</td>
                 <td>Titel</td>
                 <td>Prijs</td>
-                <td>Begintijd</td>
-                <td>Eindtijd</td>
+                <td>Sorteerdatum</td>
+                <td>Weergavedatum</td>
                 <td>Inschrijvingen</td>
                 <td></td>
                 <td></td>
@@ -33,8 +33,8 @@
                     <td>{{$activity->id}}</td>
                     <td>{{$activity->title}}</td>
                     <td class="glyphicon-euro">{{$activity->price}}</td>
-                    <td>{{$activity->datetimestart}}</td>
-                    <td>{{$activity->datetimeend}}</td>
+                    <td>{{$activity->sorting_date}}</td>
+                    <td>{{$activity->display_date}}</td>
                     <td>{{$activity->getNumberOfEntries()}}</td>
                     <td>
                         <a href="/beheer/activiteit/{{$activity->id}}"

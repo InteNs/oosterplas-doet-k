@@ -18,13 +18,13 @@
         </div>
 
         <div class="form-group row">
-            {!! Form::label('datetimestart', 'Begintijd') !!}
-            {!! Form::datetime('datetimestart', $activity->datetimestart, ['class' => 'form-control', 'required']) !!}
+            {!! Form::label('sorting_date', 'Sorteerdatum') !!}
+            {!! Form::datetime('sorting_date', $activity->sorting_date, ['class' => 'form-control', 'required']) !!}
         </div>
 
         <div class="form-group row">
-            {!! Form::label('datetimeend', 'Eindtijd') !!}
-            {!! Form::datetime('datetimeend',$activity->datetimeend, ['class' => 'form-control', 'required']) !!}
+            {!! Form::label('display_date', 'Weergavedatum') !!}
+            {!! Form::datetime('display_date',$activity->display_date, ['class' => 'form-control', 'required']) !!}
         </div>
 
         <div class="form-group row">
