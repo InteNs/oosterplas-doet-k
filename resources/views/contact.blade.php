@@ -26,8 +26,8 @@
 
             <div class="col-sm-12 col-md-5">
                 <div class="googlemaps">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2472.9152489884327!2d5.339200415536991!3d51.69799600457079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6efa521dba5e9%3A0x152b86603c8b448c!2sVincentvanGoghlaan1%2C5246GBRosmalen!5e0!3m2!1sen!2snl!4v1494931265011"
-                        width="400" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4946.722532727519!2d5.336517429205033!3d51.689833718661944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6efa76de486a1%3A0xcf664914fbb72b1e!2sOosterplas!5e0!3m2!1snl!2snl!4v1496412342700"
+                            width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
             </div>
 
