@@ -6,7 +6,7 @@ class HomeworkPageTest extends BaseSeleniumTestCase
     public function testOverviewHomeworkPage()
     {
         $this->artisan('db:seed', ['--class' => 'ActivitiesTableSeeder']);
-        $this->visit('/evenementen/1')->see('Schrijf je in voor Huiswerkbegeleiding!');
+        $this->visit('/evenementen/1')->see('Schrijf je in voor Studiebegeleiding!');
     }
 
     public function testContactForm()
@@ -23,6 +23,6 @@ class HomeworkPageTest extends BaseSeleniumTestCase
             ->hold(1)
             ->click('createSubmit')
             ->hold(1)
-            ->see('Uw aanmelding voor Huiswerkbegeleiding is succesvol verzonden. Er zal spoedig contact met u worden opgenomen.');
+            ->see('Uw aanmelding voor Studiebegeleiding is succesvol verzonden. Er zal spoedig contact met u worden opgenomen.');
     }
 }
