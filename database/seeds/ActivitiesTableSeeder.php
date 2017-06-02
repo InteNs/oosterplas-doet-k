@@ -13,7 +13,7 @@ class ActivitiesTableSeeder extends Seeder
     public function run()
     {
         Activity::updateOrCreate([
-            'title' => 'Huiswerkbegeleiding',
+            'title' => 'Studiebegeleiding',
             'description' =>
                 'De begeleiding helpt je om je studie goed te kunnen volgen, je leert hoe je het beste kunt leren en je krijgt hiervoor coaching om zelfstandig aan de slag te kunnen.
 Je leert plannen en je krijgt begeleiding om je brugklas jaar goed aan te pakken.
