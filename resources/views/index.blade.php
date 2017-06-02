@@ -23,7 +23,7 @@
             <span class="home-text">
                 Stichting OosterplasDOET! is er als wijkonderneming in de wijken ‘s-Hertogenbosch Oost en Hintham om mensen en
                 organisaties te verbinden. Dit doen we door het coördineren en stimuleren van activiteiten op het gebied van
-                onderwijs, arbeid, sport, cultuur en zorg & welzijn. Met als speerpunten huiswerkbegeleiding en gunbanen.
+                onderwijs, arbeid, sport, cultuur en zorg & welzijn. Met als speerpunten studiebegeleiding en gunbanen.
             </span>
         </div>
     </div>
@@ -31,7 +31,7 @@
         <div class="col-md-6 info-block">
             <div class="img" style="background-image: url('{{url('/images/huiswerkbegeleiding.jpg')}}');"></div>
             <div class="text-block1">
-            <h3>Huiswerkbegeleiding</h3>
+            <h3>Studiebegeleiding</h3>
             <span class="info">
                 De begeleiding helpt je om je studie goed te kunnen volgen, je leert hoe je het beste kunt leren
                 en je krijgt hiervoor coaching om zelfstandig aan de slag te kunnen. Je leert plannen en je krijgt begeleiding
