@@ -41,6 +41,9 @@
 /**
 General CSS
 **/
+html, body {
+    overflow-x: hidden;
+}
 body {
     font-family: 'univers-cn';
 }
@@ -52,21 +55,19 @@ Header CSS
 /**
 css contactpagina
  */
-div.col-sm-12.col-md-12{
+div.bg-contact {
     background-color: #DC941A;
 }
-div.googlemaps{
-    margin-top: 10%;
-    margin-left: 5%;
+input.button-submit {
+    white-space: normal;
+}
+iframe.googlemaps {
+    width: 100%;
 }
 .btn-primary {
     background-color: #DC941A;
     color: white;
     border-color: #DC941A;
-}
-div.contact-address{
-    margin-left: 20%;
-    margin-top: 30%;
 }
 div.links a{
     color: dimgrey;
@@ -434,7 +435,7 @@ div.text-block3 span.info {
 	display: inline-block;
 	width: 100%;
 	padding: 0px 20px 20px 20px;
-	height: 160px;
+	height: 171px;
 	display: block;
 	overflow: hidden;
 }
@@ -554,6 +555,18 @@ END Home page CSS
 **/
 
 /**
+About us page
+**/
+.partial_employee{
+    padding: 15px 0px 0px 0px;
+    width: calc(50% - 15px);
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+    margin-bottom: 25px;
+    background-color: #ACC90F;
+}
+
+/**
 Responsive
 **/
 @media (max-width: 1590px) {
@@ -611,6 +624,9 @@ Responsive
     img.logo {
         bottom: 10px;
     }
+    div.address {
+        border: none!important;
+    }
 }
 
 @media (max-width: 857px) {
@@ -631,14 +647,4 @@ Responsive
     img.logo {
         width: 200px;
     }
-}
-
-
-.partial_employee{
-    padding: 15px 0px 0px 0px;
-    width: calc(50% - 15px);
-    margin-left: 7.5px;
-    margin-right: 7.5px;
-    margin-bottom: 25px;
-    background-color: #ACC90F;
 }
