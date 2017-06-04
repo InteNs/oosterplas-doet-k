@@ -1,19 +1,17 @@
-<div class="row partial_rang_one">
-    <div class="row">
-        <div class="col-xs-12 ">
-            <a href="{{$sponsorsRank1->link}}">
-                <img class="rang_one_img" src="{{($sponsorsRank1->image != '') ? $sponsorsRank1->image : 'http://english.tw/wp-content/themes/qaengine/img/default-thumbnail.jpg'}}" />
+<div class="col-xs-12 partial_rang_one">
+    <div class="bg">
+        <div class="row">
+            <a class="col-xs-12 col-md-3" href="{{$sponsorsRank1->link}}" title="{{$sponsorsRank1->name}}">
+                <div class="rang_one_img" style="background-image: url('{{($sponsorsRank1->image != '') ? url($sponsorsRank1->image) : 'http://english.tw/wp-content/themes/qaengine/img/default-thumbnail.jpg'}}');"></div>
             </a>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12">
-            <h3>
-                {{$sponsorsRank1->name}}
-            </h3>
-            <p>
-                {{$sponsorsRank1->description}}
-            </p>
+            <div class="col-xs-12 col-md-9">
+                <h3>
+                    {{$sponsorsRank1->name}}
+                </h3>
+                <p>
+                    {{$sponsorsRank1->description}}
+                </p>
+            </div>
         </div>
     </div>
 </div>

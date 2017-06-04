@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="container-fluid bg-contact">
+    <div class="container-fluid more-padding bg-contact">
         <div class="row">
             <br>
 
@@ -61,9 +61,9 @@
                         <input type="hidden" name="event" value="empty" id="event">
 
                         <div class="row">
-                            {!! Form::submit('Meld je nu aan voor onze nieuwsbrief!', array('class' => 'btn btn-primary button-submit', 'id' => 'subscribe')) !!}
+                            {!! Form::submit('Meld je nu aan voor onze nieuwsbrief!', array('class' => 'btn btn-primary button-submit colored', 'id' => 'subscribe')) !!}
                             <br/><br/>
-                            {!! Form::submit('Klik hier om je af te melden van onze nieuwsbrief', array('class' => 'btn btn-primary button-submit', 'id' => 'unsubscribe')) !!}
+                            {!! Form::submit('Klik hier om je af te melden van onze nieuwsbrief', array('class' => 'btn btn-primary button-submit colored', 'id' => 'unsubscribe')) !!}
                         </div>
 
                         @if (session('message'))
@@ -153,7 +153,7 @@
                             <div class="form-group">
                                 <label class="col-md-4 control-label"></label>
                                 <div class="col-md-4">
-                                    {!! Form::submit('Verzend reactie', array('class' => 'btn btn-primary', 'name' => 'createSubmit')) !!}
+                                    {!! Form::submit('Verzend reactie', array('class' => 'btn btn-primary colored', 'name' => 'createSubmit')) !!}
                                 </div>
                             </div>
                         </div>

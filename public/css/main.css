@@ -47,11 +47,9 @@ html, body {
 body {
     font-family: 'univers-cn';
 }
-/**
-Header CSS
-**/
-
-
+.more-padding {
+    padding: 0px 100px 20px 100px;
+}
 /**
 css contactpagina
  */
@@ -64,23 +62,26 @@ input.button-submit {
 iframe.googlemaps {
     width: 100%;
 }
-.btn-primary {
+.btn-primary.colored {
     background-color: #DC941A;
     color: white;
     border-color: #DC941A;
 }
-div.links a{
+div.links a {
     color: dimgrey;
 }
 
-div.twitter{
+div.twitter {
     margin-top: 30px;
 }
-div.facebook{
+div.facebook {
     margin-top: 30px;
     margin-left: 10px;
-  }
+}
 
+/**
+Header CSS
+**/
 nav.navbar {
     background-color: #fff;
     border-color: #fff;
@@ -116,15 +117,13 @@ nav i.fa {
 nav i.fa-twitter {
     background-color:#C7B315;
 }
-footer{
-	background-color:#acc90f;
-}
 
 nav i.fa-at {
     background-color:#DC941A;
 }
 
 nav ul.social-media {
+    padding-left: 0px;
     float: right;
 }
 
@@ -135,6 +134,10 @@ nav ul.social-media li {
 /**
 END Header page CSS
 **/
+
+footer {
+    background-color:#acc90f;
+}
 
 /**
 Home page CSS
@@ -153,8 +156,6 @@ Home page CSS
 div.calendar{
     margin-top: 20px;
 }
-
-
 
 .slideshow {
     width: 20000px;
@@ -549,7 +550,6 @@ div.block-2 a.read-more, div.block-3 a.read-more {
     padding: 10px;
     border-left: 1px solid #999999;
 }
-
 /**
 END Home page CSS
 **/
@@ -557,14 +557,28 @@ END Home page CSS
 /**
 About us page
 **/
-.partial_employee{
-    padding: 15px 0px 0px 0px;
-    width: calc(50% - 15px);
-    margin-left: 7.5px;
-    margin-right: 7.5px;
+.partial_employee {
     margin-bottom: 25px;
+}
+.employee-bg {
     background-color: #ACC90F;
 }
+.employee-text > * {
+    padding: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.user-img {
+    width: auto;
+    height: 250px;
+    margin: 10px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/**
+END About us page
+**/
 
 /**
 Responsive
@@ -618,7 +632,7 @@ Responsive
         width: auto;
     }
 
-    div.block-1, div.block-2, div.block-3 {
+    div.block-1, div.block-2, div.block-3, .more-padding {
         padding: 0px 15px 50px 15px;
     }
     img.logo {
