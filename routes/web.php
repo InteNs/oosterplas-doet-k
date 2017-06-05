@@ -51,6 +51,7 @@ Route::group(['prefix' => 'beheer', 'middleware' => ['auth']], function () {
     Route::resource('abonnee', 'Admin\SubscriberController');
     Route::resource('huiswerk', 'Admin\HomeworkController');
     Route::resource('employee', 'Admin\EmployeeController');
+    Route::resource('notulen', 'Admin\MinutesBackendController');
     Route::resource('abonnee', 'Admin\SubscriberController');
     Route::post('abonnee', 'Admin\SubscriberController@export');
 });

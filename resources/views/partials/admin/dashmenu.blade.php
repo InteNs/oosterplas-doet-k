@@ -69,9 +69,10 @@
                 <span class="glyphicon glyphicon-tags left" aria-hidden="true"></span> Sponsors
             </a>
             <ul>
-                <li class="hover_blue">
+                <li class="toevoegen">
                     <a href="/beheer/sponsor/create">
-                        <span class="glyphicon glyphicon-plus left" aria-hidden="true"></span> Toevoegen
+                        <span class="glyphicon glyphicon-plus left" aria-hidden="true"></span>
+                        <span class="tekst">Toevoegen</span>
                     </a>
                 </li>
             </ul>
@@ -91,9 +92,23 @@
                 <span class="glyphicon glyphicon-tags left" aria-hidden="true"></span> Medewerkers
             </a>
             <ul>
-                <li class="hover_blue">
+                <li class="toevoegen">
                     <a href="/beheer/employee/create">
-                        <span class="glyphicon glyphicon-plus left" aria-hidden="true"></span> Toevoegen
+                        <span class="glyphicon glyphicon-plus left" aria-hidden="true"></span>
+                        <span class="tekst">Toevoegen</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li role="presentation" class="hover_green">
+            <a href="/beheer/notulen">
+                <span class="glyphicon glyphicon-tags left" aria-hidden="true"></span> Notulen
+            </a>
+            <ul>
+                <li class="toevoegen">
+                    <a href="/beheer/notulen/create">
+                        <span class="glyphicon glyphicon-plus left" aria-hidden="true"></span>
+                        <span class="tekst">Toevoegen</span>
                     </a>
                 </li>
             </ul>
