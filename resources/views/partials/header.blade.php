@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default">
-    <div class="container-fluid">
+    <div class="container-fluid more-padding">
         <div class="row">
             <div class="col-md-9">
                 <i class="fa fa-bars show-responsive-menu" aria-hidden="true" onclick="showMenu(1)"></i>
@@ -44,17 +44,17 @@
             <div class="col-md-3">
                 <ul class="social-media">
                     <li>
-                        <a href="/">
+                        <a href="https://www.facebook.com/OosterplasDoet" target="_blank">
                             <i class="fa fa-facebook" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a href="https://twitter.com/OosterplasDoet" target="_blank">
                             <i class="fa fa-twitter" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a href="mailto:{{ $settings->email }}" target="_blank" title="Mail naar {{ $settings->email }}">
                             <i class="fa fa-at" aria-hidden="true"></i>
                         </a>
                     </li>
@@ -69,22 +69,22 @@
     </span>
     <ul>
         <li>
-            <a href="#">
+            <a href="/">
                 Home
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="/over-ons">
                 Over ons
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="/evenementen">
                 Evenementen
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="/bedrijven">
                 Bedrijven
             </a>
         </li>
@@ -99,7 +99,7 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="/contact">
                 Contact
             </a>
         </li>
