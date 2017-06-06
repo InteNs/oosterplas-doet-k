@@ -4,6 +4,10 @@
     }
 }
 
+.partial_rang_one .bg {
+    border: 1px ridge orange;
+}
+
 div.partners-block-1 {
     background-color: #ffffff;
 }

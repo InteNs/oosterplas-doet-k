@@ -14,8 +14,8 @@
     </div>
     <div class="container-fluid more-padding">
         <div class="row">
-            @foreach($employees as $employee)
-                @include("partials.employee.employees", ['employees' => $employees])
+            @foreach($employees as $key => $employee)
+                @include("partials.employee.employees", ['employees' => $employees, 'switch' => $loop->index % 2])
             @endforeach
         </div>
     </div>
