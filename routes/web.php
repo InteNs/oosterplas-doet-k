@@ -16,13 +16,14 @@ Route::group(['middleware' => ['log']], function () {
     Route::get('/evenementen', 'ActivitiesController@index');
     Route::get('/evenementen/{id}', 'ActivitiesController@show');
     Route::post('/evenementen/{id}', 'ActivitiesController@store')->name('activity.submit.entry');
-    Route::get('/activiteitenkalender', 'CalendarController@calendar');
+   // Route::get('/activiteitenkalender', 'CalendarController@calendar');
     Route::get('/', 'MainController@index');
-    Route::get('/partners', 'PartnerController@index');
+    //Route::get('/partners', 'PartnerController@index');
     Route::get('/bedrijven', 'CompanyController@index');
     Route::get('/contact', 'ContactController@index');
     Route::post('/contact', 'ContactController@post');
     Route::get('/over-ons', 'EmployeeController@index');
+    Route::get('/vacature', 'JobController@index');
 });
 
 Route::group(['prefix' => 'beheer', 'middleware' => ['auth']], function () {
@@ -53,6 +54,7 @@ Route::group(['prefix' => 'beheer', 'middleware' => ['auth']], function () {
     Route::resource('employee', 'Admin\EmployeeController');
     Route::resource('abonnee', 'Admin\SubscriberController');
     Route::post('abonnee', 'Admin\SubscriberController@export');
+    route::resource('job', 'Admin\JobController');
 });
 
 Route::auth();

@@ -662,3 +662,18 @@ Responsive
         width: 200px;
     }
 }
+
+.vacature-row{
+    background-color: #EC671C;
+    padding-bottom: 15px;
+}
+
+div.text-block3 span.info-vacature {
+    color: #000000;
+    background-color: #EC671C;
+    display: inline-block;
+    width: 100%;
+    padding: 0px 20px 20px 20px;
+    min-height: 50px;
+    display: block;
+}
