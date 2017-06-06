@@ -16,9 +16,7 @@ Route::group(['middleware' => ['log']], function () {
     Route::get('/evenementen', 'ActivitiesController@index');
     Route::get('/evenementen/{id}', 'ActivitiesController@show');
     Route::post('/evenementen/{id}', 'ActivitiesController@store')->name('activity.submit.entry');
-   // Route::get('/activiteitenkalender', 'CalendarController@calendar');
     Route::get('/', 'MainController@index');
-    //Route::get('/partners', 'PartnerController@index');
     Route::get('/bedrijven', 'CompanyController@index');
     Route::get('/contact', 'ContactController@index');
     Route::post('/contact', 'ContactController@post');
