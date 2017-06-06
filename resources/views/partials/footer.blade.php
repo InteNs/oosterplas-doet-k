@@ -33,6 +33,7 @@
                     <p>Vragen aan OosterplasDOET!:</p>
                     <a href="/contact">Contact</a><br>
                     <a href="/contact">FAQ</a><br>
+                    <a href="/vacature">Vacatures</a><br>
                     <a href="/contact">Cookies</a><br>
                 </div>
             </div>
