@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreJob;
 use App\Job;
 
-
 class JobController extends Controller
 {
     /**

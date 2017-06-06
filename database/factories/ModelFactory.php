@@ -72,7 +72,6 @@ $factory->define(App\Slider::class, function (Faker\Generator $faker) {
     ];
 });
 
-
 $factory->define(App\Job::class, function (Faker\Generator $faker) {
 
     return [
@@ -82,4 +81,3 @@ $factory->define(App\Job::class, function (Faker\Generator $faker) {
         'places' => 1,
     ];
 });
-
