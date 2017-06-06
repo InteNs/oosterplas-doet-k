@@ -15,7 +15,7 @@ class JobController extends Controller
      */
     public function index()
     {
-        $jobs = Job::all();
+        $jobs = Job::paginate(15);
         return view('admin.job.index')->with('jobs', $jobs);
     }
 
