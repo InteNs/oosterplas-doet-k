@@ -1,17 +1,13 @@
-div.links, div.address{
-
+div.links, div.address {
     margin-bottom: 60px;
 }
-div.address{
-
+div.address {
     border-right: solid;
     border-color: black;
 }
-div.links a{
+div.links a {
     color: dimgrey;
 }
-div.all{
-    margin-left: 10%;
+div.all {
     margin-top: 80px;
-    margin-right: 5%;
 }

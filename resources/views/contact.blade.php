@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="col-sm-12 col-md-12">
+    <div class="container-fluid more-padding bg-contact">
         <div class="row">
             <br>
 
@@ -20,20 +20,19 @@
                     <strong>RSIN nummer:</strong> {{ $settings->{'RSIN-number'} }}<br>
                     <strong>KvK nummer:</strong> {{ $settings->{'KvK-number'} }}<br>
                     <strong>SBI-code:</strong> {{ $settings->{'SBI-code'} }}<br>
-                    <strong><br>Emailadres:</strong><br>{{ $settings->email }}<br>
+                    <strong><br>Emailadres:</strong><br>{{ $settings->email }}<br><br>
                 </div>
             </div>
 
             <div class="col-sm-12 col-md-5">
                 <div class="googlemaps">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4946.722532727519!2d5.336517429205033!3d51.689833718661944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6efa76de486a1%3A0xcf664914fbb72b1e!2sOosterplas!5e0!3m2!1snl!2snl!4v1496412342700"
-                            width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            class="googlemaps" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
             </div>
 
-
             <div class="col-sm-12 col-md-4">
-                <a class="twitter-timeline" data-lang="nl" data-height="500" data-width="400"
+                <a class="twitter-timeline" data-lang="nl" data-height="450" data-width="400"
                    href="https://twitter.com/OosterplasDoet"
                    data-chrome="nofooter">Tweets by OosterplasDoet</a>
                 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -42,11 +41,54 @@
         </div>
         <br>
         <div class="row">
-            <div class="col-md-8">
-                <fieldset>
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <legend>Nieuwsbrief</legend>
+                    </div>
+                    <label class="col-md-6 control-label">Wilt u altijd als eerste de nieuwtjes weten over onze
+                        website?</label>
+                    <label class="col-md-6 control-label">Meld je hier dan aan voor onze nieuwsbrief!</label>
+                    <br><br>
+                    <div class="col-md-12">
+                        {!! Form::open(array('id' => 'newsletter_form', 'method' => 'POST', 'action' => 'ContactController@post', 'class' => 'well form-horizontal')) !!}
+
+                        <div class="form-group row">
+                            {!! Form::label('news_email', 'Email') !!}
+                            {!! Form::text('news_email', null, ['class' => 'form-control', 'required']) !!}
+                        </div>
+
+                        <input type="hidden" name="event" value="empty" id="event">
+
+                        <div class="row">
+                            {!! Form::submit('Meld je nu aan voor onze nieuwsbrief!', array('class' => 'btn btn-primary button-submit colored', 'id' => 'subscribe')) !!}
+                            <br/><br/>
+                            {!! Form::submit('Klik hier om je af te melden van onze nieuwsbrief', array('class' => 'btn btn-primary button-submit colored', 'id' => 'unsubscribe')) !!}
+                        </div>
+
+                        @if (session('message'))
+                        <!-- Success message -->
+                            <div class="alert alert-success" role="alert" id="success_message">Success <i
+                                        class="glyphicon glyphicon-thumbs-up"></i> {{ session('message') }}
+                            </div>
+                        @endif
+
+                        @if (session('error'))
+                        <!-- Error message -->
+                            <div class="alert alert-danger" role="alert" id="success_message">
+                                {{ session('error') }}
+                            </div>
+                        @endif
+
+                        {!! Form::close() !!}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <fieldset class="row">
                     <!-- Form Name -->
-                    <legend>Neem vandaag nog contact op!</legend>
-                    <div class="col-md-7">
+                    <legend class="col-md-12">Neem vandaag nog contact op!</legend>
+                    <div class="col-md-12">
                         {!! Form::open(array('id' => 'contact_form', 'method' => 'POST', 'action' => 'ContactController@post', 'class' => 'well form-horizontal')) !!}
 
                         <div>
@@ -111,50 +153,13 @@
                             <div class="form-group">
                                 <label class="col-md-4 control-label"></label>
                                 <div class="col-md-4">
-                                    {!! Form::submit('Verzend reactie', array('class' => 'btn btn-primary', 'name' => 'createSubmit')) !!}
+                                    {!! Form::submit('Verzend reactie', array('class' => 'btn btn-primary colored', 'name' => 'createSubmit')) !!}
                                 </div>
                             </div>
                         </div>
                         {!! Form::close() !!}
                     </div>
-                    <div>
-                        <label class="col-md-2 control-label">Wilt u altijd als eerste de nieuwtjes weten over onze
-                            website?</label>
-                        <label class="col-md-2 control-label">Meld je hier dan aan voor onze nieuwsbrief!</label>
-                        <div class="col-md-5">
-                            {!! Form::open(array('id' => 'newsletter_form', 'method' => 'POST', 'action' => 'ContactController@post', 'class' => 'well form-horizontal')) !!}
 
-                            <div class="form-group row">
-                                {!! Form::label('news_email', 'Email') !!}
-                                {!! Form::text('news_email', null, ['class' => 'form-control', 'required']) !!}
-                            </div>
-
-                            <input type="hidden" name="event" value="empty" id="event">
-
-                            <div class="row">
-                                {!! Form::submit('Meld je nu aan voor onze nieuwsbrief!', array('class' => 'btn btn-primary button-submit', 'id' => 'subscribe')) !!}
-                                <br/><br/>
-                                {!! Form::submit('Klik hier om je af te melden van onze nieuwsbrief', array('class' => 'btn btn-primary button-submit', 'id' => 'unsubscribe')) !!}
-                            </div>
-
-                            @if (session('message'))
-                            <!-- Success message -->
-                                <div class="alert alert-success" role="alert" id="success_message">Success <i
-                                            class="glyphicon glyphicon-thumbs-up"></i> {{ session('message') }}
-                                </div>
-                            @endif
-
-                            @if (session('error'))
-                            <!-- Error message -->
-                                <div class="alert alert-danger" role="alert" id="success_message">
-                                    {{ session('error') }}
-                                </div>
-                            @endif
-
-                            {!! Form::close() !!}
-                        </div>
-
-                    </div>
                 </fieldset>
             </div>
 
@@ -163,6 +168,7 @@
                         height="500" style="border:none;overflow:hidden;width:100%;" scrolling="no" frameborder="0"
                         allowTransparency="true">
                 </iframe>
+                <br><br>
             </div>
         </div>
     </div>

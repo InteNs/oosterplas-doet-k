@@ -1,5 +1,10 @@
 <div class="sidebar col-md-2 col-sm-12">
-    <ul class="nav nav-pills nav-stacked">
+    <div class="row admin-hide-desktop">
+        <div class="col-md-12">
+            <span onclick="$('ul.admin-responsive-hide').toggleClass('show');" class="glyphicon glyphicon-menu-hamburger"></span>
+        </div>
+    </div>
+    <ul class="nav nav-pills nav-stacked admin-responsive-hide">
         <!--
             Voor gebruikerservaring te verhogen gebruik kleuren
             Plaats de volgende waarde in de class van een <li>
