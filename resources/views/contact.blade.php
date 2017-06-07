@@ -24,7 +24,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-12 col-md-5">
+            <div class="col-sm-12 col-md-5 col-sm-offset-8 col-md-offset-1">
                 <div class="googlemaps">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4946.722532727519!2d5.336517429205033!3d51.689833718661944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6efa76de486a1%3A0xcf664914fbb72b1e!2sOosterplas!5e0!3m2!1snl!2snl!4v1496412342700"
                             width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
