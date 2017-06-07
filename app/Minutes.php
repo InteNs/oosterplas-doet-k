@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Minutes extends Model
 {
-    protected $fillable = ['date', 'minutes'];
+    protected $fillable = ['name', 'date', 'minutes'];
 }

@@ -6,9 +6,9 @@
             Notulen
         </h3>
         <div class="filters">
-            <a href="/beheer/notulen?order=id&direction=asc" title="Order op titel ASC"><i
+            <a href="/beheer/notulen?order=name&direction=asc" title="Order op titel ASC"><i
                         class="fa fa-sort-numeric-asc" aria-hidden="true"></i></a>
-            <a href="/beheer/notulen?order=id&direction=desc" title="Order op titel DESC"><i
+            <a href="/beheer/notulen?order=name&direction=desc" title="Order op titel DESC"><i
                         class="fa fa-sort-numeric-desc" aria-hidden="true"></i></a>
             <a href="/beheer/notulen?order=date&direction=asc" title="Order op datum ASC"><i
                         class="fa fa-sort-alpha-asc" aria-hidden="true"></i></a>
@@ -19,6 +19,7 @@
         <table class="table table-striped table-hover ">
             <tr>
                 <td>#</td>
+                <td>Naam</td>
                 <td>Datum</td>
                 <td></td>
                 <td></td>
@@ -27,6 +28,7 @@
             @foreach ($minutes as $minute)
                 <tr>
                     <td>{{$minute->id}}</td>
+                    <td>{{$minute->name}}</td>
                     <td>{{$minute->date}}</td>
                     <td>
                         <a href="/beheer/notulen/{{$minute->id}}"

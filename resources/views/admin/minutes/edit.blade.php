@@ -19,13 +19,18 @@
         {!! Form::model($minutes, array('url' => array('beheer/notulen', $minutes->id), 'method' => 'PUT', 'files'=>true, 'class' => 'editForm')) !!}
 
         <div class="form-group row">
+            {!! Form::label('name', 'Naam') !!}
+            {!! Form::text('name', $minutes->name, ['class' => 'form-control', 'required']) !!}
+        </div>
+
+        <div class="form-group row">
             {!! Form::label('date', 'Datum') !!}
             {!! Form::date('date', $minutes->date, ['class' => 'form-control', 'required']) !!}
         </div>
 
         <div class="form-group row">
-            <label for="image">Upload nieuwe
-                notulen:</label> {!! Form::file('minutes', ['class' => 'form-control', 'accept' => 'minutes/*']) !!}
+            {!! Form::label('minutes', 'Upload Notulen') !!}
+            {!! Form::file('minutes', ['class' => 'form-control', 'accept' => 'minutes/*']) !!}
         </div>
 
         <div class="row">

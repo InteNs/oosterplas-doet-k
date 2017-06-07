@@ -44,6 +44,7 @@ class MinutesBackendController extends Controller
     {
         $minutes = new Minutes();
         $minutes->date = $request->date;
+        $minutes->name = $request->name;
 
         if ($request->minutes != null) {
             if (Input::file('minutes')->isValid()) {
@@ -87,6 +88,7 @@ class MinutesBackendController extends Controller
     {
         $minutes = Minutes::find($id);
         $minutes->date = $request->date;
+        $minutes->name = $request->name;
 
         if ($request->minutes != null) {
             if (Input::file('minutes')->isValid()) {
@@ -104,7 +106,7 @@ class MinutesBackendController extends Controller
     {
         $destinationPath = 'minutes';
         $extension = Input::file('minutes')->getClientOriginalExtension();
-        $fileName = 'notulen' . date("Y-m-d") . '-' . rand(11111, 99999) . '.' . $extension;
+        $fileName = $minutes->name . '.' . $extension;
 
         # save and link minutes
         Input::file('minutes')->move($destinationPath, $fileName);

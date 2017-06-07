@@ -30,7 +30,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/notulen">
                             Notulen
                         </a>
                     </li>

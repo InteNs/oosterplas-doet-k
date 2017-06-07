@@ -23,6 +23,7 @@ Route::group(['middleware' => ['log']], function () {
     Route::get('/contact', 'ContactController@index');
     Route::post('/contact', 'ContactController@post');
     Route::get('/over-ons', 'EmployeeController@index');
+    Route::get('/notulen', 'MinutesController@index');
 });
 
 Route::group(['prefix' => 'beheer', 'middleware' => ['auth']], function () {

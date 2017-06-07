@@ -24,6 +24,7 @@ class StoreMinutes extends FormRequest
     public function rules()
     {
         return [
+            'name' => 'required',
             'date' => 'required',
             'minutes' => 'required',
         ];

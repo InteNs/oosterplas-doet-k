@@ -15,6 +15,7 @@ class CreateMinutesTable extends Migration
     {
         Schema::create('minutes', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
             $table->date('date');
             $table->string('minutes')->nullable()->default(null);
             $table->timestamps();

@@ -19,6 +19,11 @@
         {!! Form::open(array('url' => 'beheer/notulen', 'method' => 'POST', 'files'=>true, 'class' => 'createForm')) !!}
 
         <div class="form-group row">
+            {!! Form::label('name', 'Naam') !!}
+            {!! Form::text('name', null,['class' => 'form-control', 'required']) !!}
+        </div>
+
+        <div class="form-group row">
             {!! Form::label('date', 'Datum') !!}
             {!! Form::date('date', \Carbon\Carbon::now(), ['class' => 'form-control', 'required']) !!}
         </div>
