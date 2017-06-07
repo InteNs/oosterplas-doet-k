@@ -31,12 +31,13 @@
                 </div>
             </div>
 
-
+            <div class="twitter">
             <div class="col-sm-12 col-md-4">
                 <a class="twitter-timeline" data-lang="nl" data-height="500" data-width="400"
                    href="https://twitter.com/OosterplasDoet"
                    data-chrome="nofooter">Tweets by OosterplasDoet</a>
                 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
             </div>
 
         </div>

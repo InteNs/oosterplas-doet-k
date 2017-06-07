@@ -1,0 +1,25 @@
+div.bg-contact {
+    background-color: #DC941A;
+}
+input.button-submit {
+    white-space: normal;
+}
+iframe.googlemaps {
+    width: 100%;
+}
+.btn-primary.colored {
+    background-color: #DC941A;
+    color: white;
+    border-color: #DC941A;
+}
+div.links a {
+    color: dimgrey;
+}
+
+div.twitter {
+    margin-top: 30px;
+}
+div.facebook {
+    margin-top: 30px;
+    margin-left: 10px;
+}
