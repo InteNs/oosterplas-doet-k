@@ -1,5 +1,10 @@
 <div class="sidebar col-md-2 col-sm-12">
-    <ul class="nav nav-pills nav-stacked">
+    <div class="row admin-hide-desktop">
+        <div class="col-md-12">
+            <span onclick="$('ul.admin-responsive-hide').toggleClass('show');" class="glyphicon glyphicon-menu-hamburger"></span>
+        </div>
+    </div>
+    <ul class="nav nav-pills nav-stacked admin-responsive-hide">
         <!--
             Voor gebruikerservaring te verhogen gebruik kleuren
             Plaats de volgende waarde in de class van een <li>
@@ -109,6 +114,18 @@
                     <a href="/beheer/notulen/create">
                         <span class="glyphicon glyphicon-plus left" aria-hidden="true"></span>
                         <span class="tekst">Toevoegen</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li role="presentation" class="hover_green">
+            <a href="/beheer/job">
+                <span class="glyphicon glyphicon-tags left" aria-hidden="true"></span> Vacatures
+            </a>
+            <ul>
+                <li class="hover_blue">
+                    <a href="/beheer/job/create">
+                        <span class="glyphicon glyphicon-plus left" aria-hidden="true"></span> Toevoegen
                     </a>
                 </li>
             </ul>

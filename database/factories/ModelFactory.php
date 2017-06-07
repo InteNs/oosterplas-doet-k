@@ -71,3 +71,13 @@ $factory->define(App\Slider::class, function (Faker\Generator $faker) {
         'image3' => "/images/backgroundimg3.jpg",
     ];
 });
+
+$factory->define(App\Job::class, function (Faker\Generator $faker) {
+
+    return [
+        'name' => $faker->name,
+        'description' => $faker->text(100),
+        'online' => true,
+        'places' => 1,
+    ];
+});
