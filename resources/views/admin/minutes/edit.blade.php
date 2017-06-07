@@ -29,8 +29,16 @@
         </div>
 
         <div class="form-group row">
-            {!! Form::label('minutes', 'Upload Notulen') !!}
+            {!! Form::label('minutes', 'Upload nieuwe Notulen') !!}
             {!! Form::file('minutes', ['class' => 'form-control', 'accept' => 'minutes/*']) !!}
+        </div>
+
+        <div class="form-group row">
+            {!! Form::label('minutes', 'Oude Notulen') !!}
+            <br>
+            <object data="{{$minutes->minutes}}"
+                    width="450px" height="400px">
+            </object>
         </div>
 
         <div class="row">

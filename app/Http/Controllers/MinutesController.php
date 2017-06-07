@@ -10,7 +10,7 @@ class MinutesController extends Controller
     {
         if (Request::get('date')) {
             $minutesList = Minutes::where('date', Request::get('date'))->paginate(15);
-        } else if (Request::get('name')) {
+        } elseif (Request::get('name')) {
             $minutesList = Minutes::where('name', Request::get('name'))->paginate(15);
         } else {
             $minutesList = Minutes::all();

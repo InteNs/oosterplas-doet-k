@@ -26,7 +26,6 @@ class StoreMinutes extends FormRequest
         return [
             'name' => 'required',
             'date' => 'required',
-            'minutes' => 'required',
         ];
     }
 }
