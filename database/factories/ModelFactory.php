@@ -32,6 +32,7 @@ $factory->define(App\Activity::class, function (Faker\Generator $faker) {
         'display_date' => $faker->text(100),
         'price' => $faker->numberBetween(0, 999),
         'image' => "/images/gunbaan.jpg",
+        'priority' => false,
     ];
 });
 

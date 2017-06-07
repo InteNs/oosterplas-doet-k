@@ -28,6 +28,7 @@ Bij een inkomen hoger dan 37.000,- betaal je € 160,- per maand',
             'display_date' => 'Iedere dinsdag en donderdag!',
             'price' => '0',
             'image' => '/images/huiswerkbegeleiding.jpg',
+            'priority' => true,
         ]);
 
         Activity::updateOrCreate([
@@ -39,6 +40,7 @@ Bij een inkomen hoger dan 37.000,- betaal je € 160,- per maand',
             'display_date' => '6 augustus!',
             'price' => '0',
             'image' => '/images/natuurwandeling.png',
+            'priority' => false,
         ]);
 
         Activity::updateOrCreate([
@@ -51,6 +53,7 @@ Bij een inkomen hoger dan 37.000,- betaal je € 160,- per maand',
             'display_date' => '8 juli',
             'price' => '20',
             'image' => '/images/KEFO.png',
+            'priority' => false,
         ]);
 
         Activity::updateOrCreate([
@@ -64,6 +67,7 @@ Bij een inkomen hoger dan 37.000,- betaal je € 160,- per maand',
             'display_date' => '12 december',
             'price' => '0',
             'image' => '/images/baggerloop.jpg',
+            'priority' => false,
         ]);
 
         Activity::updateOrCreate([
@@ -76,6 +80,7 @@ Bij een inkomen hoger dan 37.000,- betaal je € 160,- per maand',
             'display_date' => '10 juni',
             'price' => '15',
             'image' => '/images/dance.jpg',
+            'priority' => false,
         ]);
     }
 }
