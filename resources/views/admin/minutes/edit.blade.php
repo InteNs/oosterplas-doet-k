@@ -34,7 +34,7 @@
         </div>
 
         <div class="form-group row">
-            {!! Form::label('minutes', 'Oude Notulen') !!}
+            {!! Form::label('minutes', 'Huidige Notulen') !!}
             <br>
             <object data="{{$minutes->minutes}}"
                     width="450px" height="400px">
