@@ -55,6 +55,7 @@ Route::group(['prefix' => 'beheer', 'middleware' => ['auth']], function () {
     Route::resource('abonnee', 'Admin\SubscriberController');
     Route::post('abonnee', 'Admin\SubscriberController@export');
     route::resource('job', 'Admin\JobController');
+    Route::resource('rapportage', 'Admin\ReportController');
 });
 
 Route::auth();
