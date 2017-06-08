@@ -19,7 +19,7 @@ class Report extends Model
         return $this->belongsTo('App\Activity');
     }
 
-    public function getActivityTitle(){
+    public function getActivityTitle() {
         return Activity::find($this->activity_id)->title;
     }
 }
