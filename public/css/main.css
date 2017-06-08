@@ -53,6 +53,9 @@ body {
 /**
 css contactpagina
  */
+form.rowform{
+    height: 238px;
+}
 div.bg-contact {
     background-color: #DC941A;
 }
