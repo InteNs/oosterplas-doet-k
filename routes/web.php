@@ -21,6 +21,7 @@ Route::group(['middleware' => ['log']], function () {
     Route::get('/contact', 'ContactController@index');
     Route::post('/contact', 'ContactController@post');
     Route::get('/over-ons', 'EmployeeController@index');
+    Route::get('/notulen', 'MinutesController@index');
     Route::get('/vacature', 'JobController@index');
 });
 
@@ -50,6 +51,7 @@ Route::group(['prefix' => 'beheer', 'middleware' => ['auth']], function () {
     Route::resource('abonnee', 'Admin\SubscriberController');
     Route::resource('huiswerk', 'Admin\HomeworkController');
     Route::resource('employee', 'Admin\EmployeeController');
+    Route::resource('notulen', 'Admin\MinutesBackendController');
     Route::resource('abonnee', 'Admin\SubscriberController');
     Route::post('abonnee', 'Admin\SubscriberController@export');
     route::resource('job', 'Admin\JobController');

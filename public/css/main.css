@@ -104,6 +104,10 @@ nav.navbar {
     background-color: transparent;
 }
 
+nav ul.nav li:first-child a {
+    padding-left: 0px;
+}
+
 nav i.fa {
     background-color: #A9C811;
     width: 30px;
