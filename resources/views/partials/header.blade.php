@@ -35,6 +35,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/statuten">
+                            Statuten
+                        </a>
+                    </li>
+                    <li>
                         <a href="/contact">
                             Contact
                         </a>
@@ -94,8 +99,13 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="/notulen">
                 Notulen
+            </a>
+        </li>
+        <li>
+            <a href="/statuten">
+                Statuten
             </a>
         </li>
         <li>

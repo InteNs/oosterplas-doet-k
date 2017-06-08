@@ -95,6 +95,10 @@ nav.navbar {
     margin-bottom: 10px;
 }
 
+nav.navbar .more-padding {
+    padding-bottom: 0px;
+}
+
 .navbar-default .navbar-nav>li>a {
     color: #000000;
 }
@@ -667,6 +671,13 @@ Responsive
 @media (max-width: 857px) {
     img.logo {
         width: 200px;
+    }
+    .input-group.search-responsive {
+        display: block;
+    }
+    .search-responsive form input {
+        display: inline-block!important;
+        width: 80%!important;
     }
 }
 
