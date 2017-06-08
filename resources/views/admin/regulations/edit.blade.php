@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <h1>Verander notulen</h1>
+            <h1>Verander statuten</h1>
         </div>
 
         @if (count($errors) > 0)
@@ -16,33 +16,33 @@
             </div>
         @endif
 
-        {!! Form::model($minutes, array('url' => array('beheer/notulen', $minutes->id), 'method' => 'PUT', 'files'=>true, 'class' => 'editForm')) !!}
+        {!! Form::model($regulation, array('url' => array('beheer/statuten', $regulation->id), 'method' => 'PUT', 'files'=>true, 'class' => 'editForm')) !!}
 
         <div class="form-group row">
             {!! Form::label('name', 'Naam') !!}
-            {!! Form::text('name', $minutes->name, ['class' => 'form-control', 'required']) !!}
+            {!! Form::text('name', $regulation->name, ['class' => 'form-control', 'required']) !!}
         </div>
 
         <div class="form-group row">
             {!! Form::label('date', 'Datum') !!}
-            {!! Form::date('date', $minutes->date, ['class' => 'form-control', 'required']) !!}
+            {!! Form::date('date', $regulation->date, ['class' => 'form-control', 'required']) !!}
         </div>
 
         <div class="form-group row">
-            {!! Form::label('minutes', 'Upload nieuwe Notulen') !!}
-            {!! Form::file('minutes', ['class' => 'form-control', 'accept' => 'application/pdf']) !!}
+            {!! Form::label('regulation', 'Upload nieuwe statuten') !!}
+            {!! Form::file('regulation', ['class' => 'form-control', 'accept' => 'application/pdf']) !!}
         </div>
 
         <div class="form-group row">
-            {!! Form::label('minutes', 'Huidige Notulen') !!}
+            {!! Form::label('regulation', 'Huidige statuten') !!}
             <br>
-            <object data="{{$minutes->minutes}}"
+            <object data="{{$regulation->regulation}}"
                     width="450px" height="400px">
             </object>
         </div>
 
         <div class="row">
-            {!! Form::submit('Verander de notulen!', array('class' => 'btn btn-primary button-submit', 'id' => 'editSubmit')   ) !!}
+            {!! Form::submit('Verander de statuten!', array('class' => 'btn btn-primary button-submit', 'id' => 'editSubmit')   ) !!}
         </div>
 
         {!! Form::close() !!}

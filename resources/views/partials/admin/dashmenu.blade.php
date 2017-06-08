@@ -132,6 +132,19 @@
             </ul>
         </li>
         <li role="presentation" class="hover_green">
+            <a href="/beheer/statuten">
+                <span class="glyphicon glyphicon-tags left" aria-hidden="true"></span> Statuten
+            </a>
+            <ul>
+                <li class="toevoegen">
+                    <a href="/beheer/statuten/create">
+                        <span class="glyphicon glyphicon-plus left" aria-hidden="true"></span>
+                        <span class="tekst">Toevoegen</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li role="presentation" class="hover_green">
             <a href="/beheer/job">
                 <span class="glyphicon glyphicon-tags left" aria-hidden="true"></span> Vacatures
             </a>

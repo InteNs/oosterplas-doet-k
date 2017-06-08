@@ -3,7 +3,7 @@
 <div class="container-fluid more-padding">
     <div class="row">
         <div class="col-md-12">
-            <h1>Notulen</h1>
+            <h1>Statuten</h1>
         </div>
     </div>
     <div class="row">
@@ -38,9 +38,9 @@
     </div>
 
     <div class="row">
-        @foreach($minutesList as $minutes)
+        @foreach($regulations as $regulation)
             <div class="col-md-6 info-block" style="margin-bottom:5px;">
-                <object title="{{$minutes->name}}" type="application/pdf" data="{{$minutes->minutes}}"
+                <object title="{{$regulation->name}}" type="application/pdf" data="{{$regulation->regulation}}"
                         width="100%" height="400px">
                 </object>
             </div>
