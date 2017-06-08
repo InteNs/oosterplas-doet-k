@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default">
-    <div class="container-fluid">
+    <div class="container-fluid more-padding">
         <div class="row">
             <div class="col-md-9">
                 <i class="fa fa-bars show-responsive-menu" aria-hidden="true" onclick="showMenu(1)"></i>

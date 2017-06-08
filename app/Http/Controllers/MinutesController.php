@@ -9,9 +9,9 @@ class MinutesController extends Controller
     public function index()
     {
         if (Request::get('date')) {
-            $minutesList = Minutes::where('date', Request::get('date'))->paginate(15);
+            $minutesList = Minutes::where('date', 'like', '%' . Request::get('date') . '%')->paginate();
         } elseif (Request::get('name')) {
-            $minutesList = Minutes::where('name', Request::get('name'))->paginate(15);
+            $minutesList = Minutes::where('name', 'like', '%' . Request::get('name') . '%')->paginate();
         } else {
             $minutesList = Minutes::all();
         }
