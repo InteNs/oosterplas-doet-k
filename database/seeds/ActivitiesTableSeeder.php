@@ -15,19 +15,30 @@ class ActivitiesTableSeeder extends Seeder
         Activity::updateOrCreate([
             'title' => 'Studiebegeleiding',
             'description' =>
-                'De begeleiding helpt je om je studie goed te kunnen volgen, je leert hoe je het beste kunt leren en je krijgt hiervoor coaching om zelfstandig aan de slag te kunnen.
-Je leert plannen en je krijgt begeleiding om je brugklas jaar goed aan te pakken.
-Dit alles vindt plaats bij de Biechten en er is tussentijds ook ruimte om even lekker te ontspannen of juist even te bewegen om daarna met hernieuwd concentratie weer verder te gaan.
-Tijden: elke dinsdag en donderdag professionele begeleiding van Studiejunk van 15.00-18.00
-
-Tarieven worden vastgesteld bij aanmelding. Dit wordt gebaseerd op het gezamenlijk bruto jaarinkomen:
-Bij een inkomen lager dan 18.500,- betaal je € 20,- per maand
-Bij een inkomen tussen de 18.500,- en 37.000,- betaal je € 80,-  per maand
-Bij een inkomen hoger dan 37.000,- betaal je € 160,- per maand',
+                'De begeleiding helpt je om je studie goed te kunnen volgen, 
+                je leert hoe je het beste kunt leren en je krijgt hiervoor coaching om zelfstandig aan de slag te kunnen. 
+                Je leert plannen en je krijgt begeleiding om je brugklas jaar goed aan te pakken. 
+                Dit alles vindt plaats bij de Biechten en er is tussentijds ook ruimte om even lekker te ontspannen 
+                of juist even te bewegen om daarna met hernieuwd concentratie weer verder te gaan.',
             'sorting_date' => '2017-12-31 00:00:00',
             'display_date' => 'Iedere dinsdag en donderdag!',
             'price' => '0',
             'image' => '/images/huiswerkbegeleiding.jpg',
+            'priority' => true,
+        ]);
+
+        Activity::updateOrCreate([
+            'title' => 'Gunbaan',
+            'description' =>
+                'Gunbanen zijn tijdelijke opstapbanen voor jongeren in een uitkeringssituatie. Iedereen tussen de 18 en 27 jaar,
+                thuiswonend of alleenstaand met of zonder kinderen, kan zich hiervoor aanmelden. We hebben diverse werkplaatsen
+                waar je ervaring op kunt doen, waar je je CV mee in beweging kunt houden en mogelijk kan leiden tot een vaste baan
+                bij hen of via hun netwerk. Ben jij, of ken je iemand die in een dergelijke situatie zit neem dan contact met ons op.
+                We helpen je graag verder.',
+            'sorting_date' => '2017-12-30 00:00:00',
+            'display_date' => 'Verbreed je netwerk!',
+            'price' => '0',
+            'image' => '/images/gunbaan.jpg',
             'priority' => true,
         ]);
 

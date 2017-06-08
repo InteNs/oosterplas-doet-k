@@ -6,9 +6,9 @@
             Activiteiten
         </h3>
         <div class="filters">
-            <a href="/beheer/activiteit?order=date&direction=asc" title="Order op datum ASC"><i
+            <a href="/beheer/activiteit?order=sorting_date&direction=asc" title="Order op datum ASC"><i
                         class="fa fa-sort-numeric-asc" aria-hidden="true"></i></a>
-            <a href="/beheer/activiteit?order=date&direction=desc" title="Order op datum DESC"><i
+            <a href="/beheer/activiteit?order=sorting_date&direction=desc" title="Order op datum DESC"><i
                         class="fa fa-sort-numeric-desc" aria-hidden="true"></i></a>
             <a href="/beheer/activiteit?order=title&direction=asc" title="Order op titel ASC"><i
                         class="fa fa-sort-alpha-asc" aria-hidden="true"></i></a>
@@ -18,7 +18,7 @@
 
         <table class="table table-striped table-hover ">
             <tr>
-                <td>#</td>
+                <td></td>
                 <td>Titel</td>
                 <td>Prijs</td>
                 <td>Sorteerdatum</td>
@@ -30,7 +30,11 @@
             </tr>
             @foreach ($activities as $activity)
                 <tr>
-                    <td>{{$activity->id}}</td>
+                    @if ($activity->priority)
+                        <td class="fa fa-star"></td>
+                    @else
+                        <td></td>
+                    @endif
                     <td>{{$activity->title}}</td>
                     <td class="glyphicon-euro">{{$activity->price}}</td>
                     <td>{{$activity->sorting_date}}</td>
