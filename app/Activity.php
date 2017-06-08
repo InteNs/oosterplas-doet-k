@@ -16,6 +16,11 @@ class Activity extends Model
         return $this->hasMany('App\Entry');
     }
 
+    public function reports()
+    {
+        return $this->hasMany('App\Report');
+    }
+
     public function getNumberOfEntries()
     {
         return $this->entries()->count();

@@ -5,6 +5,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-2">
+                <a href="/beheer/rapportage" class="btn btn-primary">Maak een rapportage!</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
                 <h1>{{$activity->title}}</h1>
             </div>
         </div>
