@@ -7,7 +7,7 @@
                     {!! Form::open(['method'=>'GET', 'class'=>'navbar-form navbar-left', 'role'=>'search']) !!}
                         {!! Form::date('date', null, ['class' => 'form-control']) !!}
                         <span class="input-group-btn">
-                            <button class="btn btn-default-sm" type="submit">
+                            <button class="btn btn-primary button-submit colored" type="submit">
                                 <i class="fa fa-search"></i>
                             </button>
                         </span>
@@ -21,7 +21,7 @@
                 {!! Form::open(['method'=>'GET', 'class'=>'navbar-form navbar-left', 'role'=>'search']) !!}
                     {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Naam...']) !!}
                     <span class="input-group-btn">
-                        <button class="btn btn-default-sm" type="submit">
+                        <button class="btn btn-primary button-submit colored" type="submit">
                             <i class="fa fa-search"></i>
                         </button>
                     </span>

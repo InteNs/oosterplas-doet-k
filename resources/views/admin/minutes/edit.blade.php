@@ -42,7 +42,7 @@
         </div>
 
         <div class="row">
-            {!! Form::submit('Verander de notulen!', array('class' => 'btn btn-primary', 'id' => 'editSubmit')   ) !!}
+            {!! Form::submit('Verander de notulen!', array('class' => 'btn btn-primary button-submit', 'id' => 'editSubmit')   ) !!}
         </div>
 
         {!! Form::close() !!}

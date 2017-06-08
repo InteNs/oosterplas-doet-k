@@ -34,7 +34,7 @@
         </div>
 
         <div class="row">
-            {!! Form::submit('Upload de notulen!', array('class' => 'btn btn-primary', 'id' => 'createSubmit')) !!}
+            {!! Form::submit('Upload de notulen!', array('class' => 'btn btn-primary button-submit', 'id' => 'createSubmit')) !!}
         </div>
 
         {!! Form::close() !!}
