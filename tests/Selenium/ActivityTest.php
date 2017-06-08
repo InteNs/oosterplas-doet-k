@@ -33,8 +33,8 @@ class ActivityTest extends BaseSeleniumTestCase
             ->typeInformation( [
                 'title' => 'Een aangepaste titel',
                 'description' => 'Een aangepaste beschrijving',
-//                'datetimestart' => '2019-01-02 08:30:00',
-//                'datetimeend' => '2019-01-02 12:45:00',
+                'sorting_date' => '2019-01-02 08:30:00',
+                'display_date' => 'test',
                 'price' => '55',
             ], true)
             ->click('editSubmit')
@@ -56,8 +56,8 @@ class ActivityTest extends BaseSeleniumTestCase
             ->typeInformation([
                 'title' => 'B-Battle',
                 'description' => 'KEFO en B-battle voor alle wijkbewoners/ Bosschenaren, Baggerloop voor 7 basisscholen in Den Bosch Oost en Hintham en 5 middelbare scholen. Dit zijn juist 5 middelbare scholen waar veel kinderen/ jongeren op zitten die niet actief deelnemen aan een sportvereniging en vaak ook een “rugzakje” hebben.',
-//                'datetimestart' => '2019-01-02 08:30:00',
-//                'datetimeend' => '2019-01-02 12:45:00',
+                'sorting_date' => '2019-01-02 08:30:00',
+                'display_date' => 'test',
                 'price' => '10',
             ],true )
             ->click('createSubmit')
