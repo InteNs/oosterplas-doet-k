@@ -33,6 +33,11 @@
         </div>
 
         <div class="form-group row">
+            {!! Form::label('spotlight', 'Spotlight activiteit?') !!}
+            {!! Form::checkbox('spotlight', false) !!}
+        </div>
+
+        <div class="form-group row">
             <label for="image">Upload nieuwe
                 afbeelding:</label> {!! Form::file('image', ['class' => 'form-control', 'accept' => 'image/*']) !!}
             <p class="errors">{!! $errors->first('image') !!}</p>

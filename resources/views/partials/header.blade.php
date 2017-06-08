@@ -15,7 +15,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/Activiteiten">
+                        <a href="/activiteiten">
                             Activiteiten
                         </a>
                     </li>

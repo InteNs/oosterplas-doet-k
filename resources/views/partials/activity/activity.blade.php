@@ -9,7 +9,7 @@
                {{$activity->description}}
             </span>
         <div class="continue-reading2">
-            <a href="/activiteit/{{$activity->id}}">
+            <a href="/activiteiten/{{$activity->id}}">
                 Lees verder >
             </a>
         </div>
