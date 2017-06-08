@@ -8,6 +8,14 @@
 
         {!! Form::model($report, array('url' => array('/beheer/rapportage', $report->id), 'method' => 'PUT', 'files'=>true, 'class' => 'editForm')) !!}
         <div class="form-group row">
+            {!! Form::label('activity_title', 'Activiteit') !!}
+            <select class="form-control m-bot15" name="activity_id">
+                    @foreach($activities as $activity)
+                        <option value="{{ $activity->id }}">{{ $activity->title }}</option>
+                    @endforeach
+            </select>
+        </div>
+        <div class="form-group row">
             {!! Form::label('title', 'Titel') !!}
             {!! Form::text('title', $report->title, ['class' => 'form-control', 'required']) !!}
         </div>

@@ -25,7 +25,8 @@ class StoreReport extends FormRequest
     public function rules()
     {
         return [
-            'title',
+            'activity_title' => 'required',
+            'title' => 'required',
             'message' => 'required',
             'image' => 'required',
         ];

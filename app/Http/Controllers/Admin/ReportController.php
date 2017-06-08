@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Activity;
 use App\Report;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreReport;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 class ReportController extends Controller
 {
@@ -23,11 +25,12 @@ class ReportController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function create()
     {
-        return view('admin.report.create');
+        $nonCleanedActivities = Activity::all();
+        return view('admin.report.create')->with('activities', $nonCleanedActivities);
     }
 
     /**
@@ -39,11 +42,19 @@ class ReportController extends Controller
     public function store(Request $request)
     {
         $report = new Report();
+        $report->activity_id = $request->activity_id;
         $report->title = $request->title;
         $report->message = $request->message;
-        $report->image = $request->image;
+        if ($request->image != null) {
+            if (Input::file('image')->isValid()) {
+                $this->addImage($report);
+            } else {
+                Session::flash('error', 'uploaded file is not valid');
+                return redirect('beheer/partner/create');
+            }
+        }
         $report->save();
-        return redirect('/beheer/activiteit');
+        return redirect('/beheer/rapportage');
     }
 
     /**
@@ -67,7 +78,8 @@ class ReportController extends Controller
     public function edit($id)
     {
         $report = Report::find($id);
-        return view('admin.report.edit')->with('report', $report);
+        $nonCleanedActivities = Activity::all();
+        return view('admin.report.edit')->with('report', $report)->with('activities', $nonCleanedActivities);
     }
 
     /**
@@ -80,11 +92,19 @@ class ReportController extends Controller
     public function update(Request $request, $id)
     {
         $report = Report::find($id);
+        $report->activity_id = $request->activity_id;
         $report->title = $request->title;
         $report->message = $request->message;
-        $report->image = $request->image;
+        if ($request->image != null) {
+            if (Input::file('image')->isValid()) {
+                $this->addImage($report);
+            } else {
+                Session::flash('error', 'uploaded file is not valid');
+                return redirect('beheer/partner/create');
+            }
+        }
         $report->save();
-        return redirect('/beheer/activiteit');
+        return redirect('/beheer/rapportage');
     }
 
     /**
@@ -96,6 +116,17 @@ class ReportController extends Controller
     public function destroy($id)
     {
         Report::destroy($id);
-        return redirect('/beheer/activiteit');
+        return redirect('/beheer/rapportage');
+    }
+
+    private function addImage($activity)
+    {
+        $destinationPath = 'images/uploads';
+        $extension = Input::file('image')->getClientOriginalExtension();
+        $fileName = 'activiteit' . date("Y-m-d") . '-' . rand(11111, 99999) . '.' . $extension;
+
+        # save and link image
+        Input::file('image')->move($destinationPath, $fileName);
+        $activity->image = '/' . $destinationPath . '/' . $fileName;
     }
 }

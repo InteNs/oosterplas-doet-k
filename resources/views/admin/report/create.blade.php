@@ -8,13 +8,24 @@
 
         {!! Form::open(array('url' => 'beheer/rapportage', 'method' => 'POST', 'files'=>true, 'class' => 'createForm')) !!}
         <div class="form-group row">
+            {!! Form::label('activity_title', 'Activiteit') !!}
+            <select class="form-control m-bot15" name="activity_id">
+                @if ($activities->count())
+                    @foreach($activities as $activity)
+                        <option value="{{ $activity->id }}">{{ $activity->title }}</option>
+                    @endforeach
+                @endif
+            </select>
+        </div>
+
+        <div class="form-group row">
             {!! Form::label('title', 'Titel') !!}
             {!! Form::text('title', null, ['class' => 'form-control', 'required']) !!}
         </div>
 
         <div class="form-group row">
             {!! Form::label('message', 'Beschrijving') !!}
-            {!! Form::text('message', null, ['class' => 'form-control', 'required']) !!}
+            {!! Form::textarea('message', null, ['class' => 'form-control', 'required']) !!}
         </div>
 
         <div class="form-group row">

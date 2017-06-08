@@ -19,6 +19,7 @@
         <table class="table table-striped table-hover ">
             <tr>
                 <td>#</td>
+                <td>Activiteit</td>
                 <td>Titel</td>
                 <td></td>
                 <td></td>
@@ -27,6 +28,7 @@
             @foreach ($reports as $report)
                 <tr>
                     <td>{{$report->id}}</td>
+                    <td>{{$report->getActivityTitle()}}</td>
                     <td>{{$report->title}}</td>
                     <td>
                         <a href="/beheer/rapportage/{{$report->id}}"
@@ -37,13 +39,11 @@
                            title="Edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                     </td>
                     <td>
-                        @if ($report->id !== 1)
-                            {{ Form::open(['id' => 'formDelete'.$report->id,'method' => 'DELETE', 'route' => ['rapportage.destroy', $report->id]]) }}
+                        {{ Form::open(['id' => 'formDelete'.$report->id,'method' => 'DELETE', 'route' => ['rapportage.destroy', $report->id]]) }}
                                 <a title="Delete" href="javascript:void(0)" onclick="document.getElementById('formDelete{{$report->id}}').submit()">
                                     <i class="fa fa-times" aria-hidden="true"></i>
                                 </a>
-                            {{ Form::close() }}
-                        @endif
+                        {{ Form::close() }}
                     </td>
                 </tr>
             @endforeach
