@@ -21,7 +21,7 @@ class CreateActivitiesTable extends Migration
             $table->string('display_date');
             $table->double('price')->default(0);
             $table->string('image')->nullable()->default(null);
-            $table->boolean('spotlight')->default(false);
+            $table->boolean('priority')->default(false);
             $table->timestamps();
         });
     }
