@@ -39,6 +39,19 @@
             </ul>
         </li>
         <li role="presentation" class="hover_green">
+            <a href="/beheer/rapportage">
+                <span class="glyphicon glyphicon-list-alt left" aria-hidden="true"></span> Rapportages
+            </a>
+            <ul>
+                <li class="toevoegen">
+                    <a href="/beheer/rapportage/create">
+                        <span class="glyphicon glyphicon-plus left" aria-hidden="true"></span>
+                        <span class="tekst">Toevoegen</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li role="presentation" class="hover_green">
             <a href="/beheer/huiswerk">
                 <span class="glyphicon glyphicon-list-alt left" aria-hidden="true"></span> Huiswerkbegeleiding
             </a>
