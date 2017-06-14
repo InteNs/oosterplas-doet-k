@@ -20,12 +20,12 @@
 
         <div class="form-group row">
             {!! Form::label('sorting_date', 'Sorteerdatum') !!}
-            {!! Form::datetime('sorting_date', \Carbon\Carbon::now(), ['class' => 'form-control', 'required']) !!}
+            {!! Form::date('sorting_date', \Carbon\Carbon::now(), ['class' => 'form-control', 'required']) !!}
         </div>
 
         <div class="form-group row">
             {!! Form::label('display_date', 'Weergavedatum') !!}
-            {!! Form::datetime('display_date', null, ['class' => 'form-control', 'required']) !!}
+            {!! Form::text('display_date', null, ['class' => 'form-control', 'required']) !!}
         </div>
 
         <div class="form-group row">
