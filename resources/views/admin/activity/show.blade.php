@@ -18,18 +18,18 @@
         </div>
         <div class="row">
             <div class="col-md-2">
-                <h4><label for="image">Begint op:</label></h4>
+                <h4><label for="image">Sorteerdatum</label></h4>
             </div>
             <div class="col-md-6">
-                <h4>{{$activity->datetimestart}}</h4>
+                <h4>{{$activity->sorting_date}}</h4>
             </div>
         </div>
         <div class="row">
             <div class="col-md-2">
-                <h4><label for="image">Eindigt op:</label></h4>
+                <h4><label for="image">Weergavedatum</label></h4>
             </div>
             <div class="col-md-6">
-                <h4>{{$activity->datetimeend}}</h4>
+                <h4>{{$activity->display_date}}</h4>
             </div>
         </div>
         <div class="row">

@@ -15,22 +15,27 @@
 
         <div class="form-group row">
             {!! Form::label('description', 'Beschrijving') !!}
-            {!! Form::text('description', null, ['class' => 'form-control', 'required']) !!}
+            {!! Form::textarea('description', null, ['class' => 'form-control', 'required']) !!}
         </div>
 
         <div class="form-group row">
-            {!! Form::label('datetimestart', 'Begintijd') !!}
-            {!! Form::datetime('datetimestart', \Carbon\Carbon::now(), ['class' => 'form-control', 'required']) !!}
+            {!! Form::label('sorting_date', 'Sorteerdatum') !!}
+            {!! Form::date('sorting_date', \Carbon\Carbon::now(), ['class' => 'form-control', 'required']) !!}
         </div>
 
         <div class="form-group row">
-            {!! Form::label('datetimeend', 'Eindtijd') !!}
-            {!! Form::datetime('datetimeend', \Carbon\Carbon::tomorrow(), ['class' => 'form-control', 'required']) !!}
+            {!! Form::label('display_date', 'Weergavedatum') !!}
+            {!! Form::text('display_date', null, ['class' => 'form-control', 'required']) !!}
         </div>
 
         <div class="form-group row">
             {!! Form::label('price', 'Prijs') !!}
             {!! Form::number('price', 0, ['class' => 'form-control', 'step' => 'any', 'min' => 0]) !!}
+        </div>
+
+        <div class="form-group row">
+            {!! Form::label('spotlight', 'Spotlight activiteit?') !!}
+            {!! Form::checkbox('spotlight', false) !!}
         </div>
 
         <div class="form-group row">
