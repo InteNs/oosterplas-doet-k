@@ -10,22 +10,9 @@ class MainController extends Controller
 {
     public function index()
     {
-        $last_activities = $this->getLastThreeActivities(Activity::orderBy('datetimestart', 'asc')->get());
-        return view('index')->with('slider', Slider::find(1))->with('activities', $last_activities);
-    }
-
-    private function getLastThreeActivities($activities)
-    {
-        foreach ($activities as $activity) {
-            if (count($activities) <= 3) {
-                return $activities;
-            }
-                $start = $activity->datetimestart;
-            if ($start <= Carbon::now()) {
-                $activities->shift();
-                continue;
-            }
-        }
-        return $activities;
+        $spotlights = Activity::where('priority', '=', true)->take(3)->get();
+        $last_activities = Activity::orderBy('sorting_date', 'asc')->take(3)->get();
+        return view('index')->with('slider', Slider::find(1))->with('activities', $last_activities)
+            ->with('spotlights', $spotlights);
     }
 }

@@ -3,13 +3,13 @@
     <div class="text-block2">
         <h3>{{$activity->title}}</h3>
         <h4 class="date">
-           {{$activity->datetimestart}}
+           {{$activity->display_date}}
         </h4>
         <span class="info">
                {{$activity->description}}
             </span>
         <div class="continue-reading2">
-            <a href="/activiteit/{{$activity->id}}">
+            <a href="/activiteiten/{{$activity->id}}">
                 Lees verder >
             </a>
         </div>

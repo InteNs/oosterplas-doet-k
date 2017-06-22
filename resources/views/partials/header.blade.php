@@ -15,8 +15,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/evenementen">
-                            Evenementen
+                        <a href="/activiteiten">
+                            Activiteiten
                         </a>
                     </li>
                     <li>
@@ -84,8 +84,8 @@
             </a>
         </li>
         <li>
-            <a href="/evenementen">
-                Evenementen
+            <a href="#">
+                Activiteiten
             </a>
         </li>
         <li>

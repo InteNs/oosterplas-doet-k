@@ -6,14 +6,14 @@ class HomeworkPageTest extends BaseSeleniumTestCase
     public function testOverviewHomeworkPage()
     {
         $this->artisan('db:seed', ['--class' => 'ActivitiesTableSeeder']);
-        $this->visit('/evenementen/1')->see('Schrijf je in voor Studiebegeleiding!');
+        $this->visit('/activiteiten/1')->see('Schrijf je in voor Studiebegeleiding!');
     }
 
     public function testContactForm()
     {
         $this->artisan('db:seed', ['--class' => 'ActivitiesTableSeeder']);
         $this
-            ->visit('/evenementen/1')
+            ->visit('/activiteiten/1')
             ->hold(1)
             ->typeInformation([
                 'firstname' => 'Peter',

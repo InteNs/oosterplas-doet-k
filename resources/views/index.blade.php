@@ -28,42 +28,22 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-6 info-block">
-            <div class="img" style="background-image: url('{{url('/images/huiswerkbegeleiding.jpg')}}');"></div>
-            <div class="text-block1">
-            <h3>Studiebegeleiding</h3>
-            <span class="info">
-                De begeleiding helpt je om je studie goed te kunnen volgen, je leert hoe je het beste kunt leren
-                en je krijgt hiervoor coaching om zelfstandig aan de slag te kunnen. Je leert plannen en je krijgt begeleiding
-                om je brugklas jaar goed aan te pakken.
-                Dit alles vindt plaats bij de Biechten en er is tussentijds ook ruimte om even lekker te ontspannen of juist even te
-                bewegen om daarna met hernieuwd concentratie weer verder te gaan.
-            </span>
-            <div class="continue-reading1">
-                <a href="{{url('/evenementen/1')}}">
-                    Lees verder >
-                </a>
+        @foreach ($spotlights as $spotlight)
+            <div class="col-md-6 info-block">
+                <div class="img" style="background-image: url({{$spotlight->image}});"></div>
+                <div class="text-block1">
+                    <h3>{{$spotlight->title}}</h3>
+                    <span class="info">
+                        {{$spotlight->description}}
+                    </span>
+                    <div class="continue-reading1">
+                        <a href="/activiteiten/{{$spotlight->id}}">
+                            Lees verder >
+                        </a>
+                    </div>
+                </div>
             </div>
-            </div>
-        </div>
-        <div class="col-md-6 info-block">
-            <div class="img" style="background-image: url('{{url('/images/gunbaan.jpg')}}');"></div>
-            <div class="text-block1">
-            <h3>Gunbanen</h3>
-            <span class="info">
-                Gunbanen zijn tijdelijke opstapbanen voor jongeren in een uitkeringssituatie. Iedereen tussen de 18 en 27 jaar,
-                thuiswonend of alleenstaand met of zonder kinderen, kan zich hiervoor aanmelden. We hebben diverse werkplaatsen
-                waar je ervaring op kunt doen, waar je je CV mee in beweging kunt houden en mogelijk kan leiden tot een vaste baan
-                bij hen of via hun netwerk. Ben jij, of ken je iemand die in een dergelijke situatie zit neem dan contact met ons op.
-                We helpen je graag verder.
-            </span>
-            <div class="continue-reading1">
-                <a href="/">
-                    Lees verder >
-                </a>
-            </div>
-            </div>
-        </div>
+        @endforeach
     </div>
 </div>
 </div>

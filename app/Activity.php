@@ -36,34 +36,14 @@ class Activity extends Model
         return $this->title;
     }
 
-    /**
-     * Is it an all day event?
-     *
-     * @return bool
-     */
-    public function isAllDay()
+    public function getSortingDate()
     {
-        return false;
+        return new DateTime($this->sorting_date);
     }
 
-    /**
-     * Get the start time
-     *
-     * @return DateTime
-     */
-    public function getStart()
+    public function getDisplayDate()
     {
-        return new DateTime($this->datetimestart);
-    }
-
-    /**
-     * Get the end time
-     *
-     * @return DateTime
-     */
-    public function getEnd()
-    {
-        return new DateTime($this->datetimeend);
+        return new DateTime($this->display_date);
     }
 
     /**
