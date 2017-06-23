@@ -62,8 +62,8 @@
             <div class="col-md-4"></div>
             <div class="col-md-4"></div>
             <div class="col-md-4">
-                <a href="/" class="read-more">
-                    Bekijk de volledige evenementen kalender >
+                <a href="/activiteiten" class="read-more">
+                    Bekijk alle activiteiten >
                 </a>
             </div>
         </div>
