@@ -41,45 +41,50 @@
 /**
 General CSS
 **/
+html, body {
+    overflow-x: hidden;
+}
 body {
     font-family: 'univers-cn';
 }
-/**
-Header CSS
-**/
-
-
+.more-padding {
+    padding: 0px 100px 20px 100px;
+}
 /**
 css contactpagina
  */
-div.col-sm-12.col-md-12{
+form.rowform{
+    height: 238px;
+}
+div.bg-contact {
     background-color: #DC941A;
 }
-div.googlemaps{
-    margin-top: 10%;
-    margin-left: 5%;
+input.button-submit {
+    white-space: normal;
 }
-.btn-primary {
+iframe.googlemaps {
+    width: 100%;
+}
+.btn-primary.colored {
     background-color: #DC941A;
     color: white;
     border-color: #DC941A;
 }
-div.contact-address{
-    margin-left: 20%;
-    margin-top: 30%;
-}
-div.links a{
+div.links a {
     color: dimgrey;
 }
 
-div.twitter{
+div.twitter {
     margin-top: 30px;
 }
-div.facebook{
+div.facebook {
     margin-top: 30px;
     margin-left: 10px;
-  }
+}
 
+/**
+Header CSS
+**/
 nav.navbar {
     background-color: #fff;
     border-color: #fff;
@@ -90,6 +95,10 @@ nav.navbar {
     margin-bottom: 10px;
 }
 
+nav.navbar .more-padding {
+    padding-bottom: 0px;
+}
+
 .navbar-default .navbar-nav>li>a {
     color: #000000;
 }
@@ -97,6 +106,10 @@ nav.navbar {
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
     color: #000000;
     background-color: transparent;
+}
+
+nav ul.nav li:first-child a {
+    padding-left: 0px;
 }
 
 nav i.fa {
@@ -115,15 +128,13 @@ nav i.fa {
 nav i.fa-twitter {
     background-color:#C7B315;
 }
-footer{
-	background-color:#acc90f;
-}
 
 nav i.fa-at {
     background-color:#DC941A;
 }
 
 nav ul.social-media {
+    padding-left: 0px;
     float: right;
 }
 
@@ -134,6 +145,10 @@ nav ul.social-media li {
 /**
 END Header page CSS
 **/
+
+footer {
+    background-color:#acc90f;
+}
 
 /**
 Home page CSS
@@ -152,8 +167,6 @@ Home page CSS
 div.calendar{
     margin-top: 20px;
 }
-
-
 
 .slideshow {
     width: 20000px;
@@ -434,7 +447,7 @@ div.text-block3 span.info {
 	display: inline-block;
 	width: 100%;
 	padding: 0px 20px 20px 20px;
-	height: 160px;
+	height: 171px;
 	display: block;
 	overflow: hidden;
 }
@@ -548,9 +561,34 @@ div.block-2 a.read-more, div.block-3 a.read-more {
     padding: 10px;
     border-left: 1px solid #999999;
 }
-
 /**
 END Home page CSS
+**/
+
+/**
+About us page
+**/
+.partial_employee {
+    margin-bottom: 25px;
+}
+.employee-bg {
+    background-color: #ACC90F;
+}
+.employee-text > * {
+    padding: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.user-img {
+    width: auto;
+    height: 250px;
+    margin: 10px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/**
+END About us page
 **/
 
 /**
@@ -605,11 +643,14 @@ Responsive
         width: auto;
     }
 
-    div.block-1, div.block-2, div.block-3 {
+    div.block-1, div.block-2, div.block-3, .more-padding {
         padding: 0px 15px 50px 15px;
     }
     img.logo {
         bottom: 10px;
+    }
+    div.address {
+        border: none!important;
     }
 }
 
@@ -631,14 +672,26 @@ Responsive
     img.logo {
         width: 200px;
     }
+    .input-group.search-responsive {
+        display: block;
+    }
+    .search-responsive form input {
+        display: inline-block!important;
+        width: 80%!important;
+    }
 }
 
+.vacature-row{
+    background-color: #EC671C;
+    padding-bottom: 15px;
+}
 
-.partial_employee{
-    padding: 15px 0px 0px 0px;
-    width: calc(50% - 15px);
-    margin-left: 7.5px;
-    margin-right: 7.5px;
-    margin-bottom: 25px;
-    background-color: #ACC90F;
+div.text-block3 span.info-vacature {
+    color: #000000;
+    background-color: #EC671C;
+    display: inline-block;
+    width: 100%;
+    padding: 0px 20px 20px 20px;
+    min-height: 50px;
+    display: block;
 }

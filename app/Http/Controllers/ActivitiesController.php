@@ -36,6 +36,6 @@ class ActivitiesController extends Controller
             'phone' => $request->input('phone')
         ]);
 
-        return redirect('/evenementen/'.$id)->with('status', true);
+        return redirect('/activiteiten/'.$id)->with('status', true);
     }
 }

@@ -1,5 +1,4 @@
 <?php
-<?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
  * Generated for Laravel 5.4.9 on 2017-02-06.

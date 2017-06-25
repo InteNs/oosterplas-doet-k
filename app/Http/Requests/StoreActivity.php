@@ -27,8 +27,8 @@ class StoreActivity extends FormRequest
         return [
             'title' => 'required',
             'description' => 'required',
-            'datetimestart' => 'required',
-            'datetimeend' => 'required',
+            'sorting_date' => 'required',
+            'display_date' => 'required',
         ];
     }
 }

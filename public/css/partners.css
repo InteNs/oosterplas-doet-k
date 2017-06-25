@@ -1,67 +1,69 @@
 @media (max-width: 992px) {
-
     div.partners-block-1, div.partners-block-2, div.partners-block-3 {
         padding: 0px 15px 50px 15px;
     }
 }
 
+.partial_rang_one .bg {
+    border: 1px ridge orange;
+}
+
 div.partners-block-1 {
-    padding: 0px 100px 20px 100px;
     background-color: #ffffff;
 }
-div.partners-block-2{
-    padding: 0px 100px 0px 100px;
+div.partners-block-2 {
+    padding-top: 20px;
     background-color: #C8B415;
 }
 div.partners-block-3 {
-    padding: 25px 100px 25px 100px;
     background-color: #ffffff;
 }
-
-/* block-2 custom css*/
-.partial_rang_two{
-    background: #ffffff;
-    padding: 25px;
-    margin-bottom: 20px;
-}
-
-.partners-block-2-partial-text{
-    vertical-align: middle;
-    height: auto;
-}
-
-.partners-block-2-img{
-    width:200px;
-    height: 200px;"
-}
 .partial_rang_three {
-    padding: 15px 0px 0px 0px;
-    width: calc(33.3333333% - 15px);
-    margin-left: 7.5px;
-    margin-right: 7.5px;
-    margin-bottom: 25px;
+    margin-top: 30px;
+}
+.partial_rang_three .bg {
     background-color: #ACC90F;
 }
-
-
-.rang_three  .col-md-10 {
- padding: 0px 0px 0px 0px;
+.partial_rang_one {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* block-2 custom css*/
+.partial_rang_two {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.partial_rang_two .bg {
+    background: #ffffff;
+}
+.rang_three .col-md-10 {
+    padding: 0px 0px 0px 0px;
 }
 
-.rang_one_img{
+.rang_one_img, .rang_two_img, .rang_three_img {
+    margin: 10px;
     height: 200px;
-}
-
-.rang_two_img{
-    width:200px;
-    height: 200px;
-}
-
-.rang_three_img{
-    width:200px;
-    height: 200px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .partner-background{
     background-color: #EC671C !important;
+}
+
+.sponsors-text {
+    height: 150px;
+    overflow: hidden;
+}
+
+.sponsors-text h4, .sponsors-text p {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (max-width: 992px) {
+    .sponsors-text {
+        height: auto;
+    }
 }

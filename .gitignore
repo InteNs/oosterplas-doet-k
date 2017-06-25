@@ -9,3 +9,5 @@ Homestead.json
 Homestead.yaml
 .env
 /public/images/uploads
+/public/minutes
+/public/regulations

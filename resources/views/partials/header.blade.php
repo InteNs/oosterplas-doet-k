@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default">
-    <div class="container-fluid">
+    <div class="container-fluid more-padding">
         <div class="row">
             <div class="col-md-9">
                 <i class="fa fa-bars show-responsive-menu" aria-hidden="true" onclick="showMenu(1)"></i>
@@ -15,8 +15,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/evenementen">
-                            Evenementen
+                        <a href="/activiteiten">
+                            Activiteiten
                         </a>
                     </li>
                     <li>
@@ -30,8 +30,13 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/notulen">
                             Notulen
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/statuten">
+                            Statuten
                         </a>
                     </li>
                     <li>
@@ -44,17 +49,17 @@
             <div class="col-md-3">
                 <ul class="social-media">
                     <li>
-                        <a href="/">
+                        <a href="https://www.facebook.com/OosterplasDoet" target="_blank">
                             <i class="fa fa-facebook" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a href="https://twitter.com/OosterplasDoet" target="_blank">
                             <i class="fa fa-twitter" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a href="mailto:{{ $settings->email }}" target="_blank" title="Mail naar {{ $settings->email }}">
                             <i class="fa fa-at" aria-hidden="true"></i>
                         </a>
                     </li>
@@ -69,22 +74,22 @@
     </span>
     <ul>
         <li>
-            <a href="#">
+            <a href="/">
                 Home
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="/over-ons">
                 Over ons
             </a>
         </li>
         <li>
             <a href="#">
-                Evenementen
+                Activiteiten
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="/bedrijven">
                 Bedrijven
             </a>
         </li>
@@ -94,12 +99,17 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="/notulen">
                 Notulen
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="/statuten">
+                Statuten
+            </a>
+        </li>
+        <li>
+            <a href="/contact">
                 Contact
             </a>
         </li>

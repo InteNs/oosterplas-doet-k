@@ -25,14 +25,14 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 
 $factory->define(App\Activity::class, function (Faker\Generator $faker) {
     $startingDate = $faker->dateTimeBetween('this week', '+6 days');
-    $endingDate   = $faker->dateTimeBetween($startingDate, strtotime('+6 days'));
     return [
         'title' => $faker->word,
         'description' => $faker->text(100),
-        'datetimestart' => $startingDate,
-        'datetimeend' => $endingDate,
+        'sorting_date' => $startingDate,
+        'display_date' => $faker->text(100),
         'price' => $faker->numberBetween(0, 999),
         'image' => "/images/gunbaan.jpg",
+        'priority' => false,
     ];
 });
 
@@ -69,5 +69,15 @@ $factory->define(App\Slider::class, function (Faker\Generator $faker) {
         'image1' => "/images/backgroundimg.jpg",
         'image2' => "/images/backgroundimg2.jpg",
         'image3' => "/images/backgroundimg3.jpg",
+    ];
+});
+
+$factory->define(App\Job::class, function (Faker\Generator $faker) {
+
+    return [
+        'name' => $faker->name,
+        'description' => $faker->text(100),
+        'online' => true,
+        'places' => 1,
     ];
 });

@@ -16,6 +16,11 @@ class Activity extends Model
         return $this->hasMany('App\Entry');
     }
 
+    public function reports()
+    {
+        return $this->hasMany('App\Report');
+    }
+
     public function getNumberOfEntries()
     {
         return $this->entries()->count();
@@ -31,34 +36,14 @@ class Activity extends Model
         return $this->title;
     }
 
-    /**
-     * Is it an all day event?
-     *
-     * @return bool
-     */
-    public function isAllDay()
+    public function getSortingDate()
     {
-        return false;
+        return new DateTime($this->sorting_date);
     }
 
-    /**
-     * Get the start time
-     *
-     * @return DateTime
-     */
-    public function getStart()
+    public function getDisplayDate()
     {
-        return new DateTime($this->datetimestart);
-    }
-
-    /**
-     * Get the end time
-     *
-     * @return DateTime
-     */
-    public function getEnd()
-    {
-        return new DateTime($this->datetimeend);
+        return new DateTime($this->display_date);
     }
 
     /**

@@ -47,20 +47,11 @@ class ActivityController extends Controller
      */
     public function store(StoreActivity $request)
     {
-        $date1 = new DateTime("$request->datetimestart");
-        $date2 = new DateTime("$request->datetimeend");
-
         $activity = new Activity();
         $activity->title = $request->title;
         $activity->description = $request->description;
-
-        if ($date2 <= $date1) {
-            Session::flash('message', 'Eindtijd kan niet voor begintijd liggen');
-            return redirect('beheer/activiteit/create');
-        }
-
-        $activity->datetimestart = $date1;
-        $activity->datetimeend = $date2;
+        $activity->sorting_date = $request->sorting_date;
+        $activity->display_date = $request->display_date;
         $activity->price = $request->price;
 
         if ($request->image != null) {
@@ -115,19 +106,11 @@ class ActivityController extends Controller
     {
         $activity = Activity::find($id);
 
-        $date1 = new DateTime("$request->datetimestart");
-        $date2 = new DateTime("$request->datetimeend");
-
+        $activity = new Activity();
         $activity->title = $request->title;
         $activity->description = $request->description;
-
-        if ($date2 <= $date1) {
-            Session::flash('message', 'Eindtijd kan niet voor begintijd liggen');
-            return redirect('beheer/activiteit/create');
-        }
-
-        $activity->datetimestart = $date1;
-        $activity->datetimeend = $date2;
+        $activity->sorting_date = $request->sorting_date;
+        $activity->display_date = $request->display_date;
         $activity->price = $request->price;
 
         if ($request->image != null) {

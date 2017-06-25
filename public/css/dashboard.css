@@ -150,6 +150,17 @@ body {
     background-color: #D3D3D3;
 }
 
+/* Admin Menu */
+.admin-responsive-hide {
+    display: none;
+}
+.admin-responsive-hide.show {
+    display: block;
+}
+.admin-hide-desktop {
+    display: block;
+}
+
 /* Extra Small Devices, Phones */
 @media only screen and (min-width: 480px) {
 
@@ -167,6 +178,12 @@ body {
     }
 
     .nav > .smallDevice {
+        display: none;
+    }
+    .admin-responsive-hide {
+        display: block;
+    }
+    .admin-hide-desktop {
         display: none;
     }
 }
@@ -214,6 +231,10 @@ body {
     border-right: 18px solid #3097D1;
     border-bottom: 10px solid #3097D1;
     border-left: 18px solid #3097D1;
+}
+
+.button-submit {
+    background-color: green;
 }
 
 
