@@ -26,7 +26,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 $factory->define(App\Activity::class, function (Faker\Generator $faker) {
     $startingDate = $faker->dateTimeBetween('this week', '+6 days');
     return [
-        'title' => $faker->word,
+        'title' => $faker->text(10),
         'description' => $faker->text(100),
         'sorting_date' => $startingDate,
         'display_date' => $faker->text(100),
