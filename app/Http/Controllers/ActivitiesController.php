@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Activity;
 use App\Entry;
+use App\Report;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -23,7 +24,8 @@ class ActivitiesController extends Controller
 
     public function show($id)
     {
-        return view('activity', ['activity' => Activity::findOrFail($id)]);
+        $reports = Activity::where('priority', '=', $id)->get();
+        return view('activity', ['activity' => Activity::findOrFail($id)])->with('reports', $reports);
     }
 
     public function store(Request $request, $id)

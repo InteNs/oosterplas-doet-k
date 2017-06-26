@@ -140,6 +140,16 @@
                 })
             });
         </script>
+
+        @foreach($reports as $report)
+                <div class="img" style="background-image: url({{$report->image}});"></div>
+                <div class="text-block3">
+                    <h3>  {{$report->title}}</h3>
+                    <span class="info">
+                       {{$report->message}}
+                    </span>
+                </div>
+        @endforeach
     </div>
 </div>
 @endsection
