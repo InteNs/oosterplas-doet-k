@@ -81,58 +81,9 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-4 info-block">
-            <div class="img" style="background-image: url('{{url('/images/baggerloop.jpg')}}');"></div>
-            <div class="text-block3">
-            <h3>Baggerloop/B-battle</h3>
-            <h4 class="date">
-                10 en 11 juni
-            </h4>
-            <span class="info">
-               KEFO en B-battle voor alle wijkbewoners/
-            </span>
-            <div class="continue-reading3">
-                <a href="/">
-                    Lees verder >
-                </a>
-            </div>
-            </div>
-        </div>
-        <div class="col-md-4 info-block">
-            <div class="img" style="background-image: url('{{url('/images/KEFO.png')}}');"></div>
-            <div class="text-block3">
-            <h3>KEFO</h3>
-            <h4 class="date">
-                10 en 11 juni
-            </h4>
-            <span class="info">
-                Het Kom Erbij Festival Oosterplas kende vorig jaar
-            </span>
-            <div class="continue-reading3">
-                <a href="/">
-                    Lees verder >
-                </a>
-            </div>
-            </div>
-        </div>
-        <div class="col-md-4 info-block">
-            <div class="img" style="background-image: url('{{url('/images/natuurwandeling.png')}}');"></div>
-            <div class="text-block3">
-            <h3>Wandelen in de natuur (65+) </h3>
-            <h4 class="date">
-                10 en 11 juni
-            </h4>
-            <span class="info">
-                In goed gezelschap met een natuurgids de leuke
-                groene routes van Den Bosch ontdekken!
-            </span>
-            <div class="continue-reading3">
-                <a href="/">
-                    Lees verder >
-                </a>
-            </div>
-            </div>
-        </div>
+        @foreach($activities as $activity)
+            @include("partials.activity.activity", ['activity' => $activity])
+        @endforeach
     </div>
     <div class="row">
         <div class="col-md-4"></div>
